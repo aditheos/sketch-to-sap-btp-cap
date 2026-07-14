@@ -1,0 +1,1714 @@
+{
+  "version": "1.0",
+  "description": "SAP BTP Service Catalog â€” Fiori Horizon styling specs for sketch-to-diagram mapping",
+  "services": [
+    {
+      "id": "sap-hana-cloud",
+      "name": "SAP HANA Cloud",
+      "aliases": [
+        "HANA",
+        "hana cloud",
+        "database",
+        "DB",
+        "in-memory DB",
+        "HANA DB",
+        "cloud database",
+        "HANA Cloud"
+      ],
+      "category": "Data & Storage",
+      "description": "In-memory cloud database and data platform for transactional and analytical workloads",
+      "btp_service_name": "hana-cloud",
+      "typical_connections": [
+        "sap-integration-suite",
+        "sap-build-code",
+        "sap-datasphere",
+        "sap-analytics-cloud"
+      ],
+      "drawio": {
+        "fillColor": "#dae8fc",
+        "strokeColor": "#6c8ebf",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "hana",
+        "entity_type": "Database"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "20083-sap-hana-cloud_sd"
+    },
+    {
+      "id": "sap-datasphere",
+      "name": "SAP Datasphere",
+      "aliases": [
+        "datasphere",
+        "DWC",
+        "data warehouse cloud",
+        "data warehouse",
+        "DW",
+        "analytics data",
+        "data platform"
+      ],
+      "category": "Data & Storage",
+      "description": "Business data fabric for unified data access and modelling across the enterprise",
+      "btp_service_name": "datasphere",
+      "typical_connections": [
+        "sap-hana-cloud",
+        "sap-analytics-cloud",
+        "sap-integration-suite"
+      ],
+      "drawio": {
+        "fillColor": "#dae8fc",
+        "strokeColor": "#6c8ebf",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "datasphere",
+        "entity_type": "DataStore"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "10025-sap-datasphere_sd"
+    },
+    {
+      "id": "sap-business-data-cloud",
+      "name": "SAP Business Data Cloud",
+      "aliases": [
+        "Business Data Cloud",
+        "SAP BDC",
+        "BDC",
+        "business data cloud"
+      ],
+      "category": "Data & Storage",
+      "description": "Unified data cloud platform combining SAP Datasphere, SAP Analytics Cloud and BDC Connect for end-to-end data management",
+      "btp_service_name": "business-data-cloud",
+      "typical_connections": [
+        "sap-datasphere",
+        "sap-analytics-cloud",
+        "sap-hana-cloud",
+        "sap-integration-suite"
+      ],
+      "drawio": {
+        "fillColor": "#dae8fc",
+        "strokeColor": "#6c8ebf",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "datasphere",
+        "entity_type": "DataStore"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "34152-sap-business-data-cloud_sd"
+    },
+    {
+      "id": "object-store",
+      "name": "Object Store Service",
+      "aliases": [
+        "object store",
+        "blob storage",
+        "file storage",
+        "S3",
+        "storage bucket",
+        "BTP storage",
+        "ObjectStore"
+      ],
+      "category": "Data & Storage",
+      "description": "Hyperscaler-native object storage for unstructured data and file artifacts on BTP",
+      "btp_service_name": "objectstore",
+      "typical_connections": [
+        "sap-build-code",
+        "sap-integration-suite",
+        "cloud-foundry-runtime"
+      ],
+      "drawio": {
+        "fillColor": "#dae8fc",
+        "strokeColor": "#6c8ebf",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "objectstore",
+        "entity_type": "BlobStorage"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "10009-object-store-on-sap-btp_sd"
+    },
+    {
+      "id": "sap-data-intelligence",
+      "name": "SAP Data Intelligence Cloud",
+      "aliases": [
+        "data intelligence",
+        "DI",
+        "data pipeline",
+        "ML pipeline",
+        "data orchestration"
+      ],
+      "category": "Data & Storage",
+      "description": "Data orchestration and ML pipeline platform for intelligent data management",
+      "btp_service_name": "data-intelligence",
+      "typical_connections": [
+        "sap-hana-cloud",
+        "sap-datasphere",
+        "sap-ai-core"
+      ],
+      "drawio": {
+        "fillColor": "#dae8fc",
+        "strokeColor": "#6c8ebf",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "generic",
+        "entity_type": "DataPipeline"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": null
+    },
+    {
+      "id": "sap-integration-suite",
+      "name": "SAP Integration Suite",
+      "aliases": [
+        "integration suite",
+        "CPI",
+        "cloud integration",
+        "iflow",
+        "integration",
+        "IS",
+        "cloud platform integration",
+        "API hub",
+        "SAP CPI"
+      ],
+      "category": "Integration",
+      "description": "Enterprise integration platform â€” Cloud Integration, API Management, Open Connectors, Event Mesh in one suite",
+      "btp_service_name": "integration-suite",
+      "typical_connections": [
+        "sap-hana-cloud",
+        "sap-s4hana-cloud",
+        "sap-event-mesh",
+        "sap-api-management"
+      ],
+      "drawio": {
+        "fillColor": "#ffe6cc",
+        "strokeColor": "#d6b656",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "integration",
+        "entity_type": "IntegrationFlow"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "32086-sap-integration-suite_sd"
+    },
+    {
+      "id": "sap-event-mesh",
+      "name": "SAP Event Mesh",
+      "aliases": [
+        "event mesh",
+        "messaging",
+        "message bus",
+        "pub sub",
+        "events",
+        "event broker",
+        "message queue",
+        "queue"
+      ],
+      "category": "Integration",
+      "description": "Cloud-native messaging service for event-driven architectures and decoupled communication",
+      "btp_service_name": "enterprise-messaging",
+      "typical_connections": [
+        "sap-integration-suite",
+        "sap-build-process-automation",
+        "sap-s4hana-cloud"
+      ],
+      "drawio": {
+        "fillColor": "#ffe6cc",
+        "strokeColor": "#d6b656",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "messaging",
+        "entity_type": "EventQueue"
+      },
+      "bpmn": {
+        "task_type": "sendTask"
+      },
+      "icon_id": "31037-event-mesh_sd"
+    },
+    {
+      "id": "sap-api-management",
+      "name": "SAP API Management",
+      "aliases": [
+        "API management",
+        "API gateway",
+        "API proxy",
+        "gateway",
+        "APIM",
+        "API layer"
+      ],
+      "category": "Integration",
+      "description": "Full lifecycle API management â€” design, publish, govern, monetise APIs across hybrid landscapes",
+      "btp_service_name": "apimanagement",
+      "typical_connections": [
+        "sap-integration-suite",
+        "sap-hana-cloud",
+        "sap-ias"
+      ],
+      "drawio": {
+        "fillColor": "#ffe6cc",
+        "strokeColor": "#d6b656",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "api",
+        "entity_type": "APIGateway"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "32133-api-management_sd"
+    },
+    {
+      "id": "sap-open-connectors",
+      "name": "SAP Open Connectors",
+      "aliases": [
+        "open connectors",
+        "third party connectors",
+        "non-SAP connectors",
+        "connectors",
+        "SaaS connectors"
+      ],
+      "category": "Integration",
+      "description": "Pre-built connectors to 170+ non-SAP SaaS applications for rapid integration",
+      "btp_service_name": "open-connectors",
+      "typical_connections": [
+        "sap-integration-suite"
+      ],
+      "drawio": {
+        "fillColor": "#ffe6cc",
+        "strokeColor": "#d6b656",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "integration",
+        "entity_type": "Connector"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "32141-open-connectors_sd"
+    },
+    {
+      "id": "sap-build-code",
+      "name": "SAP Build Code",
+      "aliases": [
+        "build code",
+        "CAP",
+        "cloud application programming",
+        "app development",
+        "coding",
+        "application",
+        "backend app",
+        "service"
+      ],
+      "category": "Development",
+      "description": "AI-powered development environment for building cloud-native business applications using CAP",
+      "btp_service_name": "build-code",
+      "typical_connections": [
+        "sap-hana-cloud",
+        "sap-bas",
+        "sap-xsuaa",
+        "sap-build-work-zone-std"
+      ],
+      "drawio": {
+        "fillColor": "#d5e8d4",
+        "strokeColor": "#82b366",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "cap",
+        "entity_type": "Application"
+      },
+      "bpmn": {
+        "task_type": "userTask"
+      },
+      "icon_id": "31109-sap-build-code_sd"
+    },
+    {
+      "id": "sap-build-apps",
+      "name": "SAP Build Apps",
+      "aliases": [
+        "Build Apps",
+        "low code app",
+        "no code app",
+        "AppGyver",
+        "visual app builder"
+      ],
+      "category": "Development",
+      "description": "Low-code/no-code visual app builder for building enterprise applications",
+      "btp_service_name": "build-apps",
+      "typical_connections": [
+        "sap-integration-suite",
+        "sap-build-work-zone-std",
+        "sap-hana-cloud"
+      ],
+      "drawio": {
+        "fillColor": "#dae8fc",
+        "strokeColor": "#6c8ebf",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "frontend",
+        "entity_type": "Application"
+      },
+      "bpmn": {
+        "task_type": "userTask"
+      },
+      "icon_id": "31066-sap-build-apps sd"
+    },
+    {
+      "id": "ui5-flexibility",
+      "name": "UI5 Flexibility for Key Users",
+      "aliases": [
+        "SAPUI5",
+        "UI5",
+        "UI Theme Designer",
+        "UI flexibility",
+        "UI5 theme designer",
+        "Fiori UI",
+        "ui5 flexibility"
+      ],
+      "category": "Development",
+      "description": "SAPUI5 framework and UI5 Flexibility tooling for key-user UI adaptations and theming",
+      "btp_service_name": "ui5-flexibility-for-key-users",
+      "typical_connections": [
+        "sap-build-work-zone-std",
+        "sap-build-work-zone-adv"
+      ],
+      "drawio": {
+        "fillColor": "#dae8fc",
+        "strokeColor": "#6c8ebf",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "frontend",
+        "entity_type": "UI"
+      },
+      "bpmn": {
+        "task_type": "userTask"
+      },
+      "icon_id": "20049-ui5-flexibility-for-key-users_sd"
+    },
+    {
+      "id": "sap-bas",
+      "name": "SAP Business Application Studio",
+      "aliases": [
+        "BAS",
+        "business application studio",
+        "IDE",
+        "cloud IDE",
+        "dev environment",
+        "dev studio"
+      ],
+      "category": "Development",
+      "description": "Cloud-based IDE for developing SAP applications â€” Fiori, CAP, mobile, workflow",
+      "btp_service_name": "sapappstudio",
+      "typical_connections": [
+        "sap-build-code",
+        "sap-hana-cloud",
+        "cloud-foundry-runtime"
+      ],
+      "drawio": {
+        "fillColor": "#d5e8d4",
+        "strokeColor": "#82b366",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "tool",
+        "entity_type": "DevelopmentTool"
+      },
+      "bpmn": {
+        "task_type": "userTask"
+      },
+      "icon_id": "20069-sap-business-application-studio_sd"
+    },
+    {
+      "id": "cloud-foundry-runtime",
+      "name": "Cloud Foundry Runtime",
+      "aliases": [
+        "CF",
+        "cloud foundry",
+        "CF runtime",
+        "CF app",
+        "PaaS",
+        "app runtime",
+        "runtime"
+      ],
+      "category": "Development",
+      "description": "Open-source PaaS runtime for deploying and scaling cloud-native applications on BTP",
+      "btp_service_name": "application-runtime",
+      "typical_connections": [
+        "sap-hana-cloud",
+        "sap-xsuaa",
+        "object-store",
+        "sap-connectivity"
+      ],
+      "drawio": {
+        "fillColor": "#d5e8d4",
+        "strokeColor": "#82b366",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "runtime",
+        "entity_type": "CloudFoundry"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "10017-sap-btp_cloud-foundry-runtime_sd"
+    },
+    {
+      "id": "kyma-runtime",
+      "name": "Kyma Runtime",
+      "aliases": [
+        "Kyma",
+        "kubernetes",
+        "K8s",
+        "container",
+        "serverless",
+        "Kyma runtime",
+        "BTP Kyma"
+      ],
+      "category": "Development",
+      "description": "Managed Kubernetes runtime with serverless, service mesh, and event-driven capabilities",
+      "btp_service_name": "kymaruntime",
+      "typical_connections": [
+        "sap-hana-cloud",
+        "sap-event-mesh",
+        "sap-xsuaa"
+      ],
+      "drawio": {
+        "fillColor": "#d5e8d4",
+        "strokeColor": "#82b366",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "runtime",
+        "entity_type": "Kyma"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "20065-sap-btp_kyma-runtime_sd"
+    },
+    {
+      "id": "sap-build-process-automation",
+      "name": "SAP Build Process Automation",
+      "aliases": [
+        "SBPA",
+        "process automation",
+        "workflow",
+        "approval",
+        "RPA",
+        "automation",
+        "business process",
+        "BPM",
+        "forms",
+        "low code workflow"
+      ],
+      "category": "Process & Automation",
+      "description": "Low-code platform for automating business processes â€” workflow, decisions, forms, RPA bots",
+      "btp_service_name": "process-automation",
+      "typical_connections": [
+        "sap-event-mesh",
+        "sap-s4hana-cloud",
+        "sap-hana-cloud",
+        "sap-build-work-zone-std"
+      ],
+      "drawio": {
+        "fillColor": "#e1d5e7",
+        "strokeColor": "#9673a6",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "workflow",
+        "entity_type": "Process"
+      },
+      "bpmn": {
+        "task_type": "userTask"
+      },
+      "icon_id": "31067-sap-build-process-automation_sd"
+    },
+    {
+      "id": "sap-rpa",
+      "name": "SAP Robotic Process Automation",
+      "aliases": [
+        "RPA",
+        "robotic automation",
+        "bot",
+        "desktop automation",
+        "attended bot",
+        "unattended bot"
+      ],
+      "category": "Process & Automation",
+      "description": "Desktop and web automation bots for repetitive task automation â€” part of SAP Build",
+      "btp_service_name": "irpa",
+      "typical_connections": [
+        "sap-build-process-automation",
+        "sap-s4hana-cloud"
+      ],
+      "drawio": {
+        "fillColor": "#e1d5e7",
+        "strokeColor": "#9673a6",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "automation",
+        "entity_type": "RPA"
+      },
+      "bpmn": {
+        "task_type": "scriptTask"
+      },
+      "icon_id": null
+    },
+    {
+      "id": "sap-build-work-zone-std",
+      "name": "SAP Build Work Zone, Standard Edition",
+      "aliases": [
+        "work zone",
+        "work zone standard",
+        "launchpad",
+        "Fiori launchpad",
+        "portal",
+        "site",
+        "BTP launchpad"
+      ],
+      "category": "Work Zone",
+      "description": "Centralised launchpad for SAP and third-party apps â€” the Fiori-compliant entry point for end users",
+      "btp_service_name": "SAPLaunchpad",
+      "typical_connections": [
+        "sap-build-code",
+        "sap-build-process-automation",
+        "sap-ias"
+      ],
+      "drawio": {
+        "fillColor": "#fff2cc",
+        "strokeColor": "#d6b656",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "portal",
+        "entity_type": "Launchpad"
+      },
+      "bpmn": {
+        "task_type": "userTask"
+      },
+      "icon_id": "31068-sap-build-work-zone_sd"
+    },
+    {
+      "id": "sap-build-work-zone-adv",
+      "name": "SAP Build Work Zone, Advanced Edition",
+      "aliases": [
+        "work zone advanced",
+        "advanced work zone",
+        "digital workplace",
+        "employee experience",
+        "WZ advanced"
+      ],
+      "category": "Work Zone",
+      "description": "Digital workplace platform with content federation, social features, and custom pages",
+      "btp_service_name": "WorkZone",
+      "typical_connections": [
+        "sap-build-work-zone-std",
+        "sap-ias",
+        "sap-build-process-automation"
+      ],
+      "drawio": {
+        "fillColor": "#fff2cc",
+        "strokeColor": "#d6b656",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "portal",
+        "entity_type": "WorkZone"
+      },
+      "bpmn": {
+        "task_type": "userTask"
+      },
+      "icon_id": "31018-sap-build-work-zone advanced-edition sd"
+    },
+    {
+      "id": "sap-ias",
+      "name": "SAP Identity Authentication Service",
+      "aliases": [
+        "IAS",
+        "identity authentication",
+        "authentication",
+        "auth",
+        "SSO",
+        "SAML",
+        "OIDC",
+        "identity provider",
+        "IdP",
+        "login"
+      ],
+      "category": "Identity & Security",
+      "description": "Cloud identity provider for authentication, SSO, and multi-factor authentication across SAP and third-party apps",
+      "btp_service_name": "identity-authentication",
+      "typical_connections": [
+        "sap-build-work-zone-std",
+        "sap-xsuaa",
+        "sap-build-code"
+      ],
+      "drawio": {
+        "fillColor": "#f8cecc",
+        "strokeColor": "#b85450",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "auth",
+        "entity_type": "IdentityProvider"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "32071-sap-identity-authentication"
+    },
+    {
+      "id": "sap-xsuaa",
+      "name": "SAP Authorization and Trust Management",
+      "aliases": [
+        "XSUAA",
+        "UAA",
+        "authorization",
+        "trust management",
+        "OAuth",
+        "JWT",
+        "scopes",
+        "roles",
+        "role collections"
+      ],
+      "category": "Identity & Security",
+      "description": "OAuth 2.0 authorization server for BTP applications â€” manages scopes, role collections, and JWT tokens",
+      "btp_service_name": "xsuaa",
+      "typical_connections": [
+        "sap-build-code",
+        "sap-ias",
+        "cloud-foundry-runtime"
+      ],
+      "drawio": {
+        "fillColor": "#f8cecc",
+        "strokeColor": "#b85450",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "auth",
+        "entity_type": "Authorization"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "31015-sap-cloud-identity_sap-authorization-and-trust-management-service_sd"
+    },
+    {
+      "id": "sap-credential-store",
+      "name": "SAP Credential Store",
+      "aliases": [
+        "credential store",
+        "secrets",
+        "secret manager",
+        "vault",
+        "key store",
+        "credentials",
+        "API key store"
+      ],
+      "category": "Identity & Security",
+      "description": "Secure store for passwords, keys, and credentials consumed by BTP applications at runtime",
+      "btp_service_name": "credential-store",
+      "typical_connections": [
+        "cloud-foundry-runtime",
+        "kyma-runtime",
+        "sap-build-code"
+      ],
+      "drawio": {
+        "fillColor": "#f8cecc",
+        "strokeColor": "#b85450",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "security",
+        "entity_type": "SecretStore"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "31073-sap-cloud-identity_sap-credential-store_sd"
+    },
+    {
+      "id": "sap-ai-core",
+      "name": "SAP AI Core",
+      "aliases": [
+        "AI Core",
+        "AI infrastructure",
+        "ML training",
+        "model serving",
+        "GenAI Hub",
+        "LLM",
+        "machine learning",
+        "AI foundation"
+      ],
+      "category": "AI",
+      "description": "Managed AI infrastructure for training, deploying, and serving ML models and generative AI at enterprise scale",
+      "btp_service_name": "aicore",
+      "typical_connections": [
+        "sap-ai-launchpad",
+        "sap-hana-cloud",
+        "sap-datasphere",
+        "object-store"
+      ],
+      "drawio": {
+        "fillColor": "#d5e8d4",
+        "strokeColor": "#23862e",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "ai",
+        "entity_type": "AICore"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": null
+    },
+    {
+      "id": "sap-ai-launchpad",
+      "name": "SAP AI Launchpad",
+      "aliases": [
+        "AI Launchpad",
+        "AI admin",
+        "ML admin",
+        "model management",
+        "AI ops"
+      ],
+      "category": "AI",
+      "description": "Operations UI for managing AI Core deployments, model lifecycle, and monitoring",
+      "btp_service_name": "ai-launchpad",
+      "typical_connections": [
+        "sap-ai-core"
+      ],
+      "drawio": {
+        "fillColor": "#d5e8d4",
+        "strokeColor": "#23862e",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "tool",
+        "entity_type": "AILaunchpad"
+      },
+      "bpmn": {
+        "task_type": "userTask"
+      },
+      "icon_id": "20059-sap-ai-launchpad_sd"
+    },
+    {
+      "id": "sap-generative-ai-hub",
+      "name": "SAP Generative AI Hub",
+      "aliases": [
+        "GenAI Hub",
+        "generative AI",
+        "LLM proxy",
+        "GPT",
+        "Claude",
+        "foundation model",
+        "prompt engineering",
+        "AI hub"
+      ],
+      "category": "AI",
+      "description": "Unified access to foundation models (Claude, GPT-4, Llama, etc.) with enterprise guardrails via SAP AI Core",
+      "btp_service_name": "generative-ai-hub",
+      "typical_connections": [
+        "sap-ai-core",
+        "sap-hana-cloud",
+        "sap-build-code"
+      ],
+      "drawio": {
+        "fillColor": "#d5e8d4",
+        "strokeColor": "#23862e",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "ai",
+        "entity_type": "GenAIHub"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": null
+    },
+    {
+      "id": "sap-connectivity",
+      "name": "SAP Connectivity Service",
+      "aliases": [
+        "connectivity",
+        "on-premise connectivity",
+        "on-prem",
+        "RFC",
+        "HTTP destination",
+        "destination service",
+        "BTP destination"
+      ],
+      "category": "Connectivity",
+      "description": "Secure connectivity from BTP to on-premise systems via SAP Cloud Connector â€” HTTP, RFC, LDAP",
+      "btp_service_name": "connectivity",
+      "typical_connections": [
+        "sap-cloud-connector",
+        "sap-integration-suite",
+        "sap-build-code"
+      ],
+      "drawio": {
+        "fillColor": "#e1d5e7",
+        "strokeColor": "#6a0dad",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "connectivity",
+        "entity_type": "ConnectivityService"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "31113-sap-connectivity-service_sd"
+    },
+    {
+      "id": "sap-cloud-connector",
+      "name": "SAP Cloud Connector",
+      "aliases": [
+        "cloud connector",
+        "SCC",
+        "reverse proxy",
+        "on-premise link",
+        "secure tunnel",
+        "CC"
+      ],
+      "category": "Connectivity",
+      "render_zone": "external",
+      "description": "On-premise agent that creates a secure tunnel from BTP to internal systems â€” runs inside the customer network",
+      "btp_service_name": "cloud-connector",
+      "typical_connections": [
+        "sap-connectivity",
+        "sap-s4hana-cloud"
+      ],
+      "drawio": {
+        "fillColor": "#e1d5e7",
+        "strokeColor": "#6a0dad",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "connectivity",
+        "entity_type": "CloudConnector"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "generic-cloud-connector-sap"
+    },
+    {
+      "id": "sap-private-link",
+      "name": "SAP Private Link Service",
+      "aliases": [
+        "private link",
+        "private endpoint",
+        "PrivateLink",
+        "VPC peering",
+        "hyperscaler private link"
+      ],
+      "category": "Connectivity",
+      "description": "Private network connectivity from BTP to hyperscaler services (AWS, Azure, GCP) without public internet exposure",
+      "btp_service_name": "privatelink",
+      "typical_connections": [
+        "sap-hana-cloud",
+        "cloud-foundry-runtime",
+        "kyma-runtime"
+      ],
+      "drawio": {
+        "fillColor": "#e1d5e7",
+        "strokeColor": "#6a0dad",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "connectivity",
+        "entity_type": "PrivateLink"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "10042-sap-private-link-service_sd"
+    },
+    {
+      "id": "sap-analytics-cloud",
+      "name": "SAP Analytics Cloud",
+      "aliases": [
+        "SAC",
+        "analytics cloud",
+        "analytics",
+        "BI",
+        "business intelligence",
+        "reporting",
+        "dashboard",
+        "charts",
+        "planning"
+      ],
+      "category": "Analytics",
+      "description": "Cloud analytics platform combining BI, planning, and predictive analytics with SAP data integration",
+      "btp_service_name": "analytics-cloud",
+      "typical_connections": [
+        "sap-datasphere",
+        "sap-hana-cloud",
+        "sap-s4hana-cloud"
+      ],
+      "drawio": {
+        "fillColor": "#fff2cc",
+        "strokeColor": "#c8971d",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "analytics",
+        "entity_type": "AnalyticsApp"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "20061-sap-analytics-cloud_sd"
+    },
+    {
+      "id": "sap-mobile-services",
+      "name": "SAP Mobile Services",
+      "aliases": [
+        "mobile services",
+        "mobile",
+        "MDK",
+        "mobile app",
+        "mobile platform",
+        "offline app"
+      ],
+      "category": "Mobile",
+      "description": "Platform for developing and operating SAP mobile applications â€” MDK, Fiori mobile, offline sync",
+      "btp_service_name": "mobileservices",
+      "typical_connections": [
+        "sap-hana-cloud",
+        "sap-xsuaa",
+        "sap-ias"
+      ],
+      "drawio": {
+        "fillColor": "#dae8fc",
+        "strokeColor": "#0054a6",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "mobile",
+        "entity_type": "MobileApp"
+      },
+      "bpmn": {
+        "task_type": "userTask"
+      },
+      "icon_id": "20091-sap-mobile-services_sd.svg"
+    },
+    {
+      "id": "sap-dms",
+      "name": "SAP Document Management Service",
+      "aliases": [
+        "DMS",
+        "document management",
+        "document store",
+        "ECM",
+        "content management",
+        "file management"
+      ],
+      "category": "Document Management",
+      "description": "Cloud document repository integrated with SAP workflows and content federation",
+      "btp_service_name": "sdm",
+      "typical_connections": [
+        "sap-build-process-automation",
+        "sap-hana-cloud",
+        "sap-build-work-zone-adv"
+      ],
+      "drawio": {
+        "fillColor": "#dae8fc",
+        "strokeColor": "#0054a6",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "storage",
+        "entity_type": "DocumentStore"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "31027-sap-document-management-service_sd"
+    },
+    {
+      "id": "sap-advanced-event-mesh",
+      "name": "SAP Advanced Event Mesh",
+      "aliases": [
+        "AEM",
+        "advanced event mesh",
+        "event streaming",
+        "Solace",
+        "broker",
+        "event broker",
+        "streaming",
+        "Kafka"
+      ],
+      "category": "Messaging",
+      "description": "Enterprise-grade event broker for high-throughput, mission-critical event streaming across hybrid landscapes",
+      "btp_service_name": "adsrestapi",
+      "typical_connections": [
+        "sap-integration-suite",
+        "sap-build-process-automation",
+        "kyma-runtime"
+      ],
+      "drawio": {
+        "fillColor": "#ffe6cc",
+        "strokeColor": "#d6761a",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "messaging",
+        "entity_type": "EventBroker"
+      },
+      "bpmn": {
+        "task_type": "sendTask"
+      },
+      "icon_id": "32032-advanced-event-mesh_sd"
+    },
+    {
+      "id": "sap-s4hana-cloud",
+      "name": "SAP S/4HANA Cloud",
+      "aliases": [
+        "S4",
+        "S/4",
+        "S4HANA",
+        "ERP",
+        "SAP ERP",
+        "backend",
+        "core ERP",
+        "business suite",
+        "S/4HANA"
+      ],
+      "category": "External Systems",
+      "description": "SAP core ERP system â€” reference as an external system that BTP integrates with",
+      "btp_service_name": "s4hana-cloud",
+      "typical_connections": [
+        "sap-integration-suite",
+        "sap-event-mesh",
+        "sap-connectivity",
+        "sap-build-process-automation"
+      ],
+      "drawio": {
+        "fillColor": "#f5f5f5",
+        "strokeColor": "#666666",
+        "fontColor": "#333333",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "external",
+        "entity_type": "ERPSystem"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "generic-on-premise-sap"
+    },
+    {
+      "id": "actor-user",
+      "name": "User",
+      "aliases": [
+        "user",
+        "users",
+        "actor",
+        "end user",
+        "person",
+        "client",
+        "browser",
+        "customer"
+      ],
+      "category": "Actors & External",
+      "description": "Human actor interacting with the system â€” rendered as a generic user icon, not a BTP service",
+      "btp_service_name": null,
+      "typical_connections": [
+        "sap-build-work-zone-std",
+        "sap-mobile-services",
+        "sap-analytics-cloud"
+      ],
+      "drawio": {
+        "fillColor": "#FFFFFF",
+        "strokeColor": "#0070F2",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=16",
+        "width": 80,
+        "height": 80
+      },
+      "cap": {
+        "service_type": "external",
+        "entity_type": "Actor"
+      },
+      "bpmn": {
+        "task_type": "userTask"
+      },
+      "icon_id": "generic-user-sap",
+      "is_actor": true
+    },
+    {
+      "id": "sap-task-center",
+      "name": "SAP Task Center",
+      "aliases": [
+        "task center",
+        "central inbox",
+        "unified inbox",
+        "approval inbox"
+      ],
+      "category": "Work Zone",
+      "description": "Centralized inbox aggregating tasks and approvals from SAP and non-SAP systems into one place",
+      "btp_service_name": "task-center",
+      "typical_connections": [
+        "sap-build-work-zone-std",
+        "sap-s4hana-cloud",
+        "sap-build-process-automation"
+      ],
+      "drawio": {
+        "fillColor": "#f5f5f5",
+        "strokeColor": "#666666",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "portal",
+        "entity_type": "TaskInbox"
+      },
+      "bpmn": {
+        "task_type": "userTask"
+      },
+      "icon_id": "31046-sap-task-center sd"
+    },
+    {
+      "id": "sap-document-ai",
+      "name": "SAP Document AI",
+      "aliases": [
+        "document ai",
+        "document information extraction",
+        "document extraction"
+      ],
+      "category": "AI",
+      "description": "AI-powered extraction of structured data from unstructured documents (invoices, forms, contracts)",
+      "btp_service_name": "document-ai",
+      "typical_connections": [
+        "sap-ai-core",
+        "sap-build-process-automation",
+        "sap-s4hana-cloud"
+      ],
+      "drawio": {
+        "fillColor": "#f5f5f5",
+        "strokeColor": "#666666",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "ai",
+        "entity_type": "DocumentExtraction"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "10004-document-information-extraction_sd"
+    },
+    {
+      "id": "sap-business-accelerator-hub",
+      "name": "SAP Business Accelerator Hub",
+      "aliases": [
+        "business accelerator hub",
+        "accelerator hub",
+        "api business hub",
+        "Developer Hub",
+        "developer hub"
+      ],
+      "category": "Integration",
+      "description": "Discovery catalog of pre-built APIs, integrations, events, and sample code for SAP solutions",
+      "btp_service_name": "business-accelerator-hub",
+      "typical_connections": [
+        "sap-integration-suite",
+        "sap-api-management"
+      ],
+      "drawio": {
+        "fillColor": "#f5f5f5",
+        "strokeColor": "#666666",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "catalog",
+        "entity_type": "ContentHub"
+      },
+      "bpmn": {
+        "task_type": "userTask"
+      },
+      "icon_id": "32153-sap-business-accelerator- hub_sd"
+    },
+    {
+      "id": "sap-html5-app-repository",
+      "name": "HTML5 Application Repository service",
+      "aliases": [
+        "html5 app repository",
+        "html5 application repository",
+        "app repository"
+      ],
+      "category": "Development",
+      "description": "Stores and serves HTML5/Fiori UI application resources deployed from BTP applications",
+      "btp_service_name": "html5-apps-repo",
+      "typical_connections": [
+        "sap-build-work-zone-std",
+        "sap-build-code"
+      ],
+      "drawio": {
+        "fillColor": "#f5f5f5",
+        "strokeColor": "#666666",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "storage",
+        "entity_type": "UIRepository"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "10030-sap-html5-application-repository-service-for-sap-btp sd"
+    },
+    {
+      "id": "sap-cloud-logging",
+      "name": "SAP Cloud Logging",
+      "aliases": [
+        "cloud logging"
+      ],
+      "category": "DevOps & Operations",
+      "description": "Centralized log management and analysis for applications running on BTP",
+      "btp_service_name": "cloud-logging",
+      "typical_connections": [
+        "cloud-foundry-runtime",
+        "kyma-runtime"
+      ],
+      "drawio": {
+        "fillColor": "#f5f5f5",
+        "strokeColor": "#666666",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "observability",
+        "entity_type": "LogStore"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "31112-sap-cloud-logging_sd"
+    },
+    {
+      "id": "sap-alert-notification",
+      "name": "SAP Alert Notification service for SAP BTP",
+      "aliases": [
+        "alert notification"
+      ],
+      "category": "DevOps & Operations",
+      "description": "Routes alerts about application and platform events to email, Slack, webhooks, and other channels",
+      "btp_service_name": "alert-notification",
+      "typical_connections": [
+        "cloud-foundry-runtime",
+        "kyma-runtime",
+        "sap-cloud-logging"
+      ],
+      "drawio": {
+        "fillColor": "#f5f5f5",
+        "strokeColor": "#666666",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "observability",
+        "entity_type": "AlertRouter"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "31060-sap-alert-notification-service-for-sap-btp_sd"
+    },
+    {
+      "id": "sap-cloud-transport-management",
+      "name": "SAP Cloud Transport Management",
+      "aliases": [
+        "cloud transport management",
+        "transport management"
+      ],
+      "category": "DevOps & Operations",
+      "description": "Manages and automates the transport of content (integration flows, extensions) across BTP landscapes",
+      "btp_service_name": "transport-management",
+      "typical_connections": [
+        "sap-integration-suite",
+        "sap-build-code"
+      ],
+      "drawio": {
+        "fillColor": "#f5f5f5",
+        "strokeColor": "#666666",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "devops",
+        "entity_type": "TransportPipeline"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "20076-sap-cloud-transport-management_sd"
+    },
+    {
+      "id": "app-router",
+      "name": "Application Router",
+      "aliases": [
+        "app router",
+        "application router"
+      ],
+      "category": "Development",
+      "description": "Single entry point that routes requests to backend microservices and handles authentication for a multi-app deployment",
+      "btp_service_name": "app-router",
+      "typical_connections": [
+        "cloud-foundry-runtime",
+        "sap-xsuaa",
+        "sap-build-code"
+      ],
+      "drawio": {
+        "fillColor": "#f5f5f5",
+        "strokeColor": "#666666",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "runtime",
+        "entity_type": "AppRouter"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": null
+    },
+    {
+      "id": "sap-identity-provisioning",
+      "name": "SAP Cloud Identity Services - Identity Provisioning",
+      "aliases": [
+        "identity provisioning",
+        "identity provisoning"
+      ],
+      "category": "Identity & Security",
+      "description": "Automates provisioning and de-provisioning of user identities across SAP and non-SAP systems",
+      "btp_service_name": "identity-provisioning",
+      "typical_connections": [
+        "sap-ias",
+        "sap-s4hana-cloud"
+      ],
+      "drawio": {
+        "fillColor": "#f5f5f5",
+        "strokeColor": "#666666",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "identity",
+        "entity_type": "IdentityProvisioning"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "32072-sap-identity-provisoning"
+    },
+    {
+      "id": "sap-identity-directory",
+      "name": "SAP Cloud Identity Services - Identity Directory",
+      "aliases": [
+        "identity directory"
+      ],
+      "category": "Identity & Security",
+      "description": "Central user and group store underlying SAP Cloud Identity Services",
+      "btp_service_name": "identity-directory",
+      "typical_connections": [
+        "sap-ias",
+        "sap-identity-provisioning"
+      ],
+      "drawio": {
+        "fillColor": "#f5f5f5",
+        "strokeColor": "#666666",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "identity",
+        "entity_type": "IdentityDirectory"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "32128-sap-identity-directory"
+    },
+    {
+      "id": "sap-joule",
+      "name": "Joule",
+      "aliases": [
+        "joule"
+      ],
+      "category": "AI",
+      "description": "SAP's generative-AI digital assistant, embedded across SAP applications for natural-language interaction",
+      "btp_service_name": "joule",
+      "typical_connections": [
+        "sap-ai-core",
+        "sap-generative-ai-hub",
+        "sap-build-work-zone-std"
+      ],
+      "drawio": {
+        "fillColor": "#f5f5f5",
+        "strokeColor": "#666666",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "ai",
+        "entity_type": "DigitalAssistant"
+      },
+      "bpmn": {
+        "task_type": "userTask"
+      },
+      "icon_id": "31115-sap-digital-assistant_sd"
+    },
+    {
+      "id": "sap-joule-studio",
+      "name": "Joule Studio",
+      "aliases": [
+        "joule studio"
+      ],
+      "category": "AI",
+      "description": "Development environment for building and extending Joule skills and AI agents",
+      "btp_service_name": "joule-studio",
+      "typical_connections": [
+        "sap-joule",
+        "sap-ai-core"
+      ],
+      "drawio": {
+        "fillColor": "#f5f5f5",
+        "strokeColor": "#666666",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "tool",
+        "entity_type": "AgentStudio"
+      },
+      "bpmn": {
+        "task_type": "userTask"
+      },
+      "icon_id": "35158-joule studio_sd"
+    },
+    {
+      "id": "sap-ariba",
+      "name": "SAP Ariba",
+      "aliases": [
+        "ariba"
+      ],
+      "category": "External Systems",
+      "render_zone": "external",
+      "description": "SAP's cloud procurement and supplier collaboration suite â€” referenced as an external system BTP integrates with",
+      "btp_service_name": "ariba",
+      "typical_connections": [
+        "sap-integration-suite",
+        "sap-event-mesh"
+      ],
+      "drawio": {
+        "fillColor": "#f5f5f5",
+        "strokeColor": "#666666",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "external",
+        "entity_type": "ProcurementSystem"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": null
+    },
+    {
+      "id": "on-premise-zone",
+      "name": "On-Premise Solutions",
+      "aliases": [
+        "on premise solutions",
+        "your private cloud data center",
+        "private cloud data center",
+        "on premise",
+        "private cloud",
+        "data center",
+        "customer network"
+      ],
+      "category": "External Systems",
+      "render_zone": "external",
+      "description": "Generic marker for the customer's own on-premise or private-cloud infrastructure, behind their firewall",
+      "btp_service_name": null,
+      "typical_connections": [
+        "sap-cloud-connector",
+        "sap-s4hana-cloud"
+      ],
+      "drawio": {
+        "fillColor": "#f5f5f5",
+        "strokeColor": "#666666",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "external",
+        "entity_type": "OnPremiseZone"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "generic-on-premise-sap"
+    }
+  ]
+}

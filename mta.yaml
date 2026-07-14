@@ -1,0 +1,33 @@
+_schema-version: "3.1"
+ID: sketch-to-sap-btp
+version: 0.3.0
+description: Convert architecture sketches and Mermaid diagrams into SAP BTP Solution Diagrams
+
+parameters:
+  enable-parallel-deployments: true
+
+modules:
+
+  # ── CAP backend ────────────────────────────────────────────────────────────
+  - name: sketch-to-sap-btp-srv
+    type: nodejs
+    path: .
+    parameters:
+      memory: 256M
+      disk-quota: 512M
+    build-parameters:
+      builder: custom
+      commands:
+        - npm ci --production
+        - npx cds build --production
+      ignore:
+        - ".env"
+        - "node_modules/"
+        - "*.mtar"
+        - ".git"
+        - "gen/"
+    provides:
+      - name: srv-url
+        properties:
+          srv-url: "${default-url}"
+

@@ -1,0 +1,11 @@
+{
+  "welcomeFile": "/index.html",
+  "authenticationMethod": "none",
+  "routes": [
+    {
+      "source": "^(.*)$",
+      "destination": "sketch-to-sap-btp-srv",
+      "authenticationType": "none"
+    }
+  ]
+}

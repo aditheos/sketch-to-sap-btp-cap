@@ -1,0 +1,23 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "aditheos.sketch.to.sap.btp",
+    "type": "application",
+    "title": "Sketch to SAP BTP",
+    "description": "Convert architecture sketches and Mermaid diagrams into SAP BTP Solution Diagrams",
+    "applicationVersion": {
+      "version": "0.2.0"
+    }
+  },
+  "sap.ui": {
+    "technology": "HTML5",
+    "supportedThemes": ["sap_horizon", "sap_horizon_dark"]
+  },
+  "sap.fiori": {
+    "archeType": "standalone"
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "aditheos.sketch.to.sap.btp"
+  }
+}

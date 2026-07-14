@@ -1,0 +1,6126 @@
+[
+  {
+    "file": "RA0001_designing-event-driven-applications__eda-enterprise.drawio",
+    "components": [
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-36",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-49",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-56",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-57",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-58",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-83",
+        "label": "SAP HANA Cloud"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-84",
+        "label": "SAP Application Logging service"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-85",
+        "label": "SAP Authorization and Trust Management service"
+      },
+      {
+        "id": "xHDvtcQ9hPAz8Bhr13sM-2",
+        "label": "SAP Build"
+      },
+      {
+        "id": "xHDvtcQ9hPAz8Bhr13sM-12",
+        "label": "SAP Build Apps"
+      },
+      {
+        "id": "xHDvtcQ9hPAz8Bhr13sM-20",
+        "label": "SAP Build Code"
+      },
+      {
+        "id": "xHDvtcQ9hPAz8Bhr13sM-22",
+        "label": "SAP Build Work Zone"
+      },
+      {
+        "id": "xHDvtcQ9hPAz8Bhr13sM-7",
+        "label": "SAP Build Process Automation"
+      },
+      {
+        "id": "EfSXCmGrHmuBxhQIsj4f-49",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "GQB5udVmQlyR0Qnnkem_-2",
+        "label": "SAP Build"
+      },
+      {
+        "id": "xHDvtcQ9hPAz8Bhr13sM-33",
+        "label": "SAP S/4HANA Cloud Public Edition"
+      },
+      {
+        "id": "GQB5udVmQlyR0Qnnkem_-9",
+        "label": "SAP S/4HANA Cloud Private Edition"
+      },
+      {
+        "id": "GQB5udVmQlyR0Qnnkem_-11",
+        "label": "SAP Omnichannel Sales Transfer and Audit"
+      },
+      {
+        "id": "GQB5udVmQlyR0Qnnkem_-13",
+        "label": "SAP Order Management Foundation"
+      },
+      {
+        "id": "GQB5udVmQlyR0Qnnkem_-15",
+        "label": "SAP Credit Agency Integration"
+      },
+      {
+        "id": "GQB5udVmQlyR0Qnnkem_-17",
+        "label": "Subscription Billing"
+      },
+      {
+        "id": "GQB5udVmQlyR0Qnnkem_-19",
+        "label": "SAP SuccessFactors"
+      },
+      {
+        "id": "EfSXCmGrHmuBxhQIsj4f-4",
+        "label": "Developer Hub"
+      },
+      {
+        "id": "EfSXCmGrHmuBxhQIsj4f-6",
+        "label": "Event Mesh capability"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-79",
+        "label": "SAP Integration Suite, advance event mesh"
+      }
+    ],
+    "connections": [
+      {
+        "source": "0VHGaXal8tBNUMvMjzwr-46",
+        "target": "0VHGaXal8tBNUMvMjzwr-49",
+        "label": ""
+      },
+      {
+        "source": "xHDvtcQ9hPAz8Bhr13sM-1",
+        "target": "xHDvtcQ9hPAz8Bhr13sM-39",
+        "label": ""
+      },
+      {
+        "source": "xHDvtcQ9hPAz8Bhr13sM-39",
+        "target": "GQB5udVmQlyR0Qnnkem_-23",
+        "label": ""
+      },
+      {
+        "source": "EfSXCmGrHmuBxhQIsj4f-8",
+        "target": "EfSXCmGrHmuBxhQIsj4f-10",
+        "label": ""
+      },
+      {
+        "source": "EfSXCmGrHmuBxhQIsj4f-10",
+        "target": "EfSXCmGrHmuBxhQIsj4f-11",
+        "label": ""
+      },
+      {
+        "source": "EfSXCmGrHmuBxhQIsj4f-11",
+        "target": "EfSXCmGrHmuBxhQIsj4f-8",
+        "label": ""
+      },
+      {
+        "source": "GQB5udVmQlyR0Qnnkem_-28",
+        "target": "GQB5udVmQlyR0Qnnkem_-23",
+        "label": ""
+      },
+      {
+        "source": "0VHGaXal8tBNUMvMjzwr-46",
+        "target": "GQB5udVmQlyR0Qnnkem_-28",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0001_designing-event-driven-applications__eda-ref-arch.drawio",
+    "components": [
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-36",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-49",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-56",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-57",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-58",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-80",
+        "label": "SAP Build Work Zone, advanced edition"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-81",
+        "label": "HTML5 App Repository"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-83",
+        "label": "SAP HANA Cloud"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-84",
+        "label": "SAP Application Logging service"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-85",
+        "label": "SAP Authorization and Trust Management service"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-98",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-99",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-141",
+        "label": "3rd Party Applications"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-142",
+        "label": "3rd Party Enterprise Apps"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-143",
+        "label": "Productivity Tools"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-398",
+        "label": "3rd Party Platforms"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-402",
+        "label": "SAP On-Premise Solutions"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-138",
+        "label": "Other IoT Plaforms"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-144",
+        "label": "Hyperscaler IoT Platforms Microsoft Azure/ AWS"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-405",
+        "label": "Systems"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-406",
+        "label": "Applications"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-498",
+        "label": "SAP Destination service"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-499",
+        "label": "SAP Connectivity service"
+      },
+      {
+        "id": "EfSXCmGrHmuBxhQIsj4f-4",
+        "label": "Developer Hub"
+      },
+      {
+        "id": "EfSXCmGrHmuBxhQIsj4f-6",
+        "label": "Event Mesh capability"
+      },
+      {
+        "id": "0VHGaXal8tBNUMvMjzwr-79",
+        "label": "SAP Integration Suite, advance event mesh"
+      },
+      {
+        "id": "EfSXCmGrHmuBxhQIsj4f-49",
+        "label": "SAP Solutions"
+      },
+      {
+        "id": "EfSXCmGrHmuBxhQIsj4f-53",
+        "label": "SAP On-Premise Solutions"
+      },
+      {
+        "id": "EfSXCmGrHmuBxhQIsj4f-42",
+        "label": "3rd Party Applications"
+      },
+      {
+        "id": "EfSXCmGrHmuBxhQIsj4f-43",
+        "label": "3rd Party Enterprise Apps"
+      },
+      {
+        "id": "EfSXCmGrHmuBxhQIsj4f-44",
+        "label": "Productivity Tools"
+      },
+      {
+        "id": "EfSXCmGrHmuBxhQIsj4f-55",
+        "label": "Other IoT Plaforms"
+      },
+      {
+        "id": "EfSXCmGrHmuBxhQIsj4f-56",
+        "label": "Hyperscaler IoT Platforms Microsoft Azure/ AWS"
+      },
+      {
+        "id": "T_uGWB_w0MuJ7aTzuxAF-2",
+        "label": "SUBSCRIBE EVENTS from SAP Event Mesh/ SAP AEM"
+      },
+      {
+        "id": "aN3v19qyoJ1CZQz01gua-3",
+        "label": "SAP Standard Events, AIF, Event Add-on for ERP PUBLISH EVENTS from SAP On-Premise/Private Landscapes"
+      },
+      {
+        "id": "aN3v19qyoJ1CZQz01gua-5",
+        "label": "Advanced Event Mesh Connectors PUBLISH EVENTS from third-party applications"
+      }
+    ],
+    "connections": [
+      {
+        "source": "0VHGaXal8tBNUMvMjzwr-499",
+        "target": "EfSXCmGrHmuBxhQIsj4f-39",
+        "label": ""
+      },
+      {
+        "source": "0VHGaXal8tBNUMvMjzwr-498",
+        "target": "EfSXCmGrHmuBxhQIsj4f-59",
+        "label": ""
+      },
+      {
+        "source": "0VHGaXal8tBNUMvMjzwr-46",
+        "target": "0VHGaXal8tBNUMvMjzwr-51",
+        "label": ""
+      },
+      {
+        "source": "0VHGaXal8tBNUMvMjzwr-46",
+        "target": "0VHGaXal8tBNUMvMjzwr-35",
+        "label": ""
+      },
+      {
+        "source": "0VHGaXal8tBNUMvMjzwr-88",
+        "target": "0VHGaXal8tBNUMvMjzwr-66",
+        "label": ""
+      },
+      {
+        "source": "0VHGaXal8tBNUMvMjzwr-103",
+        "target": "0VHGaXal8tBNUMvMjzwr-46",
+        "label": ""
+      },
+      {
+        "source": "0VHGaXal8tBNUMvMjzwr-51",
+        "target": "EfSXCmGrHmuBxhQIsj4f-39",
+        "label": ""
+      },
+      {
+        "source": "0VHGaXal8tBNUMvMjzwr-498",
+        "target": "0VHGaXal8tBNUMvMjzwr-499",
+        "label": ""
+      },
+      {
+        "source": "0VHGaXal8tBNUMvMjzwr-499",
+        "target": "0VHGaXal8tBNUMvMjzwr-503",
+        "label": ""
+      },
+      {
+        "source": "EfSXCmGrHmuBxhQIsj4f-8",
+        "target": "EfSXCmGrHmuBxhQIsj4f-10",
+        "label": ""
+      },
+      {
+        "source": "EfSXCmGrHmuBxhQIsj4f-10",
+        "target": "EfSXCmGrHmuBxhQIsj4f-11",
+        "label": ""
+      },
+      {
+        "source": "EfSXCmGrHmuBxhQIsj4f-11",
+        "target": "EfSXCmGrHmuBxhQIsj4f-8",
+        "label": ""
+      },
+      {
+        "source": "EfSXCmGrHmuBxhQIsj4f-19",
+        "target": "EfSXCmGrHmuBxhQIsj4f-7",
+        "label": ""
+      },
+      {
+        "source": "0VHGaXal8tBNUMvMjzwr-356",
+        "target": "EfSXCmGrHmuBxhQIsj4f-7",
+        "label": ""
+      },
+      {
+        "source": "0VHGaXal8tBNUMvMjzwr-356",
+        "target": "0VHGaXal8tBNUMvMjzwr-66",
+        "label": ""
+      },
+      {
+        "source": "EfSXCmGrHmuBxhQIsj4f-39",
+        "target": "EfSXCmGrHmuBxhQIsj4f-7",
+        "label": ""
+      },
+      {
+        "source": "T_uGWB_w0MuJ7aTzuxAF-2",
+        "target": "EfSXCmGrHmuBxhQIsj4f-6",
+        "label": ""
+      },
+      {
+        "source": "EfSXCmGrHmuBxhQIsj4f-1",
+        "target": "T_uGWB_w0MuJ7aTzuxAF-5",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0001_designing-event-driven-applications__eda-strategy.drawio",
+    "components": [
+      {
+        "id": "vVxKKb96vQYj8wLMnHyf-9",
+        "label": "SAP Cloud Application Event Hub"
+      },
+      {
+        "id": "vVxKKb96vQYj8wLMnHyf-11",
+        "label": "3rd Party Broker"
+      },
+      {
+        "id": "vVxKKb96vQYj8wLMnHyf-18",
+        "label": "3rd Party Platforms"
+      },
+      {
+        "id": "vVxKKb96vQYj8wLMnHyf-25",
+        "label": "3rd Party Platforms"
+      },
+      {
+        "id": "vVxKKb96vQYj8wLMnHyf-26",
+        "label": "3rd Party Application"
+      },
+      {
+        "id": "vVxKKb96vQYj8wLMnHyf-29",
+        "label": "3rd Party Platforms"
+      },
+      {
+        "id": "vVxKKb96vQYj8wLMnHyf-30",
+        "label": "SAP on-premise Application"
+      },
+      {
+        "id": "vVxKKb96vQYj8wLMnHyf-33",
+        "label": "3rd Party Platforms"
+      },
+      {
+        "id": "vVxKKb96vQYj8wLMnHyf-34",
+        "label": "SAP Cloud Application"
+      },
+      {
+        "id": "vVxKKb96vQYj8wLMnHyf-37",
+        "label": "SAP Integration Suite product family"
+      },
+      {
+        "id": "vVxKKb96vQYj8wLMnHyf-38",
+        "label": "SAP BTP"
+      },
+      {
+        "id": "vVxKKb96vQYj8wLMnHyf-40",
+        "label": "3rd Party Platforms"
+      },
+      {
+        "id": "vVxKKb96vQYj8wLMnHyf-41",
+        "label": "App on SAP BTP built by Partners or Customers"
+      }
+    ],
+    "connections": [
+      {
+        "source": "vVxKKb96vQYj8wLMnHyf-37",
+        "target": "vVxKKb96vQYj8wLMnHyf-11",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0002_architecting-multi-region-ha-dr-resiliency-patterns.drawio",
+    "components": [
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-7",
+        "label": "https://primary.ci. cfapps.us20.hana. ondemand"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-18",
+        "label": "SAP Custom Domain service"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-19",
+        "label": "DNS Service"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-46",
+        "label": "https://primary.ci. cfapps.us20.hana. ondemand"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-49",
+        "label": "https://primary.ci. cfapps.us20.hana. ondemand"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-53",
+        "label": "Multi-Region Manager (MRM)"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-57",
+        "label": "Multi-Region Manager (MRM)"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-62",
+        "label": "Cloud Integration capability within SAP Integration Suite"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-78",
+        "label": "Cloud Integration capability within SAP Integration Suite"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-100",
+        "label": "SAP Connectivity service"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-101",
+        "label": "SAP Destination service"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-102",
+        "label": "SAP Continuous Integration and Delivery"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-104",
+        "label": "SAP HANA Cloud"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-105",
+        "label": "SAP HANA Cloud"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-106",
+        "label": "SAP Destination service"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-108",
+        "label": "SAP Connectivity service"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-109",
+        "label": "SAP Build Work Zone, standard edition"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-111",
+        "label": "SAP Custom Domain service"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-112",
+        "label": "SAP Build Work Zone, standard edition"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-113",
+        "label": "SAP Integration Suite, advanced event mesh"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-115",
+        "label": "SAP Integration Suite, advanced event mesh"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-119",
+        "label": "https://primary.ci. cfapps.us20.hana. ondemand"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-120",
+        "label": "https://primary.ci. cfapps.us20.hana. ondemand"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-123",
+        "label": "Cloud Connector"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-129",
+        "label": "Legend"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-145",
+        "label": "https://primary.ci. cfapps.us20.hana. ondemand"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-148",
+        "label": "SAP Cloud Identity Services"
+      },
+      {
+        "id": "cV9vO5JgV9M1bDaGJS2Y-154",
+        "label": "SAP Cloud Identity Services"
+      },
+      {
+        "id": "12BTiJHW20yHsTcD9OAJ-0",
+        "label": "SAP Cloud Application Programming Model"
+      },
+      {
+        "id": "12BTiJHW20yHsTcD9OAJ-1",
+        "label": "SAP Cloud Application Programming Model"
+      }
+    ],
+    "connections": [
+      {
+        "source": "cV9vO5JgV9M1bDaGJS2Y-34",
+        "target": "cV9vO5JgV9M1bDaGJS2Y-111",
+        "label": ""
+      },
+      {
+        "source": "cV9vO5JgV9M1bDaGJS2Y-36",
+        "target": "cV9vO5JgV9M1bDaGJS2Y-18",
+        "label": ""
+      },
+      {
+        "source": "cV9vO5JgV9M1bDaGJS2Y-55",
+        "target": "cV9vO5JgV9M1bDaGJS2Y-51",
+        "label": ""
+      },
+      {
+        "source": "cV9vO5JgV9M1bDaGJS2Y-101",
+        "target": "cV9vO5JgV9M1bDaGJS2Y-100",
+        "label": ""
+      },
+      {
+        "source": "cV9vO5JgV9M1bDaGJS2Y-106",
+        "target": "cV9vO5JgV9M1bDaGJS2Y-108",
+        "label": ""
+      },
+      {
+        "source": "cV9vO5JgV9M1bDaGJS2Y-106",
+        "target": "cV9vO5JgV9M1bDaGJS2Y-47",
+        "label": ""
+      },
+      {
+        "source": "cV9vO5JgV9M1bDaGJS2Y-101",
+        "target": "cV9vO5JgV9M1bDaGJS2Y-47",
+        "label": ""
+      },
+      {
+        "source": "cV9vO5JgV9M1bDaGJS2Y-118",
+        "target": "cV9vO5JgV9M1bDaGJS2Y-120",
+        "label": ""
+      },
+      {
+        "source": "cV9vO5JgV9M1bDaGJS2Y-146",
+        "target": "cV9vO5JgV9M1bDaGJS2Y-145",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0003_federated-machine-learning-with-sap-datasphere.drawio",
+    "components": [
+      {
+        "id": "FTVYmsemLhQfNNow4BaC-91",
+        "label": "AI Core"
+      },
+      {
+        "id": "FTVYmsemLhQfNNow4BaC-93",
+        "label": "AI Launchpad"
+      },
+      {
+        "id": "FTVYmsemLhQfNNow4BaC-99",
+        "label": "Generative AI Hub"
+      },
+      {
+        "id": "FTVYmsemLhQfNNow4BaC-100",
+        "label": "Generative AI Hub"
+      },
+      {
+        "id": "FTVYmsemLhQfNNow4BaC-102",
+        "label": "Data Federation"
+      },
+      {
+        "id": "FTVYmsemLhQfNNow4BaC-103",
+        "label": "Virtual Models"
+      },
+      {
+        "id": "FTVYmsemLhQfNNow4BaC-104",
+        "label": "Open Schema"
+      },
+      {
+        "id": "FTVYmsemLhQfNNow4BaC-107",
+        "label": "Non-SAP Data Sources"
+      },
+      {
+        "id": "FTVYmsemLhQfNNow4BaC-110",
+        "label": "Data Federation & Replication"
+      },
+      {
+        "id": "FTVYmsemLhQfNNow4BaC-133",
+        "label": "Generative AI Hub"
+      },
+      {
+        "id": "FTVYmsemLhQfNNow4BaC-135",
+        "label": "Generative AI Hub"
+      },
+      {
+        "id": "FTVYmsemLhQfNNow4BaC-154",
+        "label": "Connectivity Core"
+      },
+      {
+        "id": "FTVYmsemLhQfNNow4BaC-155",
+        "label": "Training, Deployment, Prediction"
+      },
+      {
+        "id": "FTVYmsemLhQfNNow4BaC-156",
+        "label": "Pandas, PySpark support"
+      },
+      {
+        "id": "FTVYmsemLhQfNNow4BaC-157",
+        "label": "NVIDIA RAPIDS TM *cuDF, *cuML, and XGBoost"
+      },
+      {
+        "id": "FTVYmsemLhQfNNow4BaC-158",
+        "label": "Deployment to AI Core"
+      },
+      {
+        "id": "FTVYmsemLhQfNNow4BaC-112",
+        "label": "SAP Data Sources"
+      },
+      {
+        "id": "FTVYmsemLhQfNNow4BaC-113",
+        "label": "SAP BW/4HANA"
+      },
+      {
+        "id": "FTVYmsemLhQfNNow4BaC-114",
+        "label": "SAP S/4HANA"
+      },
+      {
+        "id": "J7_uY0JEnjW42FnnlikA-176",
+        "label": "Generative AI Hub"
+      },
+      {
+        "id": "J7_uY0JEnjW42FnnlikA-179",
+        "label": "Generative AI Hub"
+      }
+    ],
+    "connections": [
+      {
+        "source": "FTVYmsemLhQfNNow4BaC-112",
+        "target": "FTVYmsemLhQfNNow4BaC-110",
+        "label": ""
+      },
+      {
+        "source": "FTVYmsemLhQfNNow4BaC-107",
+        "target": "FTVYmsemLhQfNNow4BaC-110",
+        "label": ""
+      },
+      {
+        "source": "FTVYmsemLhQfNNow4BaC-158",
+        "target": "FTVYmsemLhQfNNow4BaC-91",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0004_explore-your-hyperscaler-data-with-sap-business-data-cloud.drawio",
+    "components": [
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-183",
+        "label": "Business Data Fabric"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-187",
+        "label": "Intelligent Applications 360 Analytics, Extended Planning, 3rd Party Apps"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-188",
+        "label": "Amazon Redshift"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-191",
+        "label": "Google BigQuery"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-192",
+        "label": "Azure Data Lake"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-193",
+        "label": "Amazon S3"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-194",
+        "label": "Google Cloud Storage"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-196",
+        "label": "SAP Data Sources"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-198",
+        "label": "SAP Data Sources"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-200",
+        "label": "SAP Data Sources"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-201",
+        "label": "SAP Data Sources"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-202",
+        "label": "SAP Data Sources"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-213",
+        "label": "AI Copilots"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-216",
+        "label": "SAP BW PCE"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-220",
+        "label": "SAP Databricks"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-224",
+        "label": "SAP Datasphere"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-228",
+        "label": "SAP BDC Cockpit"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-232",
+        "label": "SAP Analytics Cloud"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-236",
+        "label": "Business Data Cloud"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-241",
+        "label": "SAP S/4HANA PCE"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-242",
+        "label": "SAP HCM"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-243",
+        "label": "SAP ISBN"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-244",
+        "label": "SAP I&CX"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-245",
+        "label": "SAP Successfactors"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-246",
+        "label": "SAP Concur"
+      },
+      {
+        "id": "GdgkTtZatyXSoOEwFdd1-6",
+        "label": "Object Store Data Ingestion"
+      },
+      {
+        "id": "GdgkTtZatyXSoOEwFdd1-8",
+        "label": "Custom Data Products (managed by SAP Datasphere )"
+      },
+      {
+        "id": "GdgkTtZatyXSoOEwFdd1-10",
+        "label": "SAP Data Products (data sync managed by SAP LoB Apps)"
+      },
+      {
+        "id": "LKWPKKF19wJKWOmKENbk-1",
+        "label": "SAP BDC Connect Zero Copy"
+      },
+      {
+        "id": "LKWPKKF19wJKWOmKENbk-2",
+        "label": "SAP Data Sources"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-190",
+        "label": "Amazon Athena"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-203",
+        "label": "SAP Data Sources"
+      },
+      {
+        "id": "r5T437RFXBuxKpHEOjJj-189",
+        "label": "Microsoft Fabric"
+      },
+      {
+        "id": "mz1b3XgB2y6r06oTXpvb-1",
+        "label": "Snowflake"
+      },
+      {
+        "id": "mz1b3XgB2y6r06oTXpvb-4",
+        "label": "SAP Data Sources"
+      },
+      {
+        "id": "-707In3eb82gqblMD5OV-3",
+        "label": "databricks"
+      },
+      {
+        "id": "-707In3eb82gqblMD5OV-11",
+        "label": "SAP Data Sources"
+      }
+    ],
+    "connections": [
+      {
+        "source": "r5T437RFXBuxKpHEOjJj-206",
+        "target": "r5T437RFXBuxKpHEOjJj-191",
+        "label": ""
+      },
+      {
+        "source": "r5T437RFXBuxKpHEOjJj-186",
+        "target": "r5T437RFXBuxKpHEOjJj-208",
+        "label": ""
+      },
+      {
+        "source": "r5T437RFXBuxKpHEOjJj-188",
+        "target": "r5T437RFXBuxKpHEOjJj-205",
+        "label": ""
+      },
+      {
+        "source": "LKWPKKF19wJKWOmKENbk-1",
+        "target": "r5T437RFXBuxKpHEOjJj-191",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0005_generative-ai-on-sap-btp.drawio",
+    "components": [
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-1",
+        "label": "Foundation Models Partner hosted"
+      },
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-5",
+        "label": "SAP Authorization and Trust Management service"
+      },
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-6",
+        "label": "SAP Continuous Integration and Delivery"
+      },
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-7",
+        "label": "SAP Business Application Studio"
+      },
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-12",
+        "label": "Foundation Models SAP hosted"
+      },
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-15",
+        "label": "Generative AI Hub"
+      },
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-22",
+        "label": "Application Router"
+      },
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-28",
+        "label": "Generative AI Hub"
+      },
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-41",
+        "label": "SAP Connectivity Service"
+      },
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-47",
+        "label": "SAP Destination Service"
+      },
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-49",
+        "label": "HTML5 App Repository"
+      },
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-54",
+        "label": "Generative AI Hub"
+      },
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-57",
+        "label": "Generative AI Hub"
+      },
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-60",
+        "label": "SAP HANA Cloud"
+      },
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-62",
+        "label": "Knowledge Graph Engine"
+      },
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-79",
+        "label": "SAP AI Launchpad"
+      },
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-85",
+        "label": "User"
+      },
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-86",
+        "label": "Mobile/Desktop Application Clients"
+      },
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-89",
+        "label": "SAP On-Premise Solutions"
+      },
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-90",
+        "label": "SAP On-Premise Solutions"
+      },
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-91",
+        "label": "Cloud Connector"
+      },
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-93",
+        "label": "SAP Cloud Solutions"
+      },
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-94",
+        "label": "SAP Cloud Solutions"
+      },
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-95",
+        "label": "3rd Party Applications"
+      },
+      {
+        "id": "-s70KA7A0unz_qYNNWNy-96",
+        "label": "3rd Party Applications"
+      }
+    ],
+    "connections": [
+      {
+        "source": "-s70KA7A0unz_qYNNWNy-18",
+        "target": "-s70KA7A0unz_qYNNWNy-47",
+        "label": ""
+      },
+      {
+        "source": "-s70KA7A0unz_qYNNWNy-78",
+        "target": "-s70KA7A0unz_qYNNWNy-9",
+        "label": ""
+      },
+      {
+        "source": "-s70KA7A0unz_qYNNWNy-18",
+        "target": "-s70KA7A0unz_qYNNWNy-35",
+        "label": ""
+      },
+      {
+        "source": "-s70KA7A0unz_qYNNWNy-18",
+        "target": "-s70KA7A0unz_qYNNWNy-9",
+        "label": ""
+      },
+      {
+        "source": "-s70KA7A0unz_qYNNWNy-19",
+        "target": "-s70KA7A0unz_qYNNWNy-5",
+        "label": ""
+      },
+      {
+        "source": "-s70KA7A0unz_qYNNWNy-19",
+        "target": "-s70KA7A0unz_qYNNWNy-22",
+        "label": ""
+      },
+      {
+        "source": "-s70KA7A0unz_qYNNWNy-81",
+        "target": "-s70KA7A0unz_qYNNWNy-12",
+        "label": ""
+      },
+      {
+        "source": "-s70KA7A0unz_qYNNWNy-35",
+        "target": "-s70KA7A0unz_qYNNWNy-70",
+        "label": ""
+      },
+      {
+        "source": "-s70KA7A0unz_qYNNWNy-30",
+        "target": "-s70KA7A0unz_qYNNWNy-81",
+        "label": ""
+      },
+      {
+        "source": "-s70KA7A0unz_qYNNWNy-81",
+        "target": "-s70KA7A0unz_qYNNWNy-1",
+        "label": ""
+      },
+      {
+        "source": "-s70KA7A0unz_qYNNWNy-47",
+        "target": "-s70KA7A0unz_qYNNWNy-40",
+        "label": ""
+      },
+      {
+        "source": "-s70KA7A0unz_qYNNWNy-47",
+        "target": "-s70KA7A0unz_qYNNWNy-41",
+        "label": ""
+      },
+      {
+        "source": "-s70KA7A0unz_qYNNWNy-41",
+        "target": "-s70KA7A0unz_qYNNWNy-45",
+        "label": ""
+      },
+      {
+        "source": "-s70KA7A0unz_qYNNWNy-49",
+        "target": "-s70KA7A0unz_qYNNWNy-52",
+        "label": ""
+      },
+      {
+        "source": "-s70KA7A0unz_qYNNWNy-49",
+        "target": "-s70KA7A0unz_qYNNWNy-22",
+        "label": ""
+      },
+      {
+        "source": "-s70KA7A0unz_qYNNWNy-18",
+        "target": "-s70KA7A0unz_qYNNWNy-59",
+        "label": ""
+      },
+      {
+        "source": "-s70KA7A0unz_qYNNWNy-35",
+        "target": "-s70KA7A0unz_qYNNWNy-30",
+        "label": ""
+      },
+      {
+        "source": "-s70KA7A0unz_qYNNWNy-5",
+        "target": "-s70KA7A0unz_qYNNWNy-72",
+        "label": ""
+      },
+      {
+        "source": "-s70KA7A0unz_qYNNWNy-89",
+        "target": "-s70KA7A0unz_qYNNWNy-18",
+        "label": ""
+      },
+      {
+        "source": "-s70KA7A0unz_qYNNWNy-45",
+        "target": "-s70KA7A0unz_qYNNWNy-89",
+        "label": ""
+      },
+      {
+        "source": "-s70KA7A0unz_qYNNWNy-85",
+        "target": "-s70KA7A0unz_qYNNWNy-86",
+        "label": ""
+      },
+      {
+        "source": "-s70KA7A0unz_qYNNWNy-86",
+        "target": "-s70KA7A0unz_qYNNWNy-22",
+        "label": ""
+      },
+      {
+        "source": "-s70KA7A0unz_qYNNWNy-72",
+        "target": "-s70KA7A0unz_qYNNWNy-23",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0006_secure-connectivity-with-sap-private-link-service.drawio",
+    "components": [
+      {
+        "id": "DCXuzV6dq0G6qKxf91vZ-21",
+        "label": "Application Clients"
+      },
+      {
+        "id": "DCXuzV6dq0G6qKxf91vZ-22",
+        "label": "Application Clients"
+      },
+      {
+        "id": "DCXuzV6dq0G6qKxf91vZ-25",
+        "label": "End User"
+      },
+      {
+        "id": "DCXuzV6dq0G6qKxf91vZ-38",
+        "label": "End User"
+      },
+      {
+        "id": "DCXuzV6dq0G6qKxf91vZ-54",
+        "label": "End User"
+      },
+      {
+        "id": "DCXuzV6dq0G6qKxf91vZ-56",
+        "label": "End User"
+      },
+      {
+        "id": "DCXuzV6dq0G6qKxf91vZ-61",
+        "label": "End User"
+      },
+      {
+        "id": "DCXuzV6dq0G6qKxf91vZ-62",
+        "label": "SAP Private Link service"
+      },
+      {
+        "id": "DCXuzV6dq0G6qKxf91vZ-68",
+        "label": "SAP Authorization and Trust Management service"
+      },
+      {
+        "id": "DCXuzV6dq0G6qKxf91vZ-78",
+        "label": "End User"
+      },
+      {
+        "id": "DCXuzV6dq0G6qKxf91vZ-80",
+        "label": "End User"
+      },
+      {
+        "id": "DCXuzV6dq0G6qKxf91vZ-89",
+        "label": "SAP Cloud Identity Services"
+      },
+      {
+        "id": "DCXuzV6dq0G6qKxf91vZ-95",
+        "label": "SAP BTP Services"
+      },
+      {
+        "id": "DCXuzV6dq0G6qKxf91vZ-97",
+        "label": "SAP Private Link service"
+      },
+      {
+        "id": "DCXuzV6dq0G6qKxf91vZ-101",
+        "label": "SAP Destination service"
+      },
+      {
+        "id": "DCXuzV6dq0G6qKxf91vZ-103",
+        "label": "SAP Private Link service"
+      },
+      {
+        "id": "DCXuzV6dq0G6qKxf91vZ-111",
+        "label": "Supported Hyperscaler Services (e.g. Azure Storage Account, Amazon SQS, ...)"
+      },
+      {
+        "id": "DCXuzV6dq0G6qKxf91vZ-30",
+        "label": "SAP Build Code"
+      },
+      {
+        "id": "vMEjExPTOewq8tPl4FOS-31",
+        "label": "Application Service (SAP CAP)"
+      },
+      {
+        "id": "d_Ka-k3Y2CXmwIRGURnD-3",
+        "label": "SAP Build"
+      },
+      {
+        "id": "d_Ka-k3Y2CXmwIRGURnD-5",
+        "label": "SAP Build Work Zone"
+      },
+      {
+        "id": "Lt1JT63VVN87FHco43CV-81",
+        "label": "Application Clients"
+      },
+      {
+        "id": "Lt1JT63VVN87FHco43CV-82",
+        "label": "Application Clients"
+      },
+      {
+        "id": "Lt1JT63VVN87FHco43CV-86",
+        "label": "End User"
+      },
+      {
+        "id": "Lt1JT63VVN87FHco43CV-166",
+        "label": "End User"
+      },
+      {
+        "id": "VntvXcNx28MoBaKqZNAt-61",
+        "label": "End User"
+      },
+      {
+        "id": "VntvXcNx28MoBaKqZNAt-63",
+        "label": "End User"
+      },
+      {
+        "id": "VntvXcNx28MoBaKqZNAt-88",
+        "label": "SAP Alert Notification service"
+      },
+      {
+        "id": "VntvXcNx28MoBaKqZNAt-90",
+        "label": "Application Autoscaler"
+      },
+      {
+        "id": "VntvXcNx28MoBaKqZNAt-96",
+        "label": "SAP HANA Cloud"
+      },
+      {
+        "id": "VntvXcNx28MoBaKqZNAt-98",
+        "label": "SAP Application Logging service"
+      },
+      {
+        "id": "VntvXcNx28MoBaKqZNAt-108",
+        "label": "End User"
+      },
+      {
+        "id": "VntvXcNx28MoBaKqZNAt-109",
+        "label": "SAP Private Link service"
+      },
+      {
+        "id": "VntvXcNx28MoBaKqZNAt-127",
+        "label": "SAP Authorization and Trust Management service"
+      },
+      {
+        "id": "7zOUn9B34NJwDIFw2eBJ-30",
+        "label": "End User"
+      },
+      {
+        "id": "7zOUn9B34NJwDIFw2eBJ-32",
+        "label": "End User"
+      },
+      {
+        "id": "cpJQdnjB7Kt7yyLO-z2O-1",
+        "label": "SAP Cloud Identity Services"
+      },
+      {
+        "id": "kZgwXRBc1h4meQo87tTN-1",
+        "label": "SAP Integration Suite"
+      },
+      {
+        "id": "kZgwXRBc1h4meQo87tTN-3",
+        "label": "Event Mesh"
+      },
+      {
+        "id": "h54Cw7kvRQ9xL3E4FDwj-2",
+        "label": "SAP Build Code"
+      },
+      {
+        "id": "h54Cw7kvRQ9xL3E4FDwj-6",
+        "label": "Application Service (SAP CAP)"
+      },
+      {
+        "id": "h54Cw7kvRQ9xL3E4FDwj-7",
+        "label": "SAP Build"
+      },
+      {
+        "id": "h54Cw7kvRQ9xL3E4FDwj-9",
+        "label": "SAP Build Work Zone"
+      }
+    ],
+    "connections": [
+      {
+        "source": "DCXuzV6dq0G6qKxf91vZ-24",
+        "target": "DCXuzV6dq0G6qKxf91vZ-22",
+        "label": ""
+      },
+      {
+        "source": "DCXuzV6dq0G6qKxf91vZ-62",
+        "target": "DCXuzV6dq0G6qKxf91vZ-54",
+        "label": ""
+      },
+      {
+        "source": "DCXuzV6dq0G6qKxf91vZ-46",
+        "target": "DCXuzV6dq0G6qKxf91vZ-49",
+        "label": ""
+      },
+      {
+        "source": "DCXuzV6dq0G6qKxf91vZ-17",
+        "target": "DCXuzV6dq0G6qKxf91vZ-17",
+        "label": ""
+      },
+      {
+        "source": "DCXuzV6dq0G6qKxf91vZ-29",
+        "target": "DCXuzV6dq0G6qKxf91vZ-61",
+        "label": ""
+      },
+      {
+        "source": "DCXuzV6dq0G6qKxf91vZ-61",
+        "target": "DCXuzV6dq0G6qKxf91vZ-62",
+        "label": ""
+      },
+      {
+        "source": "DCXuzV6dq0G6qKxf91vZ-54",
+        "target": "DCXuzV6dq0G6qKxf91vZ-56",
+        "label": ""
+      },
+      {
+        "source": "DCXuzV6dq0G6qKxf91vZ-56",
+        "target": "DCXuzV6dq0G6qKxf91vZ-51",
+        "label": ""
+      },
+      {
+        "source": "DCXuzV6dq0G6qKxf91vZ-29",
+        "target": "DCXuzV6dq0G6qKxf91vZ-95",
+        "label": ""
+      },
+      {
+        "source": "DCXuzV6dq0G6qKxf91vZ-46",
+        "target": "DCXuzV6dq0G6qKxf91vZ-87",
+        "label": ""
+      },
+      {
+        "source": "DCXuzV6dq0G6qKxf91vZ-87",
+        "target": "DCXuzV6dq0G6qKxf91vZ-80",
+        "label": ""
+      },
+      {
+        "source": "DCXuzV6dq0G6qKxf91vZ-29",
+        "target": "DCXuzV6dq0G6qKxf91vZ-101",
+        "label": ""
+      },
+      {
+        "source": "DCXuzV6dq0G6qKxf91vZ-97",
+        "target": "DCXuzV6dq0G6qKxf91vZ-111",
+        "label": ""
+      },
+      {
+        "source": "DCXuzV6dq0G6qKxf91vZ-29",
+        "target": "DCXuzV6dq0G6qKxf91vZ-103",
+        "label": ""
+      },
+      {
+        "source": "DCXuzV6dq0G6qKxf91vZ-101",
+        "target": "DCXuzV6dq0G6qKxf91vZ-97",
+        "label": ""
+      },
+      {
+        "source": "DCXuzV6dq0G6qKxf91vZ-103",
+        "target": "DCXuzV6dq0G6qKxf91vZ-111",
+        "label": ""
+      },
+      {
+        "source": "Lt1JT63VVN87FHco43CV-85",
+        "target": "Lt1JT63VVN87FHco43CV-82",
+        "label": ""
+      },
+      {
+        "source": "Lt1JT63VVN87FHco43CV-82",
+        "target": "h54Cw7kvRQ9xL3E4FDwj-1",
+        "label": ""
+      },
+      {
+        "source": "VntvXcNx28MoBaKqZNAt-109",
+        "target": "VntvXcNx28MoBaKqZNAt-61",
+        "label": ""
+      },
+      {
+        "source": "VntvXcNx28MoBaKqZNAt-43",
+        "target": "VntvXcNx28MoBaKqZNAt-43",
+        "label": ""
+      },
+      {
+        "source": "h54Cw7kvRQ9xL3E4FDwj-1",
+        "target": "VntvXcNx28MoBaKqZNAt-108",
+        "label": ""
+      },
+      {
+        "source": "VntvXcNx28MoBaKqZNAt-108",
+        "target": "VntvXcNx28MoBaKqZNAt-109",
+        "label": ""
+      },
+      {
+        "source": "VntvXcNx28MoBaKqZNAt-61",
+        "target": "VntvXcNx28MoBaKqZNAt-63",
+        "label": ""
+      },
+      {
+        "source": "VntvXcNx28MoBaKqZNAt-63",
+        "target": "VntvXcNx28MoBaKqZNAt-53",
+        "label": ""
+      },
+      {
+        "source": "h54Cw7kvRQ9xL3E4FDwj-1",
+        "target": "VntvXcNx28MoBaKqZNAt-96",
+        "label": ""
+      },
+      {
+        "source": "VntvXcNx28MoBaKqZNAt-90",
+        "target": "h54Cw7kvRQ9xL3E4FDwj-1",
+        "label": ""
+      },
+      {
+        "source": "h54Cw7kvRQ9xL3E4FDwj-1",
+        "target": "VntvXcNx28MoBaKqZNAt-98",
+        "label": ""
+      },
+      {
+        "source": "wFqzCT27909c9c1vrSoe-7",
+        "target": "h54Cw7kvRQ9xL3E4FDwj-1",
+        "label": ""
+      },
+      {
+        "source": "VntvXcNx28MoBaKqZNAt-41",
+        "target": "cpJQdnjB7Kt7yyLO-z2O-3",
+        "label": ""
+      },
+      {
+        "source": "cpJQdnjB7Kt7yyLO-z2O-3",
+        "target": "7zOUn9B34NJwDIFw2eBJ-32",
+        "label": ""
+      },
+      {
+        "source": "cpJQdnjB7Kt7yyLO-z2O-3",
+        "target": "Lt1JT63VVN87FHco43CV-66",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0007_multitenant-saas-application-using-cap.drawio",
+    "components": [
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-1",
+        "label": "Provider Subaccount"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-2",
+        "label": "Global Account"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-4",
+        "label": "Global Account"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-56",
+        "label": "Consumer Subaccount Tenant ABC"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-53",
+        "label": "abc.saasapp.com App Subscription"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-54",
+        "label": "Consumer Subaccount Tenant ABC"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-57",
+        "label": "Consumer Subaccount Tenant XYZ"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-60",
+        "label": "xyz.saasapp.com App Subscription"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-61",
+        "label": "Consumer Subaccount Tenant XYZ"
+      },
+      {
+        "id": "KmJ4gg5qT2u1DwzpELyT-1",
+        "label": "Provider SAP Cloud Identity Services"
+      },
+      {
+        "id": "KmJ4gg5qT2u1DwzpELyT-2",
+        "label": "Provider SAP Cloud Identity Services"
+      },
+      {
+        "id": "KmJ4gg5qT2u1DwzpELyT-8",
+        "label": "Customer Identity Authentication"
+      },
+      {
+        "id": "KmJ4gg5qT2u1DwzpELyT-9",
+        "label": "Customer Identity Authentication"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-64",
+        "label": "SaaS API Service"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-66",
+        "label": "SaaS Business Application Service"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-68",
+        "label": "CAP Node.js"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-69",
+        "label": "CAP Node.js"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-72",
+        "label": "App Router"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-73",
+        "label": "App Router"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-78",
+        "label": "SAP Custom Domain Service"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-79",
+        "label": "SAP Custom Domain Service"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-88",
+        "label": "SAP Alert Notification Service"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-89",
+        "label": "SAP Alert Notification Service"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-94",
+        "label": "SAP HANA Cloud"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-95",
+        "label": "SAP HANA Cloud"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-107",
+        "label": "Destination"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-109",
+        "label": "Destination"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-110",
+        "label": "SAP Service Manager"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-111",
+        "label": "SAP Service Manager"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-70",
+        "label": "SaaS API Broker"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-71",
+        "label": "Node.js"
+      },
+      {
+        "id": "KmJ4gg5qT2u1DwzpELyT-50",
+        "label": "Cloud Identity"
+      },
+      {
+        "id": "KmJ4gg5qT2u1DwzpELyT-51",
+        "label": "Cloud Identity"
+      },
+      {
+        "id": "KmJ4gg5qT2u1DwzpELyT-59",
+        "label": "SAP Authorization and Trust Management Service (Broker Plan)"
+      },
+      {
+        "id": "KmJ4gg5qT2u1DwzpELyT-60",
+        "label": "SAP Authorization and Trust Management Service (Broker Plan)"
+      },
+      {
+        "id": "KmJ4gg5qT2u1DwzpELyT-62",
+        "label": "SAP Authorization and Trust Management Service (Application Plan)"
+      },
+      {
+        "id": "KmJ4gg5qT2u1DwzpELyT-63",
+        "label": "SAP Authorization and Trust Management Service (Application Plan)"
+      },
+      {
+        "id": "KmJ4gg5qT2u1DwzpELyT-90",
+        "label": "SaaS UI Component"
+      },
+      {
+        "id": "KmJ4gg5qT2u1DwzpELyT-91",
+        "label": "SAPUI5"
+      },
+      {
+        "id": "KmJ4gg5qT2u1DwzpELyT-96",
+        "label": "HTML5 App Repository"
+      },
+      {
+        "id": "WzqlRTGwCkZ8QxGLPs2Y-9",
+        "label": "SAP SaaS Provisioning Service"
+      },
+      {
+        "id": "3YgBjjyiIAYjSuVqHyKX-2",
+        "label": "SAP Build"
+      },
+      {
+        "id": "3YgBjjyiIAYjSuVqHyKX-3",
+        "label": "SAP Build Code"
+      },
+      {
+        "id": "3YgBjjyiIAYjSuVqHyKX-4",
+        "label": "SAP Build Code"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-11",
+        "label": "Clients"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-14",
+        "label": "Clients"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-15",
+        "label": "Clients"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-25",
+        "label": "Customer ABC"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-29",
+        "label": "ABAP Push Logic"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-30",
+        "label": "Destination SM59"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-31",
+        "label": "Custom CDS / ABAP"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-32",
+        "label": "Standard tables / views"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-44",
+        "label": "Custom Push Logic"
+      },
+      {
+        "id": "rRoa4WGp6Um_o_Tg3S-I-47",
+        "label": "Standard tables / views"
+      },
+      {
+        "id": "WzqlRTGwCkZ8QxGLPs2Y-2",
+        "label": "SAP Cloud Logging"
+      },
+      {
+        "id": "WzqlRTGwCkZ8QxGLPs2Y-3",
+        "label": "SAP Cloud Logging"
+      }
+    ],
+    "connections": [
+      {
+        "source": "KmJ4gg5qT2u1DwzpELyT-74",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-54",
+        "label": ""
+      },
+      {
+        "source": "KmJ4gg5qT2u1DwzpELyT-14",
+        "target": "KmJ4gg5qT2u1DwzpELyT-7",
+        "label": ""
+      },
+      {
+        "source": "KmJ4gg5qT2u1DwzpELyT-14",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-58",
+        "label": ""
+      },
+      {
+        "source": "KmJ4gg5qT2u1DwzpELyT-46",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-51",
+        "label": ""
+      },
+      {
+        "source": "KmJ4gg5qT2u1DwzpELyT-46",
+        "target": "KmJ4gg5qT2u1DwzpELyT-4",
+        "label": ""
+      },
+      {
+        "source": "KmJ4gg5qT2u1DwzpELyT-49",
+        "target": "KmJ4gg5qT2u1DwzpELyT-4",
+        "label": ""
+      },
+      {
+        "source": "rRoa4WGp6Um_o_Tg3S-I-63",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-79",
+        "label": ""
+      },
+      {
+        "source": "rRoa4WGp6Um_o_Tg3S-I-120",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-63",
+        "label": ""
+      },
+      {
+        "source": "rRoa4WGp6Um_o_Tg3S-I-133",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-89",
+        "label": ""
+      },
+      {
+        "source": "rRoa4WGp6Um_o_Tg3S-I-73",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-109",
+        "label": ""
+      },
+      {
+        "source": "rRoa4WGp6Um_o_Tg3S-I-109",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-66",
+        "label": ""
+      },
+      {
+        "source": "KmJ4gg5qT2u1DwzpELyT-52",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-66",
+        "label": ""
+      },
+      {
+        "source": "KmJ4gg5qT2u1DwzpELyT-51",
+        "target": "KmJ4gg5qT2u1DwzpELyT-53",
+        "label": ""
+      },
+      {
+        "source": "KmJ4gg5qT2u1DwzpELyT-53",
+        "target": "KmJ4gg5qT2u1DwzpELyT-4",
+        "label": ""
+      },
+      {
+        "source": "KmJ4gg5qT2u1DwzpELyT-60",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-70",
+        "label": ""
+      },
+      {
+        "source": "KmJ4gg5qT2u1DwzpELyT-60",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-64",
+        "label": ""
+      },
+      {
+        "source": "KmJ4gg5qT2u1DwzpELyT-63",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-73",
+        "label": ""
+      },
+      {
+        "source": "KmJ4gg5qT2u1DwzpELyT-63",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-66",
+        "label": ""
+      },
+      {
+        "source": "WzqlRTGwCkZ8QxGLPs2Y-8",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-64",
+        "label": ""
+      },
+      {
+        "source": "WzqlRTGwCkZ8QxGLPs2Y-8",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-54",
+        "label": ""
+      },
+      {
+        "source": "WzqlRTGwCkZ8QxGLPs2Y-8",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-61",
+        "label": ""
+      },
+      {
+        "source": "rRoa4WGp6Um_o_Tg3S-I-51",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-70",
+        "label": ""
+      },
+      {
+        "source": "rRoa4WGp6Um_o_Tg3S-I-58",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-70",
+        "label": ""
+      },
+      {
+        "source": "rRoa4WGp6Um_o_Tg3S-I-112",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-95",
+        "label": ""
+      },
+      {
+        "source": "rRoa4WGp6Um_o_Tg3S-I-111",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-64",
+        "label": ""
+      },
+      {
+        "source": "rRoa4WGp6Um_o_Tg3S-I-111",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-66",
+        "label": ""
+      },
+      {
+        "source": "rRoa4WGp6Um_o_Tg3S-I-73",
+        "target": "KmJ4gg5qT2u1DwzpELyT-97",
+        "label": ""
+      },
+      {
+        "source": "KmJ4gg5qT2u1DwzpELyT-90",
+        "target": "KmJ4gg5qT2u1DwzpELyT-96",
+        "label": ""
+      },
+      {
+        "source": "KmJ4gg5qT2u1DwzpELyT-49",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-5",
+        "label": ""
+      },
+      {
+        "source": "WzqlRTGwCkZ8QxGLPs2Y-9",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-66",
+        "label": ""
+      },
+      {
+        "source": "KmJ4gg5qT2u1DwzpELyT-76",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-61",
+        "label": ""
+      },
+      {
+        "source": "rRoa4WGp6Um_o_Tg3S-I-32",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-31",
+        "label": ""
+      },
+      {
+        "source": "rRoa4WGp6Um_o_Tg3S-I-30",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-29",
+        "label": ""
+      },
+      {
+        "source": "rRoa4WGp6Um_o_Tg3S-I-31",
+        "target": "rRoa4WGp6Um_o_Tg3S-I-29",
+        "label": ""
+      },
+      {
+        "source": "rRoa4WGp6Um_o_Tg3S-I-29",
+        "target": "KmJ4gg5qT2u1DwzpELyT-74",
+        "label": ""
+      },
+      {
+        "source": "rRoa4WGp6Um_o_Tg3S-I-44",
+        "target": "KmJ4gg5qT2u1DwzpELyT-76",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0008_edge-integration-cell-on-hyperscalers.drawio",
+    "components": [
+      {
+        "id": "GK1j6T8cdDNpq15kFjSn-6",
+        "label": "SAP S/4HANA"
+      },
+      {
+        "id": "GK1j6T8cdDNpq15kFjSn-7",
+        "label": "SAP ECC"
+      },
+      {
+        "id": "GK1j6T8cdDNpq15kFjSn-44",
+        "label": "SAP Cloud Applications"
+      },
+      {
+        "id": "GK1j6T8cdDNpq15kFjSn-46",
+        "label": "SAP Cloud Applications"
+      },
+      {
+        "id": "GK1j6T8cdDNpq15kFjSn-72",
+        "label": "SAP Cloud Applications"
+      },
+      {
+        "id": "GK1j6T8cdDNpq15kFjSn-78",
+        "label": "SAP Cloud Applications"
+      },
+      {
+        "id": "GK1j6T8cdDNpq15kFjSn-80",
+        "label": "SAP Cloud Applications"
+      },
+      {
+        "id": "GK1j6T8cdDNpq15kFjSn-85",
+        "label": "SAP Cloud Applications"
+      },
+      {
+        "id": "c7ha8ujQYmhdGz0n4e6j-57",
+        "label": "EIC Runtime"
+      },
+      {
+        "id": "2HGDGh5_L6hypmfTz_1F-11",
+        "label": "EIC Runtime"
+      },
+      {
+        "id": "2HGDGh5_L6hypmfTz_1F-16",
+        "label": "EIC Runtime"
+      },
+      {
+        "id": "MEJgDAWRfduAKiQX9mYb-1",
+        "label": "SAP Cloud Applications"
+      }
+    ],
+    "connections": [
+      {
+        "source": "GK1j6T8cdDNpq15kFjSn-28",
+        "target": "GK1j6T8cdDNpq15kFjSn-23",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0009_establish-a-central-inbox-with-sap-task-center.drawio",
+    "components": [
+      {
+        "id": "UHaCpyEYQsDfGPqh9ESF-35",
+        "label": "Legend"
+      },
+      {
+        "id": "lW-khkvEi3QtTLm4Eyx4-6",
+        "label": "SAP On-Premise Solutions"
+      },
+      {
+        "id": "lW-khkvEi3QtTLm4Eyx4-10",
+        "label": "SAP On-Premise Solutions"
+      },
+      {
+        "id": "lW-khkvEi3QtTLm4Eyx4-17",
+        "label": "SAP Cloud Solutions"
+      },
+      {
+        "id": "Cf-eS_Z8wyuZi8RKvG80-92",
+        "label": "SAP On-Premise Solutions"
+      },
+      {
+        "id": "Hm9edAj7zCcvypmeV3OK-23",
+        "label": "3rd party identity provider / identity management"
+      },
+      {
+        "id": "Hm9edAj7zCcvypmeV3OK-35",
+        "label": "End User"
+      },
+      {
+        "id": "Hm9edAj7zCcvypmeV3OK-36",
+        "label": "End User"
+      },
+      {
+        "id": "jNRCiT8ZszyoKKQ9_2MV-4",
+        "label": "SAP Task Center"
+      },
+      {
+        "id": "jNRCiT8ZszyoKKQ9_2MV-5",
+        "label": "SAP Build Work Zone"
+      },
+      {
+        "id": "jNRCiT8ZszyoKKQ9_2MV-6",
+        "label": "SAP Connectivity service"
+      },
+      {
+        "id": "jNRCiT8ZszyoKKQ9_2MV-7",
+        "label": "SAP Destination service"
+      },
+      {
+        "id": "r_b8lqjJzKN5wHnG_93h-1",
+        "label": "Cloud Connector"
+      },
+      {
+        "id": "jNRCiT8ZszyoKKQ9_2MV-1",
+        "label": "Identity Directory"
+      },
+      {
+        "id": "jNRCiT8ZszyoKKQ9_2MV-2",
+        "label": "Identity Authentication"
+      },
+      {
+        "id": "jNRCiT8ZszyoKKQ9_2MV-3",
+        "label": "Identity Provisioning"
+      }
+    ],
+    "connections": [
+      {
+        "source": "Hm9edAj7zCcvypmeV3OK-33",
+        "target": "Hm9edAj7zCcvypmeV3OK-36",
+        "label": ""
+      },
+      {
+        "source": "Hm9edAj7zCcvypmeV3OK-20",
+        "target": "Hm9edAj7zCcvypmeV3OK-45",
+        "label": ""
+      },
+      {
+        "source": "Hm9edAj7zCcvypmeV3OK-41",
+        "target": "Hm9edAj7zCcvypmeV3OK-20",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0010_establish-a-central-entry-point-with-sap-build-work-zone.drawio",
+    "components": [
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-0",
+        "label": "BTP Service"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-5",
+        "label": "SAP On-Premise Solutions"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-8",
+        "label": "SAP On-Premise Solutions"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-23",
+        "label": "Connectivity"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-31",
+        "label": "SAP On-Premise Solutions"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-33",
+        "label": "SAP On-Premise Solutions"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-41",
+        "label": "Destination"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-43",
+        "label": "Identity Directory"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-44",
+        "label": "Identity Authentication"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-45",
+        "label": "Identity Provisoning"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-46",
+        "label": "Cloud Connector"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-48",
+        "label": "SAP On-Premise Solutions"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-51",
+        "label": "Cloud Transport Management"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-74",
+        "label": "Legend"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-78",
+        "label": "Legend"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-85",
+        "label": "SAP Build Work Zone"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-86",
+        "label": "UI Theme Designer"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-87",
+        "label": "Mobile Services"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-88",
+        "label": "UI flexibility"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-89",
+        "label": "Alert Notification"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-92",
+        "label": "Digital Workplace Service"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-95",
+        "label": "SAP On-Premise Solutions"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-97",
+        "label": "SAP On-Premise Solutions"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-100",
+        "label": "SAP On-Premise Solutions"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-110",
+        "label": "HTML5 App Repository"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-114",
+        "label": "SAP On-Premise Solutions"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-117",
+        "label": "SAP On-Premise Solutions"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-120",
+        "label": "Joule"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-125",
+        "label": "SAP Task Center"
+      },
+      {
+        "id": "b7LLGqeyTYqkbNjHBUPV-130",
+        "label": "SAP Build Process Automation"
+      }
+    ],
+    "connections": [
+      {
+        "source": "b7LLGqeyTYqkbNjHBUPV-16",
+        "target": "b7LLGqeyTYqkbNjHBUPV-28",
+        "label": ""
+      },
+      {
+        "source": "b7LLGqeyTYqkbNjHBUPV-39",
+        "target": "b7LLGqeyTYqkbNjHBUPV-47",
+        "label": ""
+      },
+      {
+        "source": "b7LLGqeyTYqkbNjHBUPV-28",
+        "target": "b7LLGqeyTYqkbNjHBUPV-39",
+        "label": ""
+      },
+      {
+        "source": "b7LLGqeyTYqkbNjHBUPV-17",
+        "target": "b7LLGqeyTYqkbNjHBUPV-3",
+        "label": ""
+      },
+      {
+        "source": "b7LLGqeyTYqkbNjHBUPV-23",
+        "target": "b7LLGqeyTYqkbNjHBUPV-17",
+        "label": ""
+      },
+      {
+        "source": "b7LLGqeyTYqkbNjHBUPV-17",
+        "target": "b7LLGqeyTYqkbNjHBUPV-17",
+        "label": ""
+      },
+      {
+        "source": "b7LLGqeyTYqkbNjHBUPV-41",
+        "target": "b7LLGqeyTYqkbNjHBUPV-42",
+        "label": ""
+      },
+      {
+        "source": "b7LLGqeyTYqkbNjHBUPV-2",
+        "target": "b7LLGqeyTYqkbNjHBUPV-51",
+        "label": ""
+      },
+      {
+        "source": "b7LLGqeyTYqkbNjHBUPV-2",
+        "target": "b7LLGqeyTYqkbNjHBUPV-117",
+        "label": ""
+      },
+      {
+        "source": "b7LLGqeyTYqkbNjHBUPV-107",
+        "target": "b7LLGqeyTYqkbNjHBUPV-28",
+        "label": ""
+      },
+      {
+        "source": "b7LLGqeyTYqkbNjHBUPV-2",
+        "target": "b7LLGqeyTYqkbNjHBUPV-110",
+        "label": ""
+      },
+      {
+        "source": "b7LLGqeyTYqkbNjHBUPV-114",
+        "target": "b7LLGqeyTYqkbNjHBUPV-110",
+        "label": ""
+      },
+      {
+        "source": "b7LLGqeyTYqkbNjHBUPV-42",
+        "target": "b7LLGqeyTYqkbNjHBUPV-47",
+        "label": ""
+      },
+      {
+        "source": "b7LLGqeyTYqkbNjHBUPV-2",
+        "target": "b7LLGqeyTYqkbNjHBUPV-130",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0011_sap-hana-cloud-as-an-esri-geodatabase.drawio",
+    "components": [
+      {
+        "id": "IuFET5kUObXA4saJwFoe-27",
+        "label": "SAP Cloud Solutions"
+      },
+      {
+        "id": "IuFET5kUObXA4saJwFoe-31",
+        "label": "SAP On-Premise Solutions"
+      },
+      {
+        "id": "IuFET5kUObXA4saJwFoe-39",
+        "label": "Application Clients"
+      },
+      {
+        "id": "IuFET5kUObXA4saJwFoe-40",
+        "label": "Application Clients"
+      },
+      {
+        "id": "IuFET5kUObXA4saJwFoe-100",
+        "label": "ArcGIS Insights"
+      },
+      {
+        "id": "G-U2a8LbeuhaKoUTO3h7-1",
+        "label": "ArcGIS Pro/Desktop"
+      },
+      {
+        "id": "G-U2a8LbeuhaKoUTO3h7-2",
+        "label": "ArcGIS Portal"
+      },
+      {
+        "id": "G-U2a8LbeuhaKoUTO3h7-3",
+        "label": "ArcGIS Enterprise"
+      },
+      {
+        "id": "IuFET5kUObXA4saJwFoe-61",
+        "label": "SAP HANA Cloud"
+      },
+      {
+        "id": "IuFET5kUObXA4saJwFoe-10",
+        "label": "SAP HANA Cloud"
+      },
+      {
+        "id": "IuFET5kUObXA4saJwFoe-19",
+        "label": "SAP HANA Cloud"
+      },
+      {
+        "id": "IuFET5kUObXA4saJwFoe-21",
+        "label": "GeoSpatial Application built on SAP BTP can use geospatial data stored in an ESRI Geodatabase on SAP HANA Cloud"
+      },
+      {
+        "id": "IuFET5kUObXA4saJwFoe-64",
+        "label": "Business Application Studio"
+      },
+      {
+        "id": "IuFET5kUObXA4saJwFoe-77",
+        "label": "Fiori UI"
+      },
+      {
+        "id": "G-U2a8LbeuhaKoUTO3h7-4",
+        "label": "SAP HANA Cloud"
+      },
+      {
+        "id": "G-U2a8LbeuhaKoUTO3h7-11",
+        "label": "SAP HANA Cloud"
+      },
+      {
+        "id": "G-U2a8LbeuhaKoUTO3h7-23",
+        "label": "HANA Cloud Calculation View is built on top of Esri Geodatabase and CDS from S/4HANA joining Esri and SAP data"
+      },
+      {
+        "id": "IuFET5kUObXA4saJwFoe-52",
+        "label": "Source Systems"
+      },
+      {
+        "id": "IuFET5kUObXA4saJwFoe-53",
+        "label": "Source Systems"
+      },
+      {
+        "id": "IuFET5kUObXA4saJwFoe-82",
+        "label": "Application Clients"
+      },
+      {
+        "id": "IuFET5kUObXA4saJwFoe-83",
+        "label": "Application Clients"
+      },
+      {
+        "id": "IuFET5kUObXA4saJwFoe-96",
+        "label": "non-SAP system"
+      }
+    ],
+    "connections": [
+      {
+        "source": "IuFET5kUObXA4saJwFoe-18",
+        "target": "IuFET5kUObXA4saJwFoe-10",
+        "label": ""
+      },
+      {
+        "source": "IuFET5kUObXA4saJwFoe-77",
+        "target": "IuFET5kUObXA4saJwFoe-18",
+        "label": ""
+      },
+      {
+        "source": "IuFET5kUObXA4saJwFoe-64",
+        "target": "IuFET5kUObXA4saJwFoe-18",
+        "label": ""
+      },
+      {
+        "source": "IuFET5kUObXA4saJwFoe-50",
+        "target": "IuFET5kUObXA4saJwFoe-64",
+        "label": ""
+      },
+      {
+        "source": "IuFET5kUObXA4saJwFoe-80",
+        "target": "IuFET5kUObXA4saJwFoe-77",
+        "label": ""
+      },
+      {
+        "source": "IuFET5kUObXA4saJwFoe-3",
+        "target": "IuFET5kUObXA4saJwFoe-10",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0012_medallion-reference-architecture-for-big-data-processing-in-sap-hana-cloud.drawio",
+    "components": [
+      {
+        "id": "qwzaFTHRrZOKG-1LBnMU-4",
+        "label": "Structured Data"
+      },
+      {
+        "id": "qwzaFTHRrZOKG-1LBnMU-5",
+        "label": "Semi Structured Data"
+      },
+      {
+        "id": "qwzaFTHRrZOKG-1LBnMU-6",
+        "label": "Unstructured Data"
+      },
+      {
+        "id": "qwzaFTHRrZOKG-1LBnMU-12",
+        "label": "Silver Data SAP HANA Cloud, data lake files SAP HANA database"
+      },
+      {
+        "id": "qwzaFTHRrZOKG-1LBnMU-14",
+        "label": "Delta Table"
+      },
+      {
+        "id": "qwzaFTHRrZOKG-1LBnMU-20",
+        "label": "External Data Sources"
+      },
+      {
+        "id": "qwzaFTHRrZOKG-1LBnMU-28",
+        "label": "Ingest"
+      },
+      {
+        "id": "qwzaFTHRrZOKG-1LBnMU-29",
+        "label": "Consume"
+      },
+      {
+        "id": "qwzaFTHRrZOKG-1LBnMU-30",
+        "label": "Model and Share"
+      },
+      {
+        "id": "qwzaFTHRrZOKG-1LBnMU-31",
+        "label": "Process, Curate and Store"
+      },
+      {
+        "id": "qwzaFTHRrZOKG-1LBnMU-37",
+        "label": "SAP Analytics Cloud"
+      },
+      {
+        "id": "qwzaFTHRrZOKG-1LBnMU-38",
+        "label": "SAP Analytics Cloud"
+      },
+      {
+        "id": "n1ukS1SRiOcm4zX3iiyI-4",
+        "label": "Bronze Data SAP HANA Cloud, data lake files"
+      },
+      {
+        "id": "n1ukS1SRiOcm4zX3iiyI-22",
+        "label": "Gold Data SAP HANA Cloud, data lake files SAP HANA database"
+      },
+      {
+        "id": "n1ukS1SRiOcm4zX3iiyI-23",
+        "label": "Delta Table"
+      },
+      {
+        "id": "n1ukS1SRiOcm4zX3iiyI-25",
+        "label": "Delta Shares"
+      },
+      {
+        "id": "o_71wqFG7WSUV7l9rTbJ-16",
+        "label": "Business Application Studio"
+      },
+      {
+        "id": "o_71wqFG7WSUV7l9rTbJ-17",
+        "label": "Business Application Studio"
+      },
+      {
+        "id": "o_71wqFG7WSUV7l9rTbJ-19",
+        "label": "SAP Datasphere"
+      },
+      {
+        "id": "o_71wqFG7WSUV7l9rTbJ-20",
+        "label": "SAP Datasphere"
+      },
+      {
+        "id": "o_71wqFG7WSUV7l9rTbJ-28",
+        "label": "SAP AI Core"
+      },
+      {
+        "id": "o_71wqFG7WSUV7l9rTbJ-26",
+        "label": "SAP AI Core"
+      },
+      {
+        "id": "o_71wqFG7WSUV7l9rTbJ-29",
+        "label": "SAP HANA Cloud"
+      },
+      {
+        "id": "qwzaFTHRrZOKG-1LBnMU-44",
+        "label": "SAP HANA Cloud"
+      }
+    ],
+    "connections": [
+      {
+        "source": "qwzaFTHRrZOKG-1LBnMU-12",
+        "target": "n1ukS1SRiOcm4zX3iiyI-22",
+        "label": ""
+      },
+      {
+        "source": "qwzaFTHRrZOKG-1LBnMU-61",
+        "target": "n1ukS1SRiOcm4zX3iiyI-4",
+        "label": ""
+      },
+      {
+        "source": "qwzaFTHRrZOKG-1LBnMU-63",
+        "target": "n1ukS1SRiOcm4zX3iiyI-4",
+        "label": ""
+      },
+      {
+        "source": "qwzaFTHRrZOKG-1LBnMU-64",
+        "target": "qwzaFTHRrZOKG-1LBnMU-12",
+        "label": ""
+      },
+      {
+        "source": "qwzaFTHRrZOKG-1LBnMU-64",
+        "target": "qwzaFTHRrZOKG-1LBnMU-12",
+        "label": ""
+      },
+      {
+        "source": "qwzaFTHRrZOKG-1LBnMU-64",
+        "target": "qwzaFTHRrZOKG-1LBnMU-12",
+        "label": ""
+      },
+      {
+        "source": "n1ukS1SRiOcm4zX3iiyI-4",
+        "target": "qwzaFTHRrZOKG-1LBnMU-12",
+        "label": ""
+      },
+      {
+        "source": "n1ukS1SRiOcm4zX3iiyI-22",
+        "target": "qwzaFTHRrZOKG-1LBnMU-32",
+        "label": ""
+      },
+      {
+        "source": "n1ukS1SRiOcm4zX3iiyI-24",
+        "target": "qwzaFTHRrZOKG-1LBnMU-32",
+        "label": ""
+      },
+      {
+        "source": "qwzaFTHRrZOKG-1LBnMU-62",
+        "target": "n1ukS1SRiOcm4zX3iiyI-4",
+        "label": ""
+      },
+      {
+        "source": "n1ukS1SRiOcm4zX3iiyI-4",
+        "target": "qwzaFTHRrZOKG-1LBnMU-15",
+        "label": ""
+      },
+      {
+        "source": "qwzaFTHRrZOKG-1LBnMU-15",
+        "target": "n1ukS1SRiOcm4zX3iiyI-24",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0013_transforming-enterprise-data-strategy-with-sap-business-data-cloud__sap-bdc-highlevel.drawio",
+    "components": [],
+    "connections": []
+  },
+  {
+    "file": "RA0013_transforming-enterprise-data-strategy-with-sap-business-data-cloud__sap-bdc.drawio",
+    "components": [
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-1",
+        "label": "Business Data Fabric"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-8",
+        "label": "Object Store Data Ingestion"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-9",
+        "label": "Custom Data Products (managed by SAP Datasphere )"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-10",
+        "label": "SAP Data Products (data sync managed by SAP LoB Apps)"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-11",
+        "label": "SAP LoB Source Systems"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-12",
+        "label": "S/4HANA PCE"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-16",
+        "label": "Sustainability"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-18",
+        "label": "Non-SAP Source Systems"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-21",
+        "label": "AWS, Azure, etc"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-22",
+        "label": "SAP BW PCE"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-25",
+        "label": "SAP Analytics Cloud"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-28",
+        "label": "Intelligent Applications 360 Analytics, Extended Planning, 3rd Party Apps"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-29",
+        "label": "AI Copilots"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-30",
+        "label": "SAP LoB Source Systems"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-31",
+        "label": "S/4HANA On-Prem"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-35",
+        "label": "Open data ecosystem"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-37",
+        "label": "SAP Datasphere"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-42",
+        "label": "SAP Databricks"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-47",
+        "label": "Business Data Cloud"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-50",
+        "label": "BDC Connect"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-53",
+        "label": "SAP Snowflake*"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-58",
+        "label": "SAP BDC Cockpit"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-62",
+        "label": "SAP Managed"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-63",
+        "label": "SAP Managed"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-64",
+        "label": "SAP Managed"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-65",
+        "label": "SAP Managed"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-66",
+        "label": "SAP Managed"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-67",
+        "label": "SAP Managed"
+      },
+      {
+        "id": "QWuizRGkWBOWvefgkMGa-68",
+        "label": "SAP Managed"
+      }
+    ],
+    "connections": []
+  },
+  {
+    "file": "RA0014_understanding-network-performance-in-a-multi-regional-solution__direct-odata-call.drawio",
+    "components": [
+      {
+        "id": "5U30cNDtQMpAbmY5_7fr-10",
+        "label": "Private Edition"
+      }
+    ],
+    "connections": [
+      {
+        "source": "5U30cNDtQMpAbmY5_7fr-3",
+        "target": "5U30cNDtQMpAbmY5_7fr-10",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0014_understanding-network-performance-in-a-multi-regional-solution__measurement-landscape.drawio",
+    "components": [
+      {
+        "id": "3_tqcAupVyAekN3fUpBM-10",
+        "label": "Docker Container WestEurope (1.0.0.4)"
+      },
+      {
+        "id": "3_tqcAupVyAekN3fUpBM-25",
+        "label": "Kyma Runtime"
+      },
+      {
+        "id": "3_tqcAupVyAekN3fUpBM-38",
+        "label": "Cloud Foundry Runtime"
+      },
+      {
+        "id": "3_tqcAupVyAekN3fUpBM-62",
+        "label": "SAP S/4HANA Cloud, Private Edition"
+      },
+      {
+        "id": "3_tqcAupVyAekN3fUpBM-64",
+        "label": "SAP S/4HANA Cloud, Private Edition"
+      },
+      {
+        "id": "3_tqcAupVyAekN3fUpBM-65",
+        "label": "SAP Gateway"
+      },
+      {
+        "id": "3_tqcAupVyAekN3fUpBM-80",
+        "label": "Controller Node"
+      }
+    ],
+    "connections": [
+      {
+        "source": "3_tqcAupVyAekN3fUpBM-42",
+        "target": "3_tqcAupVyAekN3fUpBM-48",
+        "label": ""
+      },
+      {
+        "source": "3_tqcAupVyAekN3fUpBM-44",
+        "target": "3_tqcAupVyAekN3fUpBM-48",
+        "label": ""
+      },
+      {
+        "source": "3_tqcAupVyAekN3fUpBM-6",
+        "target": "3_tqcAupVyAekN3fUpBM-25",
+        "label": ""
+      },
+      {
+        "source": "3_tqcAupVyAekN3fUpBM-80",
+        "target": "3_tqcAupVyAekN3fUpBM-25",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0014_understanding-network-performance-in-a-multi-regional-solution__odata-call-app-router-privatelink.drawio",
+    "components": [
+      {
+        "id": "5U30cNDtQMpAbmY5_7fr-10",
+        "label": "Private Edition"
+      },
+      {
+        "id": "5U30cNDtQMpAbmY5_7fr-46",
+        "label": "Worker Node"
+      }
+    ],
+    "connections": [
+      {
+        "source": "5U30cNDtQMpAbmY5_7fr-3",
+        "target": "5U30cNDtQMpAbmY5_7fr-29",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0014_understanding-network-performance-in-a-multi-regional-solution__odata-call-app-router-scc.drawio",
+    "components": [
+      {
+        "id": "5U30cNDtQMpAbmY5_7fr-10",
+        "label": "Private Edition"
+      }
+    ],
+    "connections": [
+      {
+        "source": "5U30cNDtQMpAbmY5_7fr-3",
+        "target": "5U30cNDtQMpAbmY5_7fr-29",
+        "label": ""
+      },
+      {
+        "source": "5U30cNDtQMpAbmY5_7fr-34",
+        "target": "5U30cNDtQMpAbmY5_7fr-38",
+        "label": ""
+      },
+      {
+        "source": "5U30cNDtQMpAbmY5_7fr-29",
+        "target": "5U30cNDtQMpAbmY5_7fr-34",
+        "label": ""
+      },
+      {
+        "source": "5U30cNDtQMpAbmY5_7fr-38",
+        "target": "5U30cNDtQMpAbmY5_7fr-10",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0014_understanding-network-performance-in-a-multi-regional-solution__odata-call-app-router.drawio",
+    "components": [
+      {
+        "id": "5U30cNDtQMpAbmY5_7fr-10",
+        "label": "Private Edition"
+      }
+    ],
+    "connections": [
+      {
+        "source": "5U30cNDtQMpAbmY5_7fr-3",
+        "target": "5U30cNDtQMpAbmY5_7fr-29",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0014_understanding-network-performance-in-a-multi-regional-solution__odata-call-cap-app.drawio",
+    "components": [
+      {
+        "id": "5U30cNDtQMpAbmY5_7fr-10",
+        "label": "Private Edition"
+      }
+    ],
+    "connections": [
+      {
+        "source": "5U30cNDtQMpAbmY5_7fr-3",
+        "target": "5U30cNDtQMpAbmY5_7fr-29",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0014_understanding-network-performance-in-a-multi-regional-solution__odata-call-cap-privatelink.drawio",
+    "components": [
+      {
+        "id": "5U30cNDtQMpAbmY5_7fr-10",
+        "label": "Private Edition"
+      },
+      {
+        "id": "5U30cNDtQMpAbmY5_7fr-46",
+        "label": "Worker Node"
+      }
+    ],
+    "connections": [
+      {
+        "source": "5U30cNDtQMpAbmY5_7fr-3",
+        "target": "5U30cNDtQMpAbmY5_7fr-29",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0014_understanding-network-performance-in-a-multi-regional-solution__odata-call-cap-scc.drawio",
+    "components": [
+      {
+        "id": "5U30cNDtQMpAbmY5_7fr-10",
+        "label": "Private Edition"
+      }
+    ],
+    "connections": [
+      {
+        "source": "5U30cNDtQMpAbmY5_7fr-3",
+        "target": "5U30cNDtQMpAbmY5_7fr-29",
+        "label": ""
+      },
+      {
+        "source": "5U30cNDtQMpAbmY5_7fr-34",
+        "target": "5U30cNDtQMpAbmY5_7fr-38",
+        "label": ""
+      },
+      {
+        "source": "5U30cNDtQMpAbmY5_7fr-29",
+        "target": "5U30cNDtQMpAbmY5_7fr-34",
+        "label": ""
+      },
+      {
+        "source": "5U30cNDtQMpAbmY5_7fr-38",
+        "target": "5U30cNDtQMpAbmY5_7fr-10",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0015_business-to-government-integration.drawio",
+    "components": [
+      {
+        "id": "_FdFY5pbQAiYYbf3v4dS-66",
+        "label": "Authorities / Designees"
+      },
+      {
+        "id": "_FdFY5pbQAiYYbf3v4dS-67",
+        "label": "Business Partners"
+      },
+      {
+        "id": "1nddzdw7vivYGaLFLm3b-1",
+        "label": "SAP Business Accelerator Hub"
+      },
+      {
+        "id": "_FdFY5pbQAiYYbf3v4dS-38",
+        "label": "SAP Cloud Identiy Services"
+      },
+      {
+        "id": "_FdFY5pbQAiYYbf3v4dS-55",
+        "label": "Identity Authentication"
+      },
+      {
+        "id": "_FdFY5pbQAiYYbf3v4dS-25",
+        "label": "Application Clients"
+      },
+      {
+        "id": "_FdFY5pbQAiYYbf3v4dS-30",
+        "label": "End User"
+      },
+      {
+        "id": "_FdFY5pbQAiYYbf3v4dS-62",
+        "label": "Peppol Services (service metadata publishing)"
+      },
+      {
+        "id": "bFVPSskZjtyiZDLN3V_n-15",
+        "label": "Cloud Connector"
+      },
+      {
+        "id": "_FdFY5pbQAiYYbf3v4dS-65",
+        "label": "Peppol Network"
+      },
+      {
+        "id": "bFVPSskZjtyiZDLN3V_n-12",
+        "label": "Application Interface Framework"
+      },
+      {
+        "id": "bFVPSskZjtyiZDLN3V_n-2",
+        "label": "SAP Cloud Solutions"
+      },
+      {
+        "id": "bFVPSskZjtyiZDLN3V_n-69",
+        "label": "Legend"
+      },
+      {
+        "id": "bFVPSskZjtyiZDLN3V_n-81",
+        "label": "SAP BTP Service"
+      },
+      {
+        "id": "8l6RRYxQaxA69R045GtP-4",
+        "label": "\"> \">"
+      },
+      {
+        "id": "YePybaSxP1RbHi_yg-6t-13",
+        "label": "SAP Integration Suite"
+      },
+      {
+        "id": "YePybaSxP1RbHi_yg-6t-65",
+        "label": "Cloud Integration"
+      },
+      {
+        "id": "YePybaSxP1RbHi_yg-6t-67",
+        "label": "Integration flows"
+      },
+      {
+        "id": "c7Bn3E_EWqIzA4pNv21--2",
+        "label": "SAP Integration Suite"
+      },
+      {
+        "id": "bFVPSskZjtyiZDLN3V_n-119",
+        "label": "SAP Destination service"
+      },
+      {
+        "id": "bFVPSskZjtyiZDLN3V_n-120",
+        "label": "SAP Connectivity service"
+      },
+      {
+        "id": "YePybaSxP1RbHi_yg-6t-15",
+        "label": "SAP Document Reporting and Compliance, cloud edition"
+      },
+      {
+        "id": "bFVPSskZjtyiZDLN3V_n-35",
+        "label": "SAP Destination service"
+      },
+      {
+        "id": "bFVPSskZjtyiZDLN3V_n-37",
+        "label": "SAP Connectivity service"
+      },
+      {
+        "id": "h4OWvFJUvyrlSEdhDKH3-4",
+        "label": "3rd party identity management"
+      }
+    ],
+    "connections": [
+      {
+        "source": "_FdFY5pbQAiYYbf3v4dS-38",
+        "target": "bFVPSskZjtyiZDLN3V_n-23",
+        "label": ""
+      },
+      {
+        "source": "_FdFY5pbQAiYYbf3v4dS-25",
+        "target": "bFVPSskZjtyiZDLN3V_n-23",
+        "label": ""
+      },
+      {
+        "source": "bFVPSskZjtyiZDLN3V_n-23",
+        "target": "_FdFY5pbQAiYYbf3v4dS-107",
+        "label": ""
+      },
+      {
+        "source": "bFVPSskZjtyiZDLN3V_n-23",
+        "target": "_FdFY5pbQAiYYbf3v4dS-106",
+        "label": ""
+      },
+      {
+        "source": "YePybaSxP1RbHi_yg-6t-65",
+        "target": "_FdFY5pbQAiYYbf3v4dS-66",
+        "label": ""
+      },
+      {
+        "source": "bFVPSskZjtyiZDLN3V_n-119",
+        "target": "YePybaSxP1RbHi_yg-6t-65",
+        "label": ""
+      },
+      {
+        "source": "bFVPSskZjtyiZDLN3V_n-120",
+        "target": "bFVPSskZjtyiZDLN3V_n-119",
+        "label": ""
+      },
+      {
+        "source": "bFVPSskZjtyiZDLN3V_n-15",
+        "target": "bFVPSskZjtyiZDLN3V_n-121",
+        "label": ""
+      },
+      {
+        "source": "bFVPSskZjtyiZDLN3V_n-37",
+        "target": "bFVPSskZjtyiZDLN3V_n-35",
+        "label": ""
+      },
+      {
+        "source": "bFVPSskZjtyiZDLN3V_n-51",
+        "target": "bFVPSskZjtyiZDLN3V_n-37",
+        "label": ""
+      },
+      {
+        "source": "bFVPSskZjtyiZDLN3V_n-15",
+        "target": "bFVPSskZjtyiZDLN3V_n-51",
+        "label": ""
+      },
+      {
+        "source": "hYUSkcnEFoUa8Ber-fzS-19",
+        "target": "YePybaSxP1RbHi_yg-6t-15",
+        "label": ""
+      },
+      {
+        "source": "bFVPSskZjtyiZDLN3V_n-63",
+        "target": "bFVPSskZjtyiZDLN3V_n-15",
+        "label": ""
+      },
+      {
+        "source": "1nddzdw7vivYGaLFLm3b-1",
+        "target": "8l6RRYxQaxA69R045GtP-4",
+        "label": ""
+      },
+      {
+        "source": "_FdFY5pbQAiYYbf3v4dS-38",
+        "target": "_FdFY5pbQAiYYbf3v4dS-76",
+        "label": ""
+      },
+      {
+        "source": "h4OWvFJUvyrlSEdhDKH3-4",
+        "target": "_FdFY5pbQAiYYbf3v4dS-38",
+        "label": ""
+      },
+      {
+        "source": "_FdFY5pbQAiYYbf3v4dS-76",
+        "target": "8l6RRYxQaxA69R045GtP-2",
+        "label": ""
+      },
+      {
+        "source": "YePybaSxP1RbHi_yg-6t-15",
+        "target": "_FdFY5pbQAiYYbf3v4dS-69",
+        "label": ""
+      },
+      {
+        "source": "YePybaSxP1RbHi_yg-6t-15",
+        "target": "_FdFY5pbQAiYYbf3v4dS-70",
+        "label": ""
+      },
+      {
+        "source": "bFVPSskZjtyiZDLN3V_n-121",
+        "target": "bFVPSskZjtyiZDLN3V_n-120",
+        "label": ""
+      },
+      {
+        "source": "hYUSkcnEFoUa8Ber-fzS-19",
+        "target": "YePybaSxP1RbHi_yg-6t-65",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0016_secure-service-consumption-across-hyperscalers__gcp-oidc.drawio",
+    "components": [
+      {
+        "id": "tjUhjMwIt7thcooCx0fi-7",
+        "label": "Security Token Service"
+      },
+      {
+        "id": "tjUhjMwIt7thcooCx0fi-9",
+        "label": "Workload Identity Pool"
+      },
+      {
+        "id": "tjUhjMwIt7thcooCx0fi-33",
+        "label": "Service Account"
+      },
+      {
+        "id": "tjUhjMwIt7thcooCx0fi-40",
+        "label": "Resources"
+      },
+      {
+        "id": "cEvXbqjrx8DW3DUu8Di_-10",
+        "label": "SAP Cloud Identity Services"
+      }
+    ],
+    "connections": [
+      {
+        "source": "tjUhjMwIt7thcooCx0fi-33",
+        "target": "tjUhjMwIt7thcooCx0fi-40",
+        "label": ""
+      },
+      {
+        "source": "6BNfL55N-zPbYAa_lblD-65",
+        "target": "cEvXbqjrx8DW3DUu8Di_-52",
+        "label": ""
+      },
+      {
+        "source": "cEvXbqjrx8DW3DUu8Di_-52",
+        "target": "6BNfL55N-zPbYAa_lblD-7",
+        "label": ""
+      },
+      {
+        "source": "PtYt7lvKfpzourR0MFkW-22",
+        "target": "6BNfL55N-zPbYAa_lblD-67",
+        "label": ""
+      },
+      {
+        "source": "PtYt7lvKfpzourR0MFkW-22",
+        "target": "6BNfL55N-zPbYAa_lblD-44",
+        "label": ""
+      },
+      {
+        "source": "PtYt7lvKfpzourR0MFkW-22",
+        "target": "6BNfL55N-zPbYAa_lblD-72",
+        "label": ""
+      },
+      {
+        "source": "cEvXbqjrx8DW3DUu8Di_-52",
+        "target": "6BNfL55N-zPbYAa_lblD-70",
+        "label": ""
+      },
+      {
+        "source": "PtYt7lvKfpzourR0MFkW-22",
+        "target": "cEvXbqjrx8DW3DUu8Di_-10",
+        "label": ""
+      },
+      {
+        "source": "cEvXbqjrx8DW3DUu8Di_-26",
+        "target": "tjUhjMwIt7thcooCx0fi-9",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0016_secure-service-consumption-across-hyperscalers__iam-roles-anywhere.drawio",
+    "components": [
+      {
+        "id": "6BNfL55N-zPbYAa_lblD-5",
+        "label": "Destination Service"
+      },
+      {
+        "id": "6BNfL55N-zPbYAa_lblD-9",
+        "label": "AWS Cloud"
+      },
+      {
+        "id": "6BNfL55N-zPbYAa_lblD-101",
+        "label": "AWS Services"
+      }
+    ],
+    "connections": [
+      {
+        "source": "PtYt7lvKfpzourR0MFkW-22",
+        "target": "6BNfL55N-zPbYAa_lblD-67",
+        "label": ""
+      },
+      {
+        "source": "PtYt7lvKfpzourR0MFkW-22",
+        "target": "6BNfL55N-zPbYAa_lblD-44",
+        "label": ""
+      },
+      {
+        "source": "PtYt7lvKfpzourR0MFkW-22",
+        "target": "6BNfL55N-zPbYAa_lblD-72",
+        "label": ""
+      },
+      {
+        "source": "6BNfL55N-zPbYAa_lblD-275",
+        "target": "6BNfL55N-zPbYAa_lblD-101",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0016_secure-service-consumption-across-hyperscalers__oidc-sts.drawio",
+    "components": [
+      {
+        "id": "6BNfL55N-zPbYAa_lblD-9",
+        "label": "AWS Cloud"
+      },
+      {
+        "id": "6BNfL55N-zPbYAa_lblD-101",
+        "label": "AWS Services"
+      },
+      {
+        "id": "cEvXbqjrx8DW3DUu8Di_-10",
+        "label": "SAP Cloud Identity Services"
+      }
+    ],
+    "connections": [
+      {
+        "source": "cEvXbqjrx8DW3DUu8Di_-82",
+        "target": "6BNfL55N-zPbYAa_lblD-101",
+        "label": ""
+      },
+      {
+        "source": "6BNfL55N-zPbYAa_lblD-65",
+        "target": "cEvXbqjrx8DW3DUu8Di_-52",
+        "label": ""
+      },
+      {
+        "source": "cEvXbqjrx8DW3DUu8Di_-52",
+        "target": "6BNfL55N-zPbYAa_lblD-7",
+        "label": ""
+      },
+      {
+        "source": "PtYt7lvKfpzourR0MFkW-22",
+        "target": "6BNfL55N-zPbYAa_lblD-67",
+        "label": ""
+      },
+      {
+        "source": "PtYt7lvKfpzourR0MFkW-22",
+        "target": "6BNfL55N-zPbYAa_lblD-44",
+        "label": ""
+      },
+      {
+        "source": "PtYt7lvKfpzourR0MFkW-22",
+        "target": "6BNfL55N-zPbYAa_lblD-72",
+        "label": ""
+      },
+      {
+        "source": "cEvXbqjrx8DW3DUu8Di_-52",
+        "target": "6BNfL55N-zPbYAa_lblD-70",
+        "label": ""
+      },
+      {
+        "source": "cEvXbqjrx8DW3DUu8Di_-52",
+        "target": "cEvXbqjrx8DW3DUu8Di_-61",
+        "label": ""
+      },
+      {
+        "source": "cEvXbqjrx8DW3DUu8Di_-61",
+        "target": "cEvXbqjrx8DW3DUu8Di_-82",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0017_connect-business-processes-with-sap-master-data-integration.drawio",
+    "components": [
+      {
+        "id": "YePybaSxP1RbHi_yg-6t-12",
+        "label": "SAP Master Data Integration"
+      },
+      {
+        "id": "YePybaSxP1RbHi_yg-6t-22",
+        "label": "Master Data Event Log"
+      },
+      {
+        "id": "1nddzdw7vivYGaLFLm3b-48",
+        "label": "Subaccount"
+      },
+      {
+        "id": "5Y-BagpDDO-0ocCBZ5ex-95",
+        "label": "SAP Destination service"
+      },
+      {
+        "id": "5Y-BagpDDO-0ocCBZ5ex-36",
+        "label": "SAP Connectivity service"
+      },
+      {
+        "id": "8l6RRYxQaxA69R045GtP-11",
+        "label": "3rd Party Cloud Solutions"
+      },
+      {
+        "id": "8l6RRYxQaxA69R045GtP-54",
+        "label": "SAP Cloud Solutions"
+      },
+      {
+        "id": "YePybaSxP1RbHi_yg-6t-75",
+        "label": "3rd Party Cloud Solutions"
+      },
+      {
+        "id": "1nddzdw7vivYGaLFLm3b-26",
+        "label": "3rd Party On-Premise Solutions"
+      },
+      {
+        "id": "zLkr8Fda_o7fLGSxankt-65",
+        "label": "SAP Application Interface Framework"
+      },
+      {
+        "id": "0xNrMv2bNo_OIqyNJr-0-21",
+        "label": "Legend"
+      },
+      {
+        "id": "0xNrMv2bNo_OIqyNJr-0-32",
+        "label": "SAP BTP Service"
+      },
+      {
+        "id": "5Y-BagpDDO-0ocCBZ5ex-34",
+        "label": "Cloud Connector"
+      },
+      {
+        "id": "8l6RRYxQaxA69R045GtP-4",
+        "label": "\"> \">"
+      },
+      {
+        "id": "YePybaSxP1RbHi_yg-6t-13",
+        "label": "3rd Party Cloud Solutions"
+      },
+      {
+        "id": "YePybaSxP1RbHi_yg-6t-65",
+        "label": "Cloud Integration"
+      },
+      {
+        "id": "YePybaSxP1RbHi_yg-6t-67",
+        "label": "Integration flow"
+      },
+      {
+        "id": "1nddzdw7vivYGaLFLm3b-13",
+        "label": "Master data integration adapter"
+      },
+      {
+        "id": "0xNrMv2bNo_OIqyNJr-0-44",
+        "label": "3rd Party Cloud Solutions"
+      },
+      {
+        "id": "1nddzdw7vivYGaLFLm3b-1",
+        "label": "SAP Business Accelerator Hub"
+      },
+      {
+        "id": "5Y-BagpDDO-0ocCBZ5ex-113",
+        "label": "SAP Destination service"
+      },
+      {
+        "id": "5Y-BagpDDO-0ocCBZ5ex-114",
+        "label": "SAP Connectivity service"
+      },
+      {
+        "id": "YfMec5EfbNTx7emQVN0L-3",
+        "label": "3rd Party Cloud Solutions"
+      }
+    ],
+    "connections": [
+      {
+        "source": "1nddzdw7vivYGaLFLm3b-36",
+        "target": "8l6RRYxQaxA69R045GtP-4",
+        "label": ""
+      },
+      {
+        "source": "5Y-BagpDDO-0ocCBZ5ex-95",
+        "target": "5Y-BagpDDO-0ocCBZ5ex-36",
+        "label": ""
+      },
+      {
+        "source": "5Y-BagpDDO-0ocCBZ5ex-36",
+        "target": "5Y-BagpDDO-0ocCBZ5ex-109",
+        "label": ""
+      },
+      {
+        "source": "5Y-BagpDDO-0ocCBZ5ex-109",
+        "target": "5Y-BagpDDO-0ocCBZ5ex-34",
+        "label": ""
+      },
+      {
+        "source": "5Y-BagpDDO-0ocCBZ5ex-117",
+        "target": "5Y-BagpDDO-0ocCBZ5ex-34",
+        "label": ""
+      },
+      {
+        "source": "hYUSkcnEFoUa8Ber-fzS-19",
+        "target": "1nddzdw7vivYGaLFLm3b-48",
+        "label": ""
+      },
+      {
+        "source": "YePybaSxP1RbHi_yg-6t-65",
+        "target": "YePybaSxP1RbHi_yg-6t-15",
+        "label": ""
+      },
+      {
+        "source": "5Y-BagpDDO-0ocCBZ5ex-34",
+        "target": "1nddzdw7vivYGaLFLm3b-36",
+        "label": ""
+      },
+      {
+        "source": "5Y-BagpDDO-0ocCBZ5ex-34",
+        "target": "zLkr8Fda_o7fLGSxankt-61",
+        "label": ""
+      },
+      {
+        "source": "1nddzdw7vivYGaLFLm3b-1",
+        "target": "YePybaSxP1RbHi_yg-6t-65",
+        "label": ""
+      },
+      {
+        "source": "5Y-BagpDDO-0ocCBZ5ex-113",
+        "target": "5Y-BagpDDO-0ocCBZ5ex-114",
+        "label": ""
+      },
+      {
+        "source": "5Y-BagpDDO-0ocCBZ5ex-114",
+        "target": "5Y-BagpDDO-0ocCBZ5ex-117",
+        "label": ""
+      },
+      {
+        "source": "YfMec5EfbNTx7emQVN0L-1",
+        "target": "YePybaSxP1RbHi_yg-6t-65",
+        "label": ""
+      },
+      {
+        "source": "YePybaSxP1RbHi_yg-6t-74",
+        "target": "YePybaSxP1RbHi_yg-6t-65",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0018_integrate-and-extend-with-sap-build-process-automation.drawio",
+    "components": [
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-5",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-17",
+        "label": "Mobile or Desktop"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-23",
+        "label": "Mobile or Desktop"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-52",
+        "label": "Mobile or Desktop"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-55",
+        "label": "Mobile or Desktop"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-27",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-32",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-45",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-57",
+        "label": "Document Management"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-58",
+        "label": "Cloud Transport Management"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-74",
+        "label": "Connectivity"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-77",
+        "label": "Destination * not always required when using actions"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-81",
+        "label": "\"> \">"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-82",
+        "label": "Event Driven Integrations"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-86",
+        "label": "Business Accelerator Hub"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-92",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-93",
+        "label": "Application Integrations"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-94",
+        "label": "API Centric Integrations"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-101",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-102",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-103",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-104",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-105",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-107",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-119",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-125",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-129",
+        "label": "SAP On-Premise Solutions"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-132",
+        "label": "Cloud Connector"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-134",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-149",
+        "label": "Identity Provisioning"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-150",
+        "label": "Identity Authentication"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-151",
+        "label": "Identity Directory"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-155",
+        "label": "Document Information Extraction"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-162",
+        "label": "Joule Studio"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-69",
+        "label": "Applications"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-164",
+        "label": "SAP Task Center"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-175",
+        "label": "Process Workspace"
+      },
+      {
+        "id": "4vnX8KjNfb7eenx3V_E6-180",
+        "label": "SAP Build"
+      }
+    ],
+    "connections": [
+      {
+        "source": "4vnX8KjNfb7eenx3V_E6-13",
+        "target": "4vnX8KjNfb7eenx3V_E6-24",
+        "label": ""
+      },
+      {
+        "source": "4vnX8KjNfb7eenx3V_E6-31",
+        "target": "4vnX8KjNfb7eenx3V_E6-124",
+        "label": ""
+      },
+      {
+        "source": "4vnX8KjNfb7eenx3V_E6-24",
+        "target": "4vnX8KjNfb7eenx3V_E6-31",
+        "label": ""
+      },
+      {
+        "source": "4vnX8KjNfb7eenx3V_E6-22",
+        "target": "4vnX8KjNfb7eenx3V_E6-17",
+        "label": ""
+      },
+      {
+        "source": "4vnX8KjNfb7eenx3V_E6-74",
+        "target": "4vnX8KjNfb7eenx3V_E6-72",
+        "label": ""
+      },
+      {
+        "source": "4vnX8KjNfb7eenx3V_E6-57",
+        "target": "4vnX8KjNfb7eenx3V_E6-74",
+        "label": ""
+      },
+      {
+        "source": "4vnX8KjNfb7eenx3V_E6-81",
+        "target": "4vnX8KjNfb7eenx3V_E6-74",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0019_sap-iam-integration-with-sap-cloud-identity-services.drawio",
+    "components": [
+      {
+        "id": "bR3FuibkpdyBBLSE132l-0",
+        "label": "Customer managed IAM integration"
+      },
+      {
+        "id": "bR3FuibkpdyBBLSE132l-2",
+        "label": "SAP Cloud Products non-BTP based"
+      },
+      {
+        "id": "bR3FuibkpdyBBLSE132l-11",
+        "label": "User"
+      },
+      {
+        "id": "bR3FuibkpdyBBLSE132l-12",
+        "label": "Mobile/Desktop Application Clients"
+      },
+      {
+        "id": "bR3FuibkpdyBBLSE132l-15",
+        "label": "SAP BTP Applications - IAM based on SAP Cloud Identity Services"
+      },
+      {
+        "id": "bR3FuibkpdyBBLSE132l-16",
+        "label": "SAP BTP Applications - IAM based on XSUAA"
+      },
+      {
+        "id": "bR3FuibkpdyBBLSE132l-17",
+        "label": "XSUAA"
+      },
+      {
+        "id": "bR3FuibkpdyBBLSE132l-20",
+        "label": "Navigation Service"
+      },
+      {
+        "id": "bR3FuibkpdyBBLSE132l-43",
+        "label": "Identity Authentication"
+      },
+      {
+        "id": "mxPtVTVgJDYKKaN8WBGz-12",
+        "label": "Legend"
+      }
+    ],
+    "connections": [
+      {
+        "source": "bR3FuibkpdyBBLSE132l-11",
+        "target": "bR3FuibkpdyBBLSE132l-12",
+        "label": ""
+      },
+      {
+        "source": "bR3FuibkpdyBBLSE132l-37",
+        "target": "bR3FuibkpdyBBLSE132l-43",
+        "label": ""
+      },
+      {
+        "source": "bR3FuibkpdyBBLSE132l-43",
+        "target": "bR3FuibkpdyBBLSE132l-38",
+        "label": ""
+      },
+      {
+        "source": "bR3FuibkpdyBBLSE132l-26",
+        "target": "bR3FuibkpdyBBLSE132l-30",
+        "label": ""
+      },
+      {
+        "source": "bR3FuibkpdyBBLSE132l-43",
+        "target": "bR3FuibkpdyBBLSE132l-26",
+        "label": ""
+      },
+      {
+        "source": "bR3FuibkpdyBBLSE132l-25",
+        "target": "bR3FuibkpdyBBLSE132l-40",
+        "label": ""
+      },
+      {
+        "source": "bR3FuibkpdyBBLSE132l-39",
+        "target": "bR3FuibkpdyBBLSE132l-25",
+        "label": ""
+      },
+      {
+        "source": "bR3FuibkpdyBBLSE132l-54",
+        "target": "bR3FuibkpdyBBLSE132l-62",
+        "label": ""
+      },
+      {
+        "source": "bR3FuibkpdyBBLSE132l-59",
+        "target": "bR3FuibkpdyBBLSE132l-62",
+        "label": ""
+      },
+      {
+        "source": "bR3FuibkpdyBBLSE132l-60",
+        "target": "bR3FuibkpdyBBLSE132l-62",
+        "label": ""
+      },
+      {
+        "source": "bR3FuibkpdyBBLSE132l-84",
+        "target": "bR3FuibkpdyBBLSE132l-72",
+        "label": ""
+      },
+      {
+        "source": "bR3FuibkpdyBBLSE132l-84",
+        "target": "bR3FuibkpdyBBLSE132l-73",
+        "label": ""
+      },
+      {
+        "source": "bR3FuibkpdyBBLSE132l-84",
+        "target": "bR3FuibkpdyBBLSE132l-71",
+        "label": ""
+      },
+      {
+        "source": "bR3FuibkpdyBBLSE132l-84",
+        "target": "bR3FuibkpdyBBLSE132l-66",
+        "label": ""
+      },
+      {
+        "source": "bR3FuibkpdyBBLSE132l-71",
+        "target": "bR3FuibkpdyBBLSE132l-84",
+        "label": ""
+      },
+      {
+        "source": "bR3FuibkpdyBBLSE132l-84",
+        "target": "bR3FuibkpdyBBLSE132l-30",
+        "label": ""
+      },
+      {
+        "source": "bR3FuibkpdyBBLSE132l-81",
+        "target": "bR3FuibkpdyBBLSE132l-84",
+        "label": ""
+      },
+      {
+        "source": "bR3FuibkpdyBBLSE132l-30",
+        "target": "bR3FuibkpdyBBLSE132l-84",
+        "label": ""
+      },
+      {
+        "source": "bR3FuibkpdyBBLSE132l-72",
+        "target": "bR3FuibkpdyBBLSE132l-84",
+        "label": ""
+      },
+      {
+        "source": "bR3FuibkpdyBBLSE132l-89",
+        "target": "bR3FuibkpdyBBLSE132l-103",
+        "label": ""
+      },
+      {
+        "source": "bR3FuibkpdyBBLSE132l-90",
+        "target": "bR3FuibkpdyBBLSE132l-103",
+        "label": ""
+      },
+      {
+        "source": "bR3FuibkpdyBBLSE132l-21",
+        "target": "bR3FuibkpdyBBLSE132l-34",
+        "label": ""
+      },
+      {
+        "source": "bR3FuibkpdyBBLSE132l-91",
+        "target": "bR3FuibkpdyBBLSE132l-89",
+        "label": ""
+      },
+      {
+        "source": "bR3FuibkpdyBBLSE132l-103",
+        "target": "bR3FuibkpdyBBLSE132l-93",
+        "label": ""
+      },
+      {
+        "source": "bR3FuibkpdyBBLSE132l-108",
+        "target": "bR3FuibkpdyBBLSE132l-103",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0020_business-to-business-integration.drawio",
+    "components": [
+      {
+        "id": "_FdFY5pbQAiYYbf3v4dS-67",
+        "label": "Trading Partners"
+      },
+      {
+        "id": "bFVPSskZjtyiZDLN3V_n-140",
+        "label": "SAP Connectivity service"
+      },
+      {
+        "id": "dFPvA1FSlUZvYu8P9tU1-146",
+        "label": "SAP Connectivity service"
+      },
+      {
+        "id": "dFPvA1FSlUZvYu8P9tU1-145",
+        "label": "SAP Destination service"
+      },
+      {
+        "id": "dFPvA1FSlUZvYu8P9tU1-117",
+        "label": "Cloud Solutions"
+      },
+      {
+        "id": "8l6RRYxQaxA69R045GtP-4",
+        "label": "SAP Integration Suite"
+      },
+      {
+        "id": "YePybaSxP1RbHi_yg-6t-13",
+        "label": "NETWORK"
+      },
+      {
+        "id": "dFPvA1FSlUZvYu8P9tU1-22",
+        "label": "Cloud Integration"
+      },
+      {
+        "id": "dFPvA1FSlUZvYu8P9tU1-53",
+        "label": "Partner directory"
+      },
+      {
+        "id": "dFPvA1FSlUZvYu8P9tU1-78",
+        "label": "Integration flows"
+      },
+      {
+        "id": "dFPvA1FSlUZvYu8P9tU1-13",
+        "label": "Integration Advisor"
+      },
+      {
+        "id": "dFPvA1FSlUZvYu8P9tU1-27",
+        "label": "Message implementation guidelines"
+      },
+      {
+        "id": "dFPvA1FSlUZvYu8P9tU1-33",
+        "label": "Knowledge graph"
+      },
+      {
+        "id": "dFPvA1FSlUZvYu8P9tU1-28",
+        "label": "Message implementation guidelines"
+      },
+      {
+        "id": "dFPvA1FSlUZvYu8P9tU1-19",
+        "label": "Trading Partner Management"
+      },
+      {
+        "id": "dFPvA1FSlUZvYu8P9tU1-11",
+        "label": "Trading partner agreement"
+      },
+      {
+        "id": "dFPvA1FSlUZvYu8P9tU1-34",
+        "label": "B2B scenario"
+      },
+      {
+        "id": "dFPvA1FSlUZvYu8P9tU1-35",
+        "label": "Trading partner profiles & agreements"
+      },
+      {
+        "id": "dFPvA1FSlUZvYu8P9tU1-123",
+        "label": "On-Premise Solutions"
+      },
+      {
+        "id": "dFPvA1FSlUZvYu8P9tU1-125",
+        "label": "SAP Application Interface Framework (for SAP S/4HANA, SAP ECC)"
+      },
+      {
+        "id": "dFPvA1FSlUZvYu8P9tU1-128",
+        "label": "Cloud Connector"
+      },
+      {
+        "id": "3KK9dNKUfCjVDNGEPONA-5",
+        "label": "Legend"
+      },
+      {
+        "id": "3KK9dNKUfCjVDNGEPONA-7",
+        "label": "SAP BTP Service"
+      },
+      {
+        "id": "1nddzdw7vivYGaLFLm3b-1",
+        "label": "SAP Business Accelerator Hub"
+      }
+    ],
+    "connections": [
+      {
+        "source": "dFPvA1FSlUZvYu8P9tU1-145",
+        "target": "dFPvA1FSlUZvYu8P9tU1-146",
+        "label": ""
+      },
+      {
+        "source": "dFPvA1FSlUZvYu8P9tU1-53",
+        "target": "dFPvA1FSlUZvYu8P9tU1-78",
+        "label": ""
+      },
+      {
+        "source": "dFPvA1FSlUZvYu8P9tU1-22",
+        "target": "dFPvA1FSlUZvYu8P9tU1-145",
+        "label": ""
+      },
+      {
+        "source": "dFPvA1FSlUZvYu8P9tU1-22",
+        "target": "dFPvA1FSlUZvYu8P9tU1-115",
+        "label": ""
+      },
+      {
+        "source": "dFPvA1FSlUZvYu8P9tU1-176",
+        "target": "dFPvA1FSlUZvYu8P9tU1-22",
+        "label": ""
+      },
+      {
+        "source": "dFPvA1FSlUZvYu8P9tU1-27",
+        "target": "dFPvA1FSlUZvYu8P9tU1-33",
+        "label": ""
+      },
+      {
+        "source": "dFPvA1FSlUZvYu8P9tU1-27",
+        "target": "dFPvA1FSlUZvYu8P9tU1-28",
+        "label": ""
+      },
+      {
+        "source": "dFPvA1FSlUZvYu8P9tU1-52",
+        "target": "dFPvA1FSlUZvYu8P9tU1-35",
+        "label": ""
+      },
+      {
+        "source": "dFPvA1FSlUZvYu8P9tU1-128",
+        "target": "dFPvA1FSlUZvYu8P9tU1-124",
+        "label": ""
+      },
+      {
+        "source": "8l6RRYxQaxA69R045GtP-4",
+        "target": "1nddzdw7vivYGaLFLm3b-1",
+        "label": ""
+      },
+      {
+        "source": "dFPvA1FSlUZvYu8P9tU1-120",
+        "target": "dFPvA1FSlUZvYu8P9tU1-128",
+        "label": ""
+      },
+      {
+        "source": "dFPvA1FSlUZvYu8P9tU1-22",
+        "target": "dFPvA1FSlUZvYu8P9tU1-124",
+        "label": ""
+      },
+      {
+        "source": "dFPvA1FSlUZvYu8P9tU1-22",
+        "target": "dFPvA1FSlUZvYu8P9tU1-13",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0021_application-to-application-integration.drawio",
+    "components": [
+      {
+        "id": "LdL5WsbrmMSdlaasYEem-25",
+        "label": "SAP Destination service"
+      },
+      {
+        "id": "8l6RRYxQaxA69R045GtP-11",
+        "label": "NETWORK"
+      },
+      {
+        "id": "8l6RRYxQaxA69R045GtP-4",
+        "label": "\"> \">"
+      },
+      {
+        "id": "4Q7_HQUH7eauDnCCm6wH-32",
+        "label": "Subaccount"
+      },
+      {
+        "id": "zLkr8Fda_o7fLGSxankt-150",
+        "label": "3rd Party Cloud S olutions"
+      },
+      {
+        "id": "zLkr8Fda_o7fLGSxankt-100",
+        "label": "SAP Cloud Solutions"
+      },
+      {
+        "id": "8l6RRYxQaxA69R045GtP-54",
+        "label": "SAP Cloud Solutions"
+      },
+      {
+        "id": "zLkr8Fda_o7fLGSxankt-243",
+        "label": "SAP Business Accelerator Hub"
+      },
+      {
+        "id": "gaJLztNP8TzJ90OF5Ure-2",
+        "label": "3rd Party Cloud S olutions"
+      },
+      {
+        "id": "v9R5KxCXn3x2G8hZvrpm-65",
+        "label": "NETWORK"
+      },
+      {
+        "id": "v9R5KxCXn3x2G8hZvrpm-67",
+        "label": "SAP Application Interface Framework (for SAP S/4HANA, SAP ECC)"
+      },
+      {
+        "id": "v9R5KxCXn3x2G8hZvrpm-92",
+        "label": "Cloud Connector"
+      },
+      {
+        "id": "LdL5WsbrmMSdlaasYEem-29",
+        "label": "SAP Connectivity service"
+      },
+      {
+        "id": "LdL5WsbrmMSdlaasYEem-6",
+        "label": "Cloud Integration"
+      },
+      {
+        "id": "LdL5WsbrmMSdlaasYEem-7",
+        "label": "Integration flows"
+      },
+      {
+        "id": "8l6RRYxQaxA69R045GtP-7",
+        "label": "On-Premise Solutions"
+      },
+      {
+        "id": "zLkr8Fda_o7fLGSxankt-65",
+        "label": "SAP Application Interface Framework (for SAP S/4HANA, SAP ECC)"
+      },
+      {
+        "id": "hYUSkcnEFoUa8Ber-fzS-73",
+        "label": "Cloud Connector"
+      },
+      {
+        "id": "yZOSKd5rAoisCalMKdBo-2",
+        "label": "Kubernetes cluster"
+      },
+      {
+        "id": "yZOSKd5rAoisCalMKdBo-13",
+        "label": "Integration flows"
+      },
+      {
+        "id": "TZSxzEkk5vNPJYZ86_Vk-3",
+        "label": "Legend"
+      },
+      {
+        "id": "TZSxzEkk5vNPJYZ86_Vk-11",
+        "label": "SAP BTP Service"
+      }
+    ],
+    "connections": [
+      {
+        "source": "8l6RRYxQaxA69R045GtP-4",
+        "target": "hYUSkcnEFoUa8Ber-fzS-31",
+        "label": ""
+      },
+      {
+        "source": "LdL5WsbrmMSdlaasYEem-6",
+        "target": "hYUSkcnEFoUa8Ber-fzS-19",
+        "label": ""
+      },
+      {
+        "source": "v9R5KxCXn3x2G8hZvrpm-92",
+        "target": "v9R5KxCXn3x2G8hZvrpm-66",
+        "label": ""
+      },
+      {
+        "source": "LdL5WsbrmMSdlaasYEem-25",
+        "target": "LdL5WsbrmMSdlaasYEem-29",
+        "label": ""
+      },
+      {
+        "source": "v9R5KxCXn3x2G8hZvrpm-66",
+        "target": "LdL5WsbrmMSdlaasYEem-6",
+        "label": ""
+      },
+      {
+        "source": "RKUqavkmANfHh5X2ywrs-12",
+        "target": "v9R5KxCXn3x2G8hZvrpm-92",
+        "label": ""
+      },
+      {
+        "source": "LdL5WsbrmMSdlaasYEem-6",
+        "target": "zLkr8Fda_o7fLGSxankt-61",
+        "label": ""
+      },
+      {
+        "source": "hYUSkcnEFoUa8Ber-fzS-18",
+        "target": "LdL5WsbrmMSdlaasYEem-6",
+        "label": ""
+      },
+      {
+        "source": "hYUSkcnEFoUa8Ber-fzS-78",
+        "target": "zLkr8Fda_o7fLGSxankt-61",
+        "label": ""
+      },
+      {
+        "source": "v9R5KxCXn3x2G8hZvrpm-92",
+        "target": "zLkr8Fda_o7fLGSxankt-61",
+        "label": ""
+      },
+      {
+        "source": "hYUSkcnEFoUa8Ber-fzS-31",
+        "target": "hYUSkcnEFoUa8Ber-fzS-73",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0022_api-managed-integration.drawio",
+    "components": [
+      {
+        "id": "8l6RRYxQaxA69R045GtP-1",
+        "label": "<<"
+      },
+      {
+        "id": "8l6RRYxQaxA69R045GtP-2",
+        "label": "<<<<<<<<<<<<<<"
+      },
+      {
+        "id": "8l6RRYxQaxA69R045GtP-11",
+        "label": "NETWORK"
+      },
+      {
+        "id": "dRn98VZPlsFJSJt_BaqV-101",
+        "label": "Client Applications"
+      },
+      {
+        "id": "dRn98VZPlsFJSJt_BaqV-98",
+        "label": "Data source"
+      },
+      {
+        "id": "dRn98VZPlsFJSJt_BaqV-102",
+        "label": "Data source"
+      },
+      {
+        "id": "dRn98VZPlsFJSJt_BaqV-99",
+        "label": "Data source"
+      },
+      {
+        "id": "dRn98VZPlsFJSJt_BaqV-100",
+        "label": "Data source"
+      },
+      {
+        "id": "8l6RRYxQaxA69R045GtP-4",
+        "label": "\"> \">"
+      },
+      {
+        "id": "8Uogrh9DGqOY0QzcngNR-36",
+        "label": "SAP Destination service"
+      },
+      {
+        "id": "8Uogrh9DGqOY0QzcngNR-39",
+        "label": "SAP Connectivity service"
+      },
+      {
+        "id": "zLkr8Fda_o7fLGSxankt-202",
+        "label": "Cloud Integration"
+      },
+      {
+        "id": "dRn98VZPlsFJSJt_BaqV-52",
+        "label": "Graph"
+      },
+      {
+        "id": "ywHCQfon3YgA2eiFdqId-14",
+        "label": "NETWORK"
+      },
+      {
+        "id": "hYUSkcnEFoUa8Ber-fzS-76",
+        "label": "Kubernetes cluster"
+      },
+      {
+        "id": "hYUSkcnEFoUa8Ber-fzS-73",
+        "label": "Cloud Connector"
+      },
+      {
+        "id": "hYUSkcnEFoUa8Ber-fzS-78",
+        "label": "Edge Integration cell"
+      },
+      {
+        "id": "ywHCQfon3YgA2eiFdqId-18",
+        "label": "NETWORK"
+      },
+      {
+        "id": "dRn98VZPlsFJSJt_BaqV-14",
+        "label": "Client Applications"
+      },
+      {
+        "id": "zLkr8Fda_o7fLGSxankt-65",
+        "label": "SAP Application Interface Framework (for SAP S/4HANA, SAP ECC)"
+      },
+      {
+        "id": "8Uogrh9DGqOY0QzcngNR-33",
+        "label": "Cloud Connector"
+      },
+      {
+        "id": "4bXTCHI5SMZw4-VJFfMM-8",
+        "label": "Legend"
+      },
+      {
+        "id": "4bXTCHI5SMZw4-VJFfMM-16",
+        "label": "SAP BTP Service"
+      },
+      {
+        "id": "lHFqGyrapINXuCe7oUP0-3",
+        "label": "NETWORK"
+      },
+      {
+        "id": "MNoCtDz5ZO1DFXrK31TN-34",
+        "label": "SAP Destination service"
+      },
+      {
+        "id": "zLkr8Fda_o7fLGSxankt-243",
+        "label": "SAP Business Accelerator Hub"
+      },
+      {
+        "id": "V25RwjR1GB1ZiLahEEfb-1",
+        "label": "Integration flows & API policies"
+      }
+    ],
+    "connections": [
+      {
+        "source": "8Uogrh9DGqOY0QzcngNR-39",
+        "target": "hYUSkcnEFoUa8Ber-fzS-26",
+        "label": ""
+      },
+      {
+        "source": "8l6RRYxQaxA69R045GtP-4",
+        "target": "4bXTCHI5SMZw4-VJFfMM-4",
+        "label": ""
+      },
+      {
+        "source": "8l6RRYxQaxA69R045GtP-4",
+        "target": "zLkr8Fda_o7fLGSxankt-243",
+        "label": ""
+      },
+      {
+        "source": "MNoCtDz5ZO1DFXrK31TN-22",
+        "target": "dRn98VZPlsFJSJt_BaqV-52",
+        "label": ""
+      },
+      {
+        "source": "8Uogrh9DGqOY0QzcngNR-36",
+        "target": "8Uogrh9DGqOY0QzcngNR-39",
+        "label": ""
+      },
+      {
+        "source": "dRn98VZPlsFJSJt_BaqV-12",
+        "target": "ywHCQfon3YgA2eiFdqId-10",
+        "label": ""
+      },
+      {
+        "source": "dRn98VZPlsFJSJt_BaqV-12",
+        "target": "ywHCQfon3YgA2eiFdqId-10",
+        "label": ""
+      },
+      {
+        "source": "dRn98VZPlsFJSJt_BaqV-12",
+        "target": "ywHCQfon3YgA2eiFdqId-10",
+        "label": ""
+      },
+      {
+        "source": "ywHCQfon3YgA2eiFdqId-10",
+        "target": "dRn98VZPlsFJSJt_BaqV-25",
+        "label": ""
+      },
+      {
+        "source": "zLkr8Fda_o7fLGSxankt-202",
+        "target": "dRn98VZPlsFJSJt_BaqV-42",
+        "label": ""
+      },
+      {
+        "source": "hYUSkcnEFoUa8Ber-fzS-26",
+        "target": "8Uogrh9DGqOY0QzcngNR-33",
+        "label": ""
+      },
+      {
+        "source": "hYUSkcnEFoUa8Ber-fzS-78",
+        "target": "zLkr8Fda_o7fLGSxankt-61",
+        "label": ""
+      },
+      {
+        "source": "MNoCtDz5ZO1DFXrK31TN-34",
+        "target": "dRn98VZPlsFJSJt_BaqV-36",
+        "label": ""
+      },
+      {
+        "source": "dRn98VZPlsFJSJt_BaqV-52",
+        "target": "MNoCtDz5ZO1DFXrK31TN-34",
+        "label": ""
+      },
+      {
+        "source": "MNoCtDz5ZO1DFXrK31TN-34",
+        "target": "MNoCtDz5ZO1DFXrK31TN-30",
+        "label": ""
+      },
+      {
+        "source": "MNoCtDz5ZO1DFXrK31TN-30",
+        "target": "dRn98VZPlsFJSJt_BaqV-30",
+        "label": ""
+      },
+      {
+        "source": "dRn98VZPlsFJSJt_BaqV-19",
+        "target": "hYUSkcnEFoUa8Ber-fzS-78",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0023_devops-with-sap-btp.drawio",
+    "components": [
+      {
+        "id": "9_2BVRPRgIGZMdOAFPMG-3",
+        "label": "Your private cloud / data center"
+      },
+      {
+        "id": "JYNAhhOeTUmVkHHW23Wc-1",
+        "label": "Terraform Provider for SAP BTP"
+      },
+      {
+        "id": "JYNAhhOeTUmVkHHW23Wc-3",
+        "label": "Git-based source code repository"
+      },
+      {
+        "id": "JYNAhhOeTUmVkHHW23Wc-5",
+        "label": "Third-party CI/CD server"
+      },
+      {
+        "id": "Dg23MXe1iFPbouFXRMG2-38",
+        "label": "Continuous Integration and Delivery"
+      },
+      {
+        "id": "Dg23MXe1iFPbouFXRMG2-14",
+        "label": "Cloud Logging"
+      },
+      {
+        "id": "Dg23MXe1iFPbouFXRMG2-11",
+        "label": "Automation Pilot"
+      },
+      {
+        "id": "Dg23MXe1iFPbouFXRMG2-44",
+        "label": "Your private cloud / data center"
+      },
+      {
+        "id": "Dg23MXe1iFPbouFXRMG2-62",
+        "label": "Your private cloud / data center"
+      },
+      {
+        "id": "Dg23MXe1iFPbouFXRMG2-41",
+        "label": "Cloud Transport Management"
+      },
+      {
+        "id": "Dg23MXe1iFPbouFXRMG2-60",
+        "label": "Your private cloud / data center"
+      },
+      {
+        "id": "eP-Ncv_d5URBy7ixXD03-12",
+        "label": "PRE-PROD"
+      },
+      {
+        "id": "eP-Ncv_d5URBy7ixXD03-16",
+        "label": "PROD"
+      },
+      {
+        "id": "eP-Ncv_d5URBy7ixXD03-11",
+        "label": "Your private cloud / data center"
+      },
+      {
+        "id": "eP-Ncv_d5URBy7ixXD03-46",
+        "label": "Cloud Connector"
+      },
+      {
+        "id": "lbPgFuZumCOXme4oE2IH-33",
+        "label": "SAP Solution Manager"
+      },
+      {
+        "id": "lbPgFuZumCOXme4oE2IH-34",
+        "label": "SAP Focused Run"
+      },
+      {
+        "id": "lbPgFuZumCOXme4oE2IH-19",
+        "label": "Your private cloud / data center"
+      },
+      {
+        "id": "lbPgFuZumCOXme4oE2IH-31",
+        "label": "Your private cloud / data center"
+      },
+      {
+        "id": "lbPgFuZumCOXme4oE2IH-52",
+        "label": "Your private cloud / data center"
+      },
+      {
+        "id": "Dg23MXe1iFPbouFXRMG2-28",
+        "label": "Your private cloud / data center"
+      },
+      {
+        "id": "glTZ9Th4ETbDfbhta1-Z-5",
+        "label": "Your private cloud / data center"
+      }
+    ],
+    "connections": [
+      {
+        "source": "JYNAhhOeTUmVkHHW23Wc-3",
+        "target": "JYNAhhOeTUmVkHHW23Wc-5",
+        "label": ""
+      },
+      {
+        "source": "Dg23MXe1iFPbouFXRMG2-37",
+        "target": "JYNAhhOeTUmVkHHW23Wc-3",
+        "label": ""
+      },
+      {
+        "source": "eP-Ncv_d5URBy7ixXD03-47",
+        "target": "Dg23MXe1iFPbouFXRMG2-62",
+        "label": ""
+      },
+      {
+        "source": "Dg23MXe1iFPbouFXRMG2-10",
+        "target": "eP-Ncv_d5URBy7ixXD03-23",
+        "label": ""
+      },
+      {
+        "source": "Dg23MXe1iFPbouFXRMG2-40",
+        "target": "JYNAhhOeTUmVkHHW23Wc-3",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0024_integrating-and-extending-joule.drawio",
+    "components": [
+      {
+        "id": "3-6J5nk3R8EDgc8lyGGh-30",
+        "label": "BTP Service"
+      },
+      {
+        "id": "3-6J5nk3R8EDgc8lyGGh-39",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "3-6J5nk3R8EDgc8lyGGh-92",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "3-6J5nk3R8EDgc8lyGGh-113",
+        "label": "Destination"
+      },
+      {
+        "id": "3-6J5nk3R8EDgc8lyGGh-152",
+        "label": "Identity Directory"
+      },
+      {
+        "id": "3-6J5nk3R8EDgc8lyGGh-153",
+        "label": "Identity Authentication"
+      },
+      {
+        "id": "3-6J5nk3R8EDgc8lyGGh-154",
+        "label": "Identity Provisoning"
+      },
+      {
+        "id": "3-6J5nk3R8EDgc8lyGGh-183",
+        "label": "SAP Build"
+      },
+      {
+        "id": "3-6J5nk3R8EDgc8lyGGh-143",
+        "label": "Legend"
+      },
+      {
+        "id": "0jtTluZprwmiQLnFnUO7-96",
+        "label": "Legend"
+      },
+      {
+        "id": "0jtTluZprwmiQLnFnUO7-45",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "1T__YqqfF3AdZEnfp5N6-0",
+        "label": "SAP Build Work Zone"
+      },
+      {
+        "id": "1T__YqqfF3AdZEnfp5N6-10",
+        "label": "Standard Capabilities"
+      },
+      {
+        "id": "1T__YqqfF3AdZEnfp5N6-11",
+        "label": "Custom Capabilities"
+      },
+      {
+        "id": "4_UFFoeULFMYEcW7mYY9-41",
+        "label": "CDM Content"
+      },
+      {
+        "id": "4_UFFoeULFMYEcW7mYY9-42",
+        "label": "Nav. Target Mappings"
+      },
+      {
+        "id": "4_UFFoeULFMYEcW7mYY9-44",
+        "label": "Multi-Cloud"
+      },
+      {
+        "id": "3-6J5nk3R8EDgc8lyGGh-64",
+        "label": "Connectivity"
+      }
+    ],
+    "connections": [
+      {
+        "source": "3-6J5nk3R8EDgc8lyGGh-88",
+        "target": "3-6J5nk3R8EDgc8lyGGh-109",
+        "label": ""
+      },
+      {
+        "source": "0jtTluZprwmiQLnFnUO7-60",
+        "target": "3-6J5nk3R8EDgc8lyGGh-88",
+        "label": ""
+      },
+      {
+        "source": "0jtTluZprwmiQLnFnUO7-49",
+        "target": "4_UFFoeULFMYEcW7mYY9-5",
+        "label": ""
+      },
+      {
+        "source": "4_UFFoeULFMYEcW7mYY9-5",
+        "target": "3-6J5nk3R8EDgc8lyGGh-88",
+        "label": ""
+      },
+      {
+        "source": "aO2RodwH0H6WVpld080A-5",
+        "target": "3-6J5nk3R8EDgc8lyGGh-88",
+        "label": ""
+      },
+      {
+        "source": "4_UFFoeULFMYEcW7mYY9-54",
+        "target": "3-6J5nk3R8EDgc8lyGGh-213",
+        "label": ""
+      },
+      {
+        "source": "1T__YqqfF3AdZEnfp5N6-9",
+        "target": "4_UFFoeULFMYEcW7mYY9-60",
+        "label": ""
+      },
+      {
+        "source": "3-6J5nk3R8EDgc8lyGGh-109",
+        "target": "3-6J5nk3R8EDgc8lyGGh-170",
+        "label": ""
+      },
+      {
+        "source": "3-6J5nk3R8EDgc8lyGGh-113",
+        "target": "4_UFFoeULFMYEcW7mYY9-68",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0025_transitioning-architectures-from-sap-netweaver.drawio",
+    "components": [
+      {
+        "id": "FNb6Wp1AUfQGS5yJftca-29",
+        "label": "Customer Private Network (Self-hosted / Hyperscaler)"
+      },
+      {
+        "id": "FNb6Wp1AUfQGS5yJftca-1",
+        "label": "Cloud Integration"
+      },
+      {
+        "id": "FNb6Wp1AUfQGS5yJftca-3",
+        "label": "Subaccount"
+      },
+      {
+        "id": "FNb6Wp1AUfQGS5yJftca-9",
+        "label": "SAP Integration Suite"
+      },
+      {
+        "id": "p3KcMJCtKF_kxD1QLjmg-3",
+        "label": "Cloud Integration"
+      },
+      {
+        "id": "FNb6Wp1AUfQGS5yJftca-32",
+        "label": "S/4HANA / ECC"
+      },
+      {
+        "id": "FNb6Wp1AUfQGS5yJftca-43",
+        "label": "SAP on-premise products"
+      },
+      {
+        "id": "pLXEFfTft9dOwHOjhkAD-1",
+        "label": "SAP Ariba"
+      },
+      {
+        "id": "pLXEFfTft9dOwHOjhkAD-4",
+        "label": "SAP Cloud Solutions"
+      },
+      {
+        "id": "pLXEFfTft9dOwHOjhkAD-8",
+        "label": "Azure Data Lake"
+      },
+      {
+        "id": "pLXEFfTft9dOwHOjhkAD-10",
+        "label": "Logging and Reporting Solutions"
+      },
+      {
+        "id": "pLXEFfTft9dOwHOjhkAD-13",
+        "label": "ServiceNow"
+      },
+      {
+        "id": "pLXEFfTft9dOwHOjhkAD-15",
+        "label": "Non-SAP / B2B Cloud Solutions"
+      },
+      {
+        "id": "pLXEFfTft9dOwHOjhkAD-18",
+        "label": "eInvoicing"
+      },
+      {
+        "id": "pLXEFfTft9dOwHOjhkAD-20",
+        "label": "Government Solutions"
+      },
+      {
+        "id": "p3KcMJCtKF_kxD1QLjmg-1",
+        "label": "SAP Ariba"
+      },
+      {
+        "id": "NWwHh8lbjI5cMUXp5uuz-3",
+        "label": "Bespoke Non-SAP solutions"
+      },
+      {
+        "id": "p3KcMJCtKF_kxD1QLjmg-2",
+        "label": "Edge Integration Cell"
+      }
+    ],
+    "connections": [
+      {
+        "source": "FNb6Wp1AUfQGS5yJftca-21",
+        "target": "FNb6Wp1AUfQGS5yJftca-9",
+        "label": ""
+      },
+      {
+        "source": "FNb6Wp1AUfQGS5yJftca-19",
+        "target": "FNb6Wp1AUfQGS5yJftca-21",
+        "label": ""
+      },
+      {
+        "source": "FNb6Wp1AUfQGS5yJftca-20",
+        "target": "FNb6Wp1AUfQGS5yJftca-32",
+        "label": ""
+      },
+      {
+        "source": "FNb6Wp1AUfQGS5yJftca-19",
+        "target": "FNb6Wp1AUfQGS5yJftca-20",
+        "label": ""
+      },
+      {
+        "source": "FNb6Wp1AUfQGS5yJftca-32",
+        "target": "FNb6Wp1AUfQGS5yJftca-13",
+        "label": ""
+      },
+      {
+        "source": "NWwHh8lbjI5cMUXp5uuz-3",
+        "target": "FNb6Wp1AUfQGS5yJftca-13",
+        "label": ""
+      },
+      {
+        "source": "FNb6Wp1AUfQGS5yJftca-13",
+        "target": "FNb6Wp1AUfQGS5yJftca-43",
+        "label": ""
+      },
+      {
+        "source": "FNb6Wp1AUfQGS5yJftca-20",
+        "target": "FNb6Wp1AUfQGS5yJftca-13",
+        "label": ""
+      },
+      {
+        "source": "pLXEFfTft9dOwHOjhkAD-4",
+        "target": "FNb6Wp1AUfQGS5yJftca-21",
+        "label": ""
+      },
+      {
+        "source": "pLXEFfTft9dOwHOjhkAD-15",
+        "target": "FNb6Wp1AUfQGS5yJftca-21",
+        "label": ""
+      },
+      {
+        "source": "pLXEFfTft9dOwHOjhkAD-20",
+        "target": "FNb6Wp1AUfQGS5yJftca-21",
+        "label": ""
+      },
+      {
+        "source": "pLXEFfTft9dOwHOjhkAD-10",
+        "target": "FNb6Wp1AUfQGS5yJftca-21",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0026_embodied-ai-agents-robotics.drawio",
+    "components": [
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-45",
+        "label": "User"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-46",
+        "label": "Mobile/Desktop Application Clients"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-47",
+        "label": "Mobile/Desktop Application Clients"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-52",
+        "label": "Connectivity"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-55",
+        "label": "Destination"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-65",
+        "label": "SAP Business AI Platform"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-68",
+        "label": "Foundation Models SAP hosted"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-107",
+        "label": "SAP Joule User Interface"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-108",
+        "label": "Joule Agents"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-109",
+        "label": "Digital AI Agents"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-110",
+        "label": "Embodied AI Agents"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-111",
+        "label": "Joule Assistants"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-115",
+        "label": "Embodied AI on BTP"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-122",
+        "label": "Consumer Account"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-123",
+        "label": "Custom Agent / App Optional"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-3",
+        "label": "3rd Party"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-6",
+        "label": "SAP On-Prem Solutions"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-7",
+        "label": "SAP On-Prem Solutions"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-8",
+        "label": "Cloud Connector"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-10",
+        "label": "SAP Cloud Solutions"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-12",
+        "label": "SAP Cloud Solutions"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-16",
+        "label": "Digital Data Products"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-17",
+        "label": "Physical Data Products"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-19",
+        "label": "Cognitive Robots"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-22",
+        "label": "Humanoids"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-23",
+        "label": "Quadrupeds"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-25",
+        "label": "Robot Orchestration Platforms (Fleet Management)"
+      },
+      {
+        "id": "AZK_6J_TqhtQKLaC_yjf-30",
+        "label": "Physical AI Models"
+      }
+    ],
+    "connections": [
+      {
+        "source": "AZK_6J_TqhtQKLaC_yjf-45",
+        "target": "AZK_6J_TqhtQKLaC_yjf-46",
+        "label": ""
+      },
+      {
+        "source": "AZK_6J_TqhtQKLaC_yjf-50",
+        "target": "AZK_6J_TqhtQKLaC_yjf-37",
+        "label": ""
+      },
+      {
+        "source": "AZK_6J_TqhtQKLaC_yjf-37",
+        "target": "AZK_6J_TqhtQKLaC_yjf-55",
+        "label": ""
+      },
+      {
+        "source": "AZK_6J_TqhtQKLaC_yjf-55",
+        "target": "AZK_6J_TqhtQKLaC_yjf-52",
+        "label": ""
+      },
+      {
+        "source": "AZK_6J_TqhtQKLaC_yjf-52",
+        "target": "AZK_6J_TqhtQKLaC_yjf-42",
+        "label": ""
+      },
+      {
+        "source": "AZK_6J_TqhtQKLaC_yjf-56",
+        "target": "AZK_6J_TqhtQKLaC_yjf-43",
+        "label": ""
+      },
+      {
+        "source": "AZK_6J_TqhtQKLaC_yjf-122",
+        "target": "AZK_6J_TqhtQKLaC_yjf-115",
+        "label": ""
+      },
+      {
+        "source": "AZK_6J_TqhtQKLaC_yjf-64",
+        "target": "AZK_6J_TqhtQKLaC_yjf-76",
+        "label": ""
+      },
+      {
+        "source": "AZK_6J_TqhtQKLaC_yjf-100",
+        "target": "AZK_6J_TqhtQKLaC_yjf-94",
+        "label": ""
+      },
+      {
+        "source": "AZK_6J_TqhtQKLaC_yjf-98",
+        "target": "AZK_6J_TqhtQKLaC_yjf-94",
+        "label": ""
+      },
+      {
+        "source": "AZK_6J_TqhtQKLaC_yjf-96",
+        "target": "AZK_6J_TqhtQKLaC_yjf-94",
+        "label": ""
+      },
+      {
+        "source": "AZK_6J_TqhtQKLaC_yjf-90",
+        "target": "AZK_6J_TqhtQKLaC_yjf-96",
+        "label": ""
+      },
+      {
+        "source": "AZK_6J_TqhtQKLaC_yjf-90",
+        "target": "AZK_6J_TqhtQKLaC_yjf-98",
+        "label": ""
+      },
+      {
+        "source": "AZK_6J_TqhtQKLaC_yjf-90",
+        "target": "AZK_6J_TqhtQKLaC_yjf-100",
+        "label": ""
+      },
+      {
+        "source": "AZK_6J_TqhtQKLaC_yjf-36",
+        "target": "AZK_6J_TqhtQKLaC_yjf-55",
+        "label": ""
+      },
+      {
+        "source": "AZK_6J_TqhtQKLaC_yjf-107",
+        "target": "AZK_6J_TqhtQKLaC_yjf-111",
+        "label": ""
+      },
+      {
+        "source": "AZK_6J_TqhtQKLaC_yjf-42",
+        "target": "AZK_6J_TqhtQKLaC_yjf-6",
+        "label": ""
+      },
+      {
+        "source": "AZK_6J_TqhtQKLaC_yjf-43",
+        "target": "AZK_6J_TqhtQKLaC_yjf-11",
+        "label": ""
+      },
+      {
+        "source": "AZK_6J_TqhtQKLaC_yjf-88",
+        "target": "AZK_6J_TqhtQKLaC_yjf-82",
+        "label": ""
+      },
+      {
+        "source": "AZK_6J_TqhtQKLaC_yjf-86",
+        "target": "AZK_6J_TqhtQKLaC_yjf-82",
+        "label": ""
+      },
+      {
+        "source": "AZK_6J_TqhtQKLaC_yjf-84",
+        "target": "AZK_6J_TqhtQKLaC_yjf-82",
+        "label": ""
+      },
+      {
+        "source": "AZK_6J_TqhtQKLaC_yjf-78",
+        "target": "AZK_6J_TqhtQKLaC_yjf-84",
+        "label": ""
+      },
+      {
+        "source": "AZK_6J_TqhtQKLaC_yjf-78",
+        "target": "AZK_6J_TqhtQKLaC_yjf-86",
+        "label": ""
+      },
+      {
+        "source": "AZK_6J_TqhtQKLaC_yjf-78",
+        "target": "AZK_6J_TqhtQKLaC_yjf-88",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0027_log-driven-security-operations-with-sap-enterprise-threat-detection-and-siem-soar-platforms.drawio",
+    "components": [
+      {
+        "id": "ZkxsVZjYvkSy5z7IWYVK-3",
+        "label": "SAP S/4HANA On-Premise Solutions"
+      },
+      {
+        "id": "ZkxsVZjYvkSy5z7IWYVK-7",
+        "label": "SAP Cloud Solutions"
+      },
+      {
+        "id": "ZkxsVZjYvkSy5z7IWYVK-11",
+        "label": "Cloud Enterprise Ressources (Network Logs, EDR, IAM, etc)"
+      },
+      {
+        "id": "ZkxsVZjYvkSy5z7IWYVK-33",
+        "label": "FortiSIEM"
+      },
+      {
+        "id": "ZkxsVZjYvkSy5z7IWYVK-34",
+        "label": "FortiSOAR"
+      },
+      {
+        "id": "ZkxsVZjYvkSy5z7IWYVK-58",
+        "label": "Status & closure updates"
+      },
+      {
+        "id": "ZkxsVZjYvkSy5z7IWYVK-63",
+        "label": "Respond to Event"
+      },
+      {
+        "id": "ZkxsVZjYvkSy5z7IWYVK-66",
+        "label": "Respond to Event"
+      }
+    ],
+    "connections": [
+      {
+        "source": "ZkxsVZjYvkSy5z7IWYVK-40",
+        "target": "ZkxsVZjYvkSy5z7IWYVK-25",
+        "label": ""
+      },
+      {
+        "source": "ZkxsVZjYvkSy5z7IWYVK-14",
+        "target": "ZkxsVZjYvkSy5z7IWYVK-40",
+        "label": ""
+      },
+      {
+        "source": "ZkxsVZjYvkSy5z7IWYVK-4",
+        "target": "ZkxsVZjYvkSy5z7IWYVK-40",
+        "label": ""
+      },
+      {
+        "source": "ZkxsVZjYvkSy5z7IWYVK-6",
+        "target": "ZkxsVZjYvkSy5z7IWYVK-40",
+        "label": ""
+      },
+      {
+        "source": "ZkxsVZjYvkSy5z7IWYVK-18",
+        "target": "ZkxsVZjYvkSy5z7IWYVK-40",
+        "label": ""
+      },
+      {
+        "source": "ZkxsVZjYvkSy5z7IWYVK-47",
+        "target": "ZkxsVZjYvkSy5z7IWYVK-30",
+        "label": ""
+      },
+      {
+        "source": "ZkxsVZjYvkSy5z7IWYVK-25",
+        "target": "ZkxsVZjYvkSy5z7IWYVK-47",
+        "label": ""
+      },
+      {
+        "source": "ZkxsVZjYvkSy5z7IWYVK-50",
+        "target": "ZkxsVZjYvkSy5z7IWYVK-30",
+        "label": ""
+      },
+      {
+        "source": "ZkxsVZjYvkSy5z7IWYVK-10",
+        "target": "ZkxsVZjYvkSy5z7IWYVK-50",
+        "label": ""
+      },
+      {
+        "source": "ZkxsVZjYvkSy5z7IWYVK-54",
+        "target": "ZkxsVZjYvkSy5z7IWYVK-36",
+        "label": ""
+      },
+      {
+        "source": "ZkxsVZjYvkSy5z7IWYVK-30",
+        "target": "ZkxsVZjYvkSy5z7IWYVK-54",
+        "label": ""
+      },
+      {
+        "source": "ZkxsVZjYvkSy5z7IWYVK-58",
+        "target": "ZkxsVZjYvkSy5z7IWYVK-36",
+        "label": ""
+      },
+      {
+        "source": "ZkxsVZjYvkSy5z7IWYVK-30",
+        "target": "ZkxsVZjYvkSy5z7IWYVK-58",
+        "label": ""
+      },
+      {
+        "source": "ZkxsVZjYvkSy5z7IWYVK-63",
+        "target": "ZkxsVZjYvkSy5z7IWYVK-36",
+        "label": ""
+      },
+      {
+        "source": "ZkxsVZjYvkSy5z7IWYVK-10",
+        "target": "ZkxsVZjYvkSy5z7IWYVK-63",
+        "label": ""
+      },
+      {
+        "source": "ZkxsVZjYvkSy5z7IWYVK-66",
+        "target": "ZkxsVZjYvkSy5z7IWYVK-36",
+        "label": ""
+      },
+      {
+        "source": "ZkxsVZjYvkSy5z7IWYVK-18",
+        "target": "ZkxsVZjYvkSy5z7IWYVK-66",
+        "label": ""
+      },
+      {
+        "source": "ZkxsVZjYvkSy5z7IWYVK-6",
+        "target": "ZkxsVZjYvkSy5z7IWYVK-66",
+        "label": ""
+      },
+      {
+        "source": "ZkxsVZjYvkSy5z7IWYVK-14",
+        "target": "ZkxsVZjYvkSy5z7IWYVK-66",
+        "label": ""
+      },
+      {
+        "source": "ZkxsVZjYvkSy5z7IWYVK-2",
+        "target": "ZkxsVZjYvkSy5z7IWYVK-66",
+        "label": ""
+      },
+      {
+        "source": "ZkxsVZjYvkSy5z7IWYVK-78",
+        "target": "ZkxsVZjYvkSy5z7IWYVK-36",
+        "label": ""
+      },
+      {
+        "source": "ZkxsVZjYvkSy5z7IWYVK-77",
+        "target": "ZkxsVZjYvkSy5z7IWYVK-78",
+        "label": ""
+      },
+      {
+        "source": "ZkxsVZjYvkSy5z7IWYVK-74",
+        "target": "ZkxsVZjYvkSy5z7IWYVK-81",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0028_sap-successfactors-suite.drawio",
+    "components": [
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-3",
+        "label": "BizX"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-19",
+        "label": "Time Tracking"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-30",
+        "label": "Scheduling"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-31",
+        "label": "Recruiting Management (Applicant Tracking System)"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-46",
+        "label": "SAP Analytics Cloud"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-47",
+        "label": "Story Reports"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-48",
+        "label": "Canvas Reports"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-49",
+        "label": "Canvas Reports"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-15",
+        "label": "Recruiting Posting"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-4",
+        "label": "Recruiting Posting (Job Board Aggregator)"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-45",
+        "label": "Career and Talent Development"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-38",
+        "label": "Succession Management"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-39",
+        "label": "Mentoring"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-42",
+        "label": "Development Goals"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-50",
+        "label": "Career Worksheet"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-52",
+        "label": "Opportunity Marketplace"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-44",
+        "label": "Performance and Goals"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-37",
+        "label": "Performance Forms"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-41",
+        "label": "Performance Goals"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-53",
+        "label": "Continues Performance Management"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-54",
+        "label": "360 Review"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-55",
+        "label": "Calibration"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-57",
+        "label": "Onboarding"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-20",
+        "label": "Onboarding"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-56",
+        "label": "Offboarding"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-13",
+        "label": "Foundation (a.k.a. Platform)"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-24",
+        "label": "Employee Profile (non-effective dated employee information)"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-25",
+        "label": "Login Information"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-26",
+        "label": "Position Management"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-27",
+        "label": "Job Profile Builder (Job Framework)"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-28",
+        "label": "Talent Intelligence Hub (Skills and Competencies)"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-615",
+        "label": "Table Reports (Ad hoc reports)"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-12",
+        "label": "Employee Central"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-11",
+        "label": "Employment Based Information"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-21",
+        "label": "Global Benefits"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-22",
+        "label": "Person Based Information"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-98",
+        "label": "S/4HANA"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-99",
+        "label": "Employee Central Payroll"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-17",
+        "label": "Recruiting Marketing"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-18",
+        "label": "Recruiting Marketing (Career Site)"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-105",
+        "label": "Advanced Analytics"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-8",
+        "label": "Plateau"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-34",
+        "label": "Learning"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-107",
+        "label": "Plateau Report Designer"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-43",
+        "label": "Compensation"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-36",
+        "label": "Compensation (Periodic Salary Cycle)"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-40",
+        "label": "Variable Pay (Bonus Cycle)"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-165",
+        "label": "Rewards (Off cycle bonus)"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-571",
+        "label": "Joule Subaccount"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-572",
+        "label": "Joule"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-574",
+        "label": "Identity Services Subaccount"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-575",
+        "label": "Identity Provisioning Service (IPS)"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-576",
+        "label": "Identity Authentication Service (IAS)"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-588",
+        "label": "Integration Suite Subaccount"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-589",
+        "label": "Cloud Integration (CPI)"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-590",
+        "label": "API Management"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-503",
+        "label": "3rd party identity provider / identity management"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-128",
+        "label": "Legend"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-612",
+        "label": "3rd party identity provider / identity management"
+      },
+      {
+        "id": "Z2X7D0c18jNXbGOoNvq_-618",
+        "label": "Time Off and Absence Management\u200b"
+      }
+    ],
+    "connections": [
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-30",
+        "target": "Z2X7D0c18jNXbGOoNvq_-19",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-50",
+        "target": "Z2X7D0c18jNXbGOoNvq_-52",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-37",
+        "target": "Z2X7D0c18jNXbGOoNvq_-55",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-24",
+        "target": "Z2X7D0c18jNXbGOoNvq_-25",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-11",
+        "target": "Z2X7D0c18jNXbGOoNvq_-24",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-20",
+        "target": "Z2X7D0c18jNXbGOoNvq_-12",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-618",
+        "target": "Z2X7D0c18jNXbGOoNvq_-56",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-11",
+        "target": "Z2X7D0c18jNXbGOoNvq_-26",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-26",
+        "target": "Z2X7D0c18jNXbGOoNvq_-31",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-31",
+        "target": "Z2X7D0c18jNXbGOoNvq_-20",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-38",
+        "target": "Z2X7D0c18jNXbGOoNvq_-26",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-27",
+        "target": "Z2X7D0c18jNXbGOoNvq_-50",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-24",
+        "target": "Z2X7D0c18jNXbGOoNvq_-45",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-28",
+        "target": "Z2X7D0c18jNXbGOoNvq_-50",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-28",
+        "target": "Z2X7D0c18jNXbGOoNvq_-31",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-11",
+        "target": "Z2X7D0c18jNXbGOoNvq_-43",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-41",
+        "target": "Z2X7D0c18jNXbGOoNvq_-54",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-28",
+        "target": "Z2X7D0c18jNXbGOoNvq_-54",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-12",
+        "target": "Z2X7D0c18jNXbGOoNvq_-99",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-618",
+        "target": "Z2X7D0c18jNXbGOoNvq_-30",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-12",
+        "target": "Z2X7D0c18jNXbGOoNvq_-19",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-24",
+        "target": "Z2X7D0c18jNXbGOoNvq_-31",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-38",
+        "target": "Z2X7D0c18jNXbGOoNvq_-24",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-24",
+        "target": "Z2X7D0c18jNXbGOoNvq_-43",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-24",
+        "target": "Z2X7D0c18jNXbGOoNvq_-44",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-18",
+        "target": "Z2X7D0c18jNXbGOoNvq_-105",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-34",
+        "target": "Z2X7D0c18jNXbGOoNvq_-107",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-42",
+        "target": "Z2X7D0c18jNXbGOoNvq_-34",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-34",
+        "target": "Z2X7D0c18jNXbGOoNvq_-47",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-27",
+        "target": "Z2X7D0c18jNXbGOoNvq_-26",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-31",
+        "target": "Z2X7D0c18jNXbGOoNvq_-18",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-42",
+        "target": "Z2X7D0c18jNXbGOoNvq_-53",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-31",
+        "target": "Z2X7D0c18jNXbGOoNvq_-52",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-34",
+        "target": "Z2X7D0c18jNXbGOoNvq_-52",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-28",
+        "target": "Z2X7D0c18jNXbGOoNvq_-27",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-38",
+        "target": "Z2X7D0c18jNXbGOoNvq_-55",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-49",
+        "target": "Z2X7D0c18jNXbGOoNvq_-3",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-36",
+        "target": "Z2X7D0c18jNXbGOoNvq_-55",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-575",
+        "target": "Z2X7D0c18jNXbGOoNvq_-576",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-576",
+        "target": "Z2X7D0c18jNXbGOoNvq_-572",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-25",
+        "target": "Z2X7D0c18jNXbGOoNvq_-575",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-572",
+        "target": "Z2X7D0c18jNXbGOoNvq_-1",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-590",
+        "target": "Z2X7D0c18jNXbGOoNvq_-589",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-589",
+        "target": "Z2X7D0c18jNXbGOoNvq_-1",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-575",
+        "target": "Z2X7D0c18jNXbGOoNvq_-47",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-575",
+        "target": "Z2X7D0c18jNXbGOoNvq_-99",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-11",
+        "target": "Z2X7D0c18jNXbGOoNvq_-618",
+        "label": ""
+      },
+      {
+        "source": "Z2X7D0c18jNXbGOoNvq_-34",
+        "target": "Z2X7D0c18jNXbGOoNvq_-575",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0029_agentic-ai-ai-agents.drawio",
+    "components": [
+      {
+        "id": "fqJ3m-EEg76958EnmQc--202",
+        "label": "Subaccount"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--219",
+        "label": "Joule Skills & Agents Standard"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--222",
+        "label": "Joule Capabilities"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--224",
+        "label": "Agent Gateway"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--228",
+        "label": "Joule Orchestrator"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--234",
+        "label": "3rd Party"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--235",
+        "label": "Custom Agents"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--236",
+        "label": "SAP Joule User Interface"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--245",
+        "label": "SAP S/4HANA"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--247",
+        "label": "SAP SuccessFactors"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--248",
+        "label": "SAP Business Networks"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--249",
+        "label": "SAP Customer Experience"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--250",
+        "label": "SAP Concur"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--251",
+        "label": "SAP Business Data Cloud"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--264",
+        "label": "Tools"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--265",
+        "label": "MCP Server"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--266",
+        "label": "API"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--281",
+        "label": "Low-Code Agents Joule Studio"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--282",
+        "label": "Pro-Code Agents SAP Cloud SDK for AI"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--257",
+        "label": "AI Agents & Clients"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--274",
+        "label": "Microsoft Azure"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--297",
+        "label": "3rd party identity provider / identity management"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--299",
+        "label": "3rd party identity provider / identity management"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--348",
+        "label": "User"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--349",
+        "label": "Mobile/Desktop Application Clients"
+      },
+      {
+        "id": "fqJ3m-EEg76958EnmQc--350",
+        "label": "Mobile/Desktop Application Clients"
+      },
+      {
+        "id": "N6EX66x-FAQNBusn9iXU-3",
+        "label": "Subaccount"
+      },
+      {
+        "id": "N6EX66x-FAQNBusn9iXU-10",
+        "label": "Legend"
+      },
+      {
+        "id": "N6EX66x-FAQNBusn9iXU-16",
+        "label": "Azure Al Foundry"
+      },
+      {
+        "id": "N6EX66x-FAQNBusn9iXU-20",
+        "label": "Azure Agents"
+      },
+      {
+        "id": "N6EX66x-FAQNBusn9iXU-24",
+        "label": "Joule Agent Builder"
+      },
+      {
+        "id": "N6EX66x-FAQNBusn9iXU-26",
+        "label": "Orchestrator Agent"
+      },
+      {
+        "id": "N6EX66x-FAQNBusn9iXU-32",
+        "label": "SAP S/4HANA"
+      },
+      {
+        "id": "N6EX66x-FAQNBusn9iXU-33",
+        "label": "SAP SuccessFactors"
+      },
+      {
+        "id": "N6EX66x-FAQNBusn9iXU-34",
+        "label": "SAP Business Networks"
+      },
+      {
+        "id": "N6EX66x-FAQNBusn9iXU-35",
+        "label": "SAP Customer Experience"
+      },
+      {
+        "id": "N6EX66x-FAQNBusn9iXU-36",
+        "label": "SAP Concur"
+      },
+      {
+        "id": "N6EX66x-FAQNBusn9iXU-37",
+        "label": "SAP Business Data Cloud"
+      },
+      {
+        "id": "N6EX66x-FAQNBusn9iXU-40",
+        "label": "Microsoft Azure"
+      },
+      {
+        "id": "N6EX66x-FAQNBusn9iXU-41",
+        "label": "Legend"
+      },
+      {
+        "id": "N6EX66x-FAQNBusn9iXU-43",
+        "label": "Bedrock Agents"
+      },
+      {
+        "id": "N6EX66x-FAQNBusn9iXU-47",
+        "label": "Bedrock Agents"
+      },
+      {
+        "id": "N6EX66x-FAQNBusn9iXU-51",
+        "label": "Legend"
+      },
+      {
+        "id": "N6EX66x-FAQNBusn9iXU-53",
+        "label": "Dispute Resolution Agent"
+      },
+      {
+        "id": "N6EX66x-FAQNBusn9iXU-55",
+        "label": "Agent Connector CAP Application ORD & A2A Server"
+      },
+      {
+        "id": "N6EX66x-FAQNBusn9iXU-58",
+        "label": "ORD Aggregator"
+      },
+      {
+        "id": "N6EX66x-FAQNBusn9iXU-64",
+        "label": "A2A Router A2A Client"
+      },
+      {
+        "id": "N6EX66x-FAQNBusn9iXU-65",
+        "label": "Agent Trigger internal/external"
+      }
+    ],
+    "connections": [
+      {
+        "source": "fqJ3m-EEg76958EnmQc--222",
+        "target": "fqJ3m-EEg76958EnmQc--235",
+        "label": ""
+      },
+      {
+        "source": "fqJ3m-EEg76958EnmQc--222",
+        "target": "fqJ3m-EEg76958EnmQc--219",
+        "label": ""
+      },
+      {
+        "source": "fqJ3m-EEg76958EnmQc--224",
+        "target": "fqJ3m-EEg76958EnmQc--222",
+        "label": ""
+      },
+      {
+        "source": "fqJ3m-EEg76958EnmQc--236",
+        "target": "fqJ3m-EEg76958EnmQc--228",
+        "label": ""
+      },
+      {
+        "source": "fqJ3m-EEg76958EnmQc--228",
+        "target": "fqJ3m-EEg76958EnmQc--222",
+        "label": ""
+      },
+      {
+        "source": "fqJ3m-EEg76958EnmQc--311",
+        "target": "fqJ3m-EEg76958EnmQc--264",
+        "label": ""
+      },
+      {
+        "source": "fqJ3m-EEg76958EnmQc--309",
+        "target": "fqJ3m-EEg76958EnmQc--224",
+        "label": ""
+      },
+      {
+        "source": "fqJ3m-EEg76958EnmQc--219",
+        "target": "fqJ3m-EEg76958EnmQc--244",
+        "label": ""
+      },
+      {
+        "source": "fqJ3m-EEg76958EnmQc--257",
+        "target": "fqJ3m-EEg76958EnmQc--309",
+        "label": ""
+      },
+      {
+        "source": "fqJ3m-EEg76958EnmQc--348",
+        "target": "fqJ3m-EEg76958EnmQc--349",
+        "label": ""
+      },
+      {
+        "source": "fqJ3m-EEg76958EnmQc--349",
+        "target": "fqJ3m-EEg76958EnmQc--236",
+        "label": ""
+      },
+      {
+        "source": "fqJ3m-EEg76958EnmQc--395",
+        "target": "fqJ3m-EEg76958EnmQc--299",
+        "label": ""
+      },
+      {
+        "source": "fqJ3m-EEg76958EnmQc--349",
+        "target": "fqJ3m-EEg76958EnmQc--395",
+        "label": ""
+      },
+      {
+        "source": "fqJ3m-EEg76958EnmQc--222",
+        "target": "fqJ3m-EEg76958EnmQc--257",
+        "label": ""
+      },
+      {
+        "source": "fqJ3m-EEg76958EnmQc--422",
+        "target": "fqJ3m-EEg76958EnmQc--224",
+        "label": ""
+      },
+      {
+        "source": "fqJ3m-EEg76958EnmQc--235",
+        "target": "fqJ3m-EEg76958EnmQc--311",
+        "label": ""
+      },
+      {
+        "source": "ZI--24O0hsVGqb5DVfrx-5",
+        "target": "fqJ3m-EEg76958EnmQc--307",
+        "label": ""
+      },
+      {
+        "source": "fqJ3m-EEg76958EnmQc--257",
+        "target": "ZI--24O0hsVGqb5DVfrx-5",
+        "label": ""
+      },
+      {
+        "source": "fqJ3m-EEg76958EnmQc--307",
+        "target": "ZI--24O0hsVGqb5DVfrx-10",
+        "label": ""
+      },
+      {
+        "source": "ZI--24O0hsVGqb5DVfrx-10",
+        "target": "fqJ3m-EEg76958EnmQc--244",
+        "label": ""
+      },
+      {
+        "source": "N6EX66x-FAQNBusn9iXU-8",
+        "target": "N6EX66x-FAQNBusn9iXU-9",
+        "label": ""
+      },
+      {
+        "source": "N6EX66x-FAQNBusn9iXU-8",
+        "target": "N6EX66x-FAQNBusn9iXU-75",
+        "label": ""
+      },
+      {
+        "source": "N6EX66x-FAQNBusn9iXU-19",
+        "target": "N6EX66x-FAQNBusn9iXU-20",
+        "label": ""
+      },
+      {
+        "source": "N6EX66x-FAQNBusn9iXU-19",
+        "target": "N6EX66x-FAQNBusn9iXU-75",
+        "label": ""
+      },
+      {
+        "source": "N6EX66x-FAQNBusn9iXU-26",
+        "target": "N6EX66x-FAQNBusn9iXU-11",
+        "label": ""
+      },
+      {
+        "source": "N6EX66x-FAQNBusn9iXU-24",
+        "target": "N6EX66x-FAQNBusn9iXU-31",
+        "label": ""
+      },
+      {
+        "source": "N6EX66x-FAQNBusn9iXU-46",
+        "target": "N6EX66x-FAQNBusn9iXU-47",
+        "label": ""
+      },
+      {
+        "source": "N6EX66x-FAQNBusn9iXU-46",
+        "target": "N6EX66x-FAQNBusn9iXU-75",
+        "label": ""
+      },
+      {
+        "source": "N6EX66x-FAQNBusn9iXU-53",
+        "target": "N6EX66x-FAQNBusn9iXU-55",
+        "label": ""
+      },
+      {
+        "source": "N6EX66x-FAQNBusn9iXU-55",
+        "target": "N6EX66x-FAQNBusn9iXU-71",
+        "label": ""
+      },
+      {
+        "source": "N6EX66x-FAQNBusn9iXU-58",
+        "target": "N6EX66x-FAQNBusn9iXU-64",
+        "label": ""
+      },
+      {
+        "source": "N6EX66x-FAQNBusn9iXU-71",
+        "target": "N6EX66x-FAQNBusn9iXU-58",
+        "label": ""
+      },
+      {
+        "source": "N6EX66x-FAQNBusn9iXU-74",
+        "target": "N6EX66x-FAQNBusn9iXU-55",
+        "label": ""
+      },
+      {
+        "source": "N6EX66x-FAQNBusn9iXU-74",
+        "target": "N6EX66x-FAQNBusn9iXU-64",
+        "label": ""
+      },
+      {
+        "source": "N6EX66x-FAQNBusn9iXU-77",
+        "target": "N6EX66x-FAQNBusn9iXU-58",
+        "label": ""
+      },
+      {
+        "source": "N6EX66x-FAQNBusn9iXU-82",
+        "target": "N6EX66x-FAQNBusn9iXU-16",
+        "label": ""
+      },
+      {
+        "source": "N6EX66x-FAQNBusn9iXU-82",
+        "target": "N6EX66x-FAQNBusn9iXU-5",
+        "label": ""
+      },
+      {
+        "source": "N6EX66x-FAQNBusn9iXU-82",
+        "target": "N6EX66x-FAQNBusn9iXU-43",
+        "label": ""
+      },
+      {
+        "source": "N6EX66x-FAQNBusn9iXU-82",
+        "target": "N6EX66x-FAQNBusn9iXU-64",
+        "label": ""
+      },
+      {
+        "source": "N6EX66x-FAQNBusn9iXU-77",
+        "target": "N6EX66x-FAQNBusn9iXU-8",
+        "label": ""
+      },
+      {
+        "source": "N6EX66x-FAQNBusn9iXU-77",
+        "target": "N6EX66x-FAQNBusn9iXU-19",
+        "label": ""
+      },
+      {
+        "source": "N6EX66x-FAQNBusn9iXU-77",
+        "target": "N6EX66x-FAQNBusn9iXU-46",
+        "label": ""
+      },
+      {
+        "source": "N6EX66x-FAQNBusn9iXU-11",
+        "target": "N6EX66x-FAQNBusn9iXU-83",
+        "label": ""
+      }
+    ]
+  },
+  {
+    "file": "RA0030_sap-document-ai.drawio",
+    "components": [
+      {
+        "id": "12",
+        "label": "Destination service"
+      },
+      {
+        "id": "163",
+        "label": "Destination service"
+      },
+      {
+        "id": "162",
+        "label": "Connectivity Service"
+      },
+      {
+        "id": "91",
+        "label": "API Gateway"
+      },
+      {
+        "id": "31",
+        "label": "SAP Document AI"
+      },
+      {
+        "id": "201",
+        "label": "Application"
+      },
+      {
+        "id": "4",
+        "label": "End User"
+      },
+      {
+        "id": "70",
+        "label": "Identity Authentication"
+      },
+      {
+        "id": "177",
+        "label": "SAP Document AI"
+      },
+      {
+        "id": "181",
+        "label": "SAP On-Premise Solutions"
+      },
+      {
+        "id": "186",
+        "label": "SAP Document AI"
+      },
+      {
+        "id": "28",
+        "label": "Document Processing & Ingestion"
+      },
+      {
+        "id": "196",
+        "label": "Workflow & Orchestration"
+      },
+      {
+        "id": "198",
+        "label": "AI / ML Extraction"
+      },
+      {
+        "id": "199",
+        "label": "Operations & Metering"
+      },
+      {
+        "id": "200",
+        "label": "Configuration & Model Management"
+      },
+      {
+        "id": "203",
+        "label": "Persistence"
+      },
+      {
+        "id": "204",
+        "label": "SAP HANA Cloud"
+      },
+      {
+        "id": "205",
+        "label": "PostgreSQL"
+      },
+      {
+        "id": "206",
+        "label": "ObjectStore"
+      },
+      {
+        "id": "214",
+        "label": "Generative AI Hub"
+      },
+      {
+        "id": "215",
+        "label": "SAP AI Core"
+      },
+      {
+        "id": "217",
+        "label": "Pretrained Models"
+      },
+      {
+        "id": "219",
+        "label": "Prompt Registry"
+      },
+      {
+        "id": "221",
+        "label": "Application Clients"
+      }
+    ],
+    "connections": [
+      {
+        "source": "163",
+        "target": "162",
+        "label": ""
+      },
+      {
+        "source": "30",
+        "target": "91",
+        "label": ""
+      },
+      {
+        "source": "162",
+        "target": "171",
+        "label": ""
+      },
+      {
+        "source": "171",
+        "target": "179",
+        "label": ""
+      },
+      {
+        "source": "91",
+        "target": "31",
+        "label": ""
+      },
+      {
+        "source": "31",
+        "target": "214",
+        "label": ""
+      },
+      {
+        "source": "163",
+        "target": "169",
+        "label": ""
+      },
+      {
+        "source": "243",
+        "target": "49",
+        "label": ""
+      },
+      {
+        "source": "174",
+        "target": "250",
+        "label": ""
+      },
+      {
+        "source": "250",
+        "target": "31",
+        "label": ""
+      },
+      {
+        "source": "201",
+        "target": "206",
+        "label": "Files (KMS encrypted)"
+      },
+      {
+        "source": "201",
+        "target": "205",
+        "label": "Tenant isolation per schema"
+      },
+      {
+        "source": "201",
+        "target": "204",
+        "label": "Tenant isolation HANA native Tenant"
+      }
+    ]
+  }
+]
