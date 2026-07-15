@@ -1,0 +1,68 @@
+{
+  "title": "Agentic AI on BTP",
+  "components": [
+    {
+      "id": "comp_1",
+      "label": "User",
+      "raw_type": "ui",
+      "description": "End user interacting with the system, positioned outside the SAP BTP boundary"
+    },
+    {
+      "id": "comp_2",
+      "label": "Joule",
+      "raw_type": "ai",
+      "description": "SAP Joule AI copilot, acting as the conversational entry point inside SAP BTP; highlighted in blue"
+    },
+    {
+      "id": "comp_3",
+      "label": "SAP AI Core",
+      "raw_type": "ai",
+      "description": "Central AI orchestration service on SAP BTP responsible for running agentic AI workloads"
+    },
+    {
+      "id": "comp_4",
+      "label": "MCP Server",
+      "raw_type": "integration",
+      "description": "Model Context Protocol server, bridging SAP AI Core with backend integration services"
+    },
+    {
+      "id": "comp_5",
+      "label": "SAP HANA Cloud",
+      "raw_type": "database",
+      "description": "Cloud-native in-memory database used for data persistence and vector/structured data access"
+    },
+    {
+      "id": "comp_6",
+      "label": "SAP Integration Suite",
+      "raw_type": "integration",
+      "description": "SAP's integration platform for connecting enterprise systems and APIs"
+    }
+  ],
+  "connections": [
+    {
+      "from_id": "comp_1",
+      "to_id": "comp_2",
+      "label": ""
+    },
+    {
+      "from_id": "comp_2",
+      "to_id": "comp_3",
+      "label": ""
+    },
+    {
+      "from_id": "comp_3",
+      "to_id": "comp_5",
+      "label": ""
+    },
+    {
+      "from_id": "comp_3",
+      "to_id": "comp_4",
+      "label": ""
+    },
+    {
+      "from_id": "comp_4",
+      "to_id": "comp_6",
+      "label": ""
+    }
+  ]
+}

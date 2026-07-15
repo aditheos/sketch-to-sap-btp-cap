@@ -1,0 +1,57 @@
+{
+  "title": "Gen AI on BTP",
+  "components": [
+    {
+      "id": "comp_1",
+      "label": "User",
+      "raw_type": "ui",
+      "description": "End user initiating requests into the architecture"
+    },
+    {
+      "id": "comp_2",
+      "label": "SAP Build Apps",
+      "raw_type": "ui",
+      "description": "Low-code application development platform used as the front-end entry point"
+    },
+    {
+      "id": "comp_3",
+      "label": "SAP AI Core",
+      "raw_type": "ai",
+      "description": "Central AI runtime service on BTP orchestrating AI model inference and workflows"
+    },
+    {
+      "id": "comp_4",
+      "label": "SAP AI Launchpad",
+      "raw_type": "ui",
+      "description": "UI tool for managing and monitoring AI scenarios, models, and deployments in SAP AI Core"
+    },
+    {
+      "id": "comp_5",
+      "label": "SAP HANA Cloud",
+      "raw_type": "database",
+      "description": "Cloud-native in-memory database used as the data persistence layer"
+    }
+  ],
+  "connections": [
+    {
+      "from_id": "comp_1",
+      "to_id": "comp_2",
+      "label": ""
+    },
+    {
+      "from_id": "comp_2",
+      "to_id": "comp_3",
+      "label": ""
+    },
+    {
+      "from_id": "comp_3",
+      "to_id": "comp_4",
+      "label": ""
+    },
+    {
+      "from_id": "comp_3",
+      "to_id": "comp_5",
+      "label": ""
+    }
+  ]
+}

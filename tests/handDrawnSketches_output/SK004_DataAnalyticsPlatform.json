@@ -1,0 +1,73 @@
+{
+  "title": "BTP Data Architecture",
+  "components": [
+    {
+      "id": "comp_1",
+      "label": "SAP S/4HANA",
+      "raw_type": "erp",
+      "description": "Source ERP system feeding data into the architecture"
+    },
+    {
+      "id": "comp_2",
+      "label": "SAP Master Data Integration",
+      "raw_type": "integration",
+      "description": "Middleware integration layer that receives data from SAP S/4HANA and routes it to the Data Platform"
+    },
+    {
+      "id": "comp_3",
+      "label": "SAP Analytics Cloud",
+      "raw_type": "analytics",
+      "description": "Analytics and BI layer sitting above the Data Platform, with bidirectional connection to Data Platform"
+    },
+    {
+      "id": "comp_4",
+      "label": "Data Platform",
+      "raw_type": "runtime",
+      "description": "Overarching platform grouping SAP Datasphere and SAP HANA Cloud"
+    },
+    {
+      "id": "comp_5",
+      "label": "SAP Datasphere",
+      "raw_type": "analytics",
+      "description": "Data management and modelling layer within the Data Platform"
+    },
+    {
+      "id": "comp_6",
+      "label": "SAP HANA Cloud",
+      "raw_type": "database",
+      "description": "In-memory cloud database layer within the Data Platform, underneath SAP Datasphere"
+    }
+  ],
+  "connections": [
+    {
+      "from_id": "comp_1",
+      "to_id": "comp_2",
+      "label": ""
+    },
+    {
+      "from_id": "comp_2",
+      "to_id": "comp_4",
+      "label": ""
+    },
+    {
+      "from_id": "comp_2",
+      "to_id": "comp_6",
+      "label": ""
+    },
+    {
+      "from_id": "comp_3",
+      "to_id": "comp_4",
+      "label": ""
+    },
+    {
+      "from_id": "comp_4",
+      "to_id": "comp_3",
+      "label": ""
+    },
+    {
+      "from_id": "comp_5",
+      "to_id": "comp_6",
+      "label": ""
+    }
+  ]
+}

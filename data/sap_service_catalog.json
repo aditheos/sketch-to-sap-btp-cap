@@ -193,11 +193,13 @@
         "CPI",
         "cloud integration",
         "iflow",
-        "integration",
         "IS",
         "cloud platform integration",
         "API hub",
-        "SAP CPI"
+        "SAP CPI",
+        "integration tenant",
+        "IS tenant",
+        "integration runtime"
       ],
       "category": "Integration",
       "description": "Enterprise integration platform â€” Cloud Integration, API Management, Open Connectors, Event Mesh in one suite",
@@ -341,9 +343,7 @@
         "cloud application programming",
         "app development",
         "coding",
-        "application",
-        "backend app",
-        "service"
+        "backend app"
       ],
       "category": "Development",
       "description": "AI-powered development environment for building cloud-native business applications using CAP",
@@ -627,7 +627,7 @@
       "bpmn": {
         "task_type": "scriptTask"
       },
-      "icon_id": null
+      "icon_id": "31067-sap-build-process-automation_sd"
     },
     {
       "id": "sap-build-work-zone-std",
@@ -703,10 +703,14 @@
     },
     {
       "id": "sap-ias",
-      "name": "SAP Identity Authentication Service",
+      "name": "SAP Cloud Identity Services",
       "aliases": [
+        "cloud identity services",
+        "CIS",
         "IAS",
         "identity authentication",
+        "identity authentication service",
+        "SAP IAS",
         "authentication",
         "auth",
         "SSO",
@@ -854,7 +858,7 @@
       "bpmn": {
         "task_type": "serviceTask"
       },
-      "icon_id": null
+      "icon_id": "generic-ai-sap-size-s"
     },
     {
       "id": "sap-ai-launchpad",
@@ -925,7 +929,7 @@
       "bpmn": {
         "task_type": "serviceTask"
       },
-      "icon_id": null
+      "icon_id": "generic-ai-sap-size-s"
     },
     {
       "id": "sap-connectivity",
@@ -1235,7 +1239,14 @@
         "person",
         "client",
         "browser",
-        "customer"
+        "customer",
+        "mobile",
+        "mobile app",
+        "web browser",
+        "external user",
+        "partner",
+        "phone",
+        "tablet"
       ],
       "category": "Actors & External",
       "description": "Human actor interacting with the system â€” rendered as a generic user icon, not a BTP service",
@@ -1522,10 +1533,13 @@
     },
     {
       "id": "sap-identity-provisioning",
-      "name": "SAP Cloud Identity Services - Identity Provisioning",
+      "name": "SAP Identity Provisioning",
       "aliases": [
         "identity provisioning",
-        "identity provisoning"
+        "identity provisoning",
+        "IPS",
+        "user provisioning",
+        "cloud identity services provisioning"
       ],
       "category": "Identity & Security",
       "description": "Automates provisioning and de-provisioning of user identities across SAP and non-SAP systems",
@@ -1709,6 +1723,194 @@
         "task_type": "serviceTask"
       },
       "icon_id": "generic-on-premise-sap"
+    },
+    {
+      "id": "sap-master-data-integration",
+      "name": "SAP Master Data Integration",
+      "aliases": [
+        "MDI",
+        "master data integration",
+        "master data management",
+        "one-mds",
+        "MDG cloud",
+        "master data governance cloud"
+      ],
+      "category": "Integration",
+      "description": "Cloud service for master data synchronization across SAP and third-party applications",
+      "btp_service_name": "one-mds",
+      "typical_connections": [
+        "sap-integration-suite",
+        "sap-hana-cloud"
+      ],
+      "drawio": {
+        "fillColor": "#dae8fc",
+        "strokeColor": "#6c8ebf",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "integration",
+        "entity_type": "Service"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "10039-sap-master-data-integration_sd"
+    },
+    {
+      "id": "sap-cicd-service",
+      "name": "SAP Continuous Integration & Delivery",
+      "aliases": [
+        "CI/CD",
+        "CICD",
+        "continuous integration",
+        "continuous delivery",
+        "continuous deployment",
+        "build pipeline",
+        "devops pipeline",
+        "CI CD pipeline",
+        "transport management",
+        "CTS",
+        "jenkins"
+      ],
+      "category": "DevOps & Operations",
+      "description": "Managed CI/CD service for automating build, test, and deploy pipelines on SAP BTP",
+      "btp_service_name": "cicd-service",
+      "typical_connections": [
+        "sap-build-code",
+        "sap-bas",
+        "cloud-foundry-runtime"
+      ],
+      "drawio": {
+        "fillColor": "#d5e8d4",
+        "strokeColor": "#82b366",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "devops",
+        "entity_type": "Pipeline"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": "10022-sap-continuous-integration-and-delivery_sd"
+    },
+    {
+      "id": "sap-successfactors",
+      "name": "SAP SuccessFactors",
+      "aliases": [
+        "successfactors",
+        "SuccessFactors",
+        "SF",
+        "HCM",
+        "SAP HCM",
+        "SAP SF",
+        "SuccessFactors HCM",
+        "employee central"
+      ],
+      "category": "External Systems",
+      "description": "Cloud HCM suite for core HR, payroll, talent management, and employee experience",
+      "btp_service_name": null,
+      "typical_connections": [
+        "sap-integration-suite",
+        "sap-cloud-identity"
+      ],
+      "drawio": {
+        "fillColor": "#f8cecc",
+        "strokeColor": "#b85450",
+        "fontColor": "#000000",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "external",
+        "entity_type": "ExternalSystem"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": null
+    },
+    {
+      "id": "subscriber-tenant",
+      "name": "Subscriber Tenant",
+      "aliases": [
+        "tenant a",
+        "tenant b",
+        "tenant c",
+        "tenant x",
+        "tenant y",
+        "subscriber",
+        "subscriber tenant",
+        "consumer tenant",
+        "tenant",
+        "saas tenant",
+        "saas subscriber"
+      ],
+      "category": "Actors & External",
+      "description": "External subscriber or consumer tenant in a multi-tenant SaaS application",
+      "btp_service_name": null,
+      "typical_connections": [],
+      "drawio": {
+        "fillColor": "#f5f5f5",
+        "strokeColor": "#666666",
+        "fontColor": "#333333",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "generic",
+        "entity_type": "Tenant"
+      },
+      "bpmn": {
+        "task_type": "userTask"
+      },
+      "icon_id": null,
+      "render_zone": "actor"
+    },
+    {
+      "id": "external-application",
+      "name": "External Application",
+      "aliases": [
+        "external app",
+        "external application",
+        "third party app",
+        "third-party app",
+        "web app",
+        "client app",
+        "custom app",
+        "partner app",
+        "external system",
+        "external service"
+      ],
+      "category": "Actors & External",
+      "description": "External application or system consuming or providing data to SAP BTP services",
+      "btp_service_name": null,
+      "typical_connections": [],
+      "drawio": {
+        "fillColor": "#f5f5f5",
+        "strokeColor": "#666666",
+        "fontColor": "#333333",
+        "shape": "rounded=1;arcSize=10",
+        "width": 160,
+        "height": 60
+      },
+      "cap": {
+        "service_type": "external",
+        "entity_type": "ExternalApp"
+      },
+      "bpmn": {
+        "task_type": "serviceTask"
+      },
+      "icon_id": null,
+      "render_zone": "actor"
     }
   ]
 }

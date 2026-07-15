@@ -44,13 +44,19 @@ const REVIEW_TOOL = {
 async function validateArchitecture(architecture) {
   const client = await getClient();
 
+  const compById = new Map(architecture.components.map(c => [c.id, c]));
+
   const componentsText = architecture.components
-    .map(c => `- ${c.label} → ${c.sapServiceName} [${c.category}] (match: ${c.confidence})`)
+    .map(c => `- ${c.sapServiceName} [${c.category}] (match: ${c.confidence})`)
     .join('\n');
 
   const connectionsText = architecture.connections.length
     ? architecture.connections
-        .map(conn => `- ${conn.fromId} → ${conn.toId}${conn.label ? ` (${conn.label})` : ''}`)
+        .map(conn => {
+          const from = compById.get(conn.fromId)?.sapServiceName || conn.fromId;
+          const to   = compById.get(conn.toId)?.sapServiceName   || conn.toId;
+          return `- ${from} → ${to}`;
+        })
         .join('\n')
     : 'No connections identified';
 

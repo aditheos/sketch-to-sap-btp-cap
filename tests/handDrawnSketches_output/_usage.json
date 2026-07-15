@@ -1,0 +1,34 @@
+{
+  "SK001_GenAI_SAP_BTP": {
+    "input_tokens": 2694,
+    "output_tokens": 402
+  },
+  "SK002_EventDrivenINtegration": {
+    "input_tokens": 2694,
+    "output_tokens": 557
+  },
+  "SK003_IAM": {
+    "input_tokens": 2694,
+    "output_tokens": 647
+  },
+  "SK004_DataAnalyticsPlatform": {
+    "input_tokens": 2694,
+    "output_tokens": 663
+  },
+  "SK005_MultiTenantSaaSApp": {
+    "input_tokens": 2694,
+    "output_tokens": 670
+  },
+  "SK006_API Integration": {
+    "input_tokens": 2694,
+    "output_tokens": 604
+  },
+  "SK007_DevOps_CICD_BTP": {
+    "input_tokens": 2694,
+    "output_tokens": 553
+  },
+  "SK008_AgenticAI_MCP": {
+    "input_tokens": 2694,
+    "output_tokens": 629
+  }
+}

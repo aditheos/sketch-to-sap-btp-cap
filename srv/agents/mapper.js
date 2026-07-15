@@ -12,7 +12,7 @@ const TYPE_TO_CATEGORY = {
   api_gateway: 'Integration',
   integration: 'Integration',
   workflow: 'Process & Automation',
-  ui: 'Work Zone',
+  // 'ui' intentionally omitted — unrecognised UI labels must NOT fall back to Work Zone
   identity: 'Identity & Security',
   ai: 'AI',
   connectivity: 'Connectivity',
@@ -20,6 +20,7 @@ const TYPE_TO_CATEGORY = {
   mobile: 'Mobile',
   runtime: 'Development',
   erp: 'External Systems',
+  actor: 'Actors & External',
 };
 
 // Labels too generic to confidently pin to a specific catalog alias via substring match.
@@ -44,6 +45,7 @@ const EXTERNAL_SAAS_LABELS = new Set([
 ]);
 
 // Emerging concepts with no BTP icon yet — must not false-match any catalog entry.
+// Also includes BTP boundary/container labels that vision may extract as components.
 const FORCE_UNKNOWN_LABELS = new Set([
   'mcp server', 'mcp', 'a2a', 'agent gateway', 'agentgateway',
   'ord aggregator', 'open discovery', 'agent registry', 'agent catalog',
@@ -52,6 +54,18 @@ const FORCE_UNKNOWN_LABELS = new Set([
   'multi-region manager', 'mrm', 'bdc connect', 'bdc cockpit',
   'foundation models sap hosted', 'foundation models partner hosted',
   'embodied ai on btp',
+  // BTP boundary box labels — vision sometimes extracts the outer box as a component
+  'sap business technology platform', 'business technology platform',
+  'sap btp platform', 'sap btp boundary',
+]);
+
+// Labels that should be DROPPED entirely — not rendered even as unknown boxes.
+// These are BTP boundary/container labels and admin tools that are not real BTP services
+// in the context of a solution architecture diagram.
+const DROP_LABELS = new Set([
+  'sap business technology platform', 'business technology platform',
+  'sap btp', 'btp', 'sap btp platform', 'sap btp boundary',
+  'sap btp cockpit', 'btp cockpit', 'cockpit',
 ]);
 
 const UNKNOWN_DRAWIO = {
@@ -111,10 +125,14 @@ function _findBestMatch(component, aliasIndex, catalog) {
   }
   if (bestMatch) return { svc: bestMatch, confidence: 'alias' };
 
-  const category = TYPE_TO_CATEGORY[component.rawType];
-  if (category) {
-    const fallback = catalog.find(s => s.category === category);
-    if (fallback) return { svc: fallback, confidence: 'type_fallback' };
+  // Type fallback only fires for non-generic labels — generic labels like 'btp',
+  // 'platform', 'integration' must not land on a random first-match service.
+  if (!labelIsGeneric) {
+    const category = TYPE_TO_CATEGORY[component.rawType];
+    if (category) {
+      const fallback = catalog.find(s => s.category === category);
+      if (fallback) return { svc: fallback, confidence: 'type_fallback' };
+    }
   }
 
   return { svc: null, confidence: 'unknown' };
@@ -123,7 +141,7 @@ function _findBestMatch(component, aliasIndex, catalog) {
 function mapToSapServices(sketch) {
   const { catalog, aliasIndex } = _loadCatalog();
 
-  const components = sketch.components.map(comp => {
+  const rawComponents = sketch.components.map(comp => {
     const { svc, confidence } = _findBestMatch(comp, aliasIndex, catalog);
 
     if (svc) {
@@ -162,11 +180,56 @@ function mapToSapServices(sketch) {
     };
   });
 
-  return {
-    title: sketch.title,
-    components,
-    connections: sketch.connections,
-  };
+  // Deduplicate: if vision detected the same SAP service twice, keep the first occurrence
+  // and remap all connections from the duplicate ID to the survivor ID.
+  // Matched services dedup by sapServiceId; unmatched unknowns dedup by normalised label.
+  // Components in DROP_LABELS are removed entirely (boundary boxes, admin UI artifacts).
+  const seenServiceIds   = new Map(); // sapServiceId → surviving comp id
+  const seenUnknownLabels = new Map(); // normLabel → surviving comp id
+  const idRemap   = {};              // duplicateId → survivorId
+  const droppedIds = new Set();      // ids of boundary/container components to discard
+  const components = [];
+
+  for (const comp of rawComponents) {
+    // Drop BTP boundary/container labels — not real service components
+    if (DROP_LABELS.has(_normalise(comp.label || comp.sapServiceName))) {
+      droppedIds.add(comp.id);
+      continue;
+    }
+    if (comp.sapServiceId) {
+      if (seenServiceIds.has(comp.sapServiceId)) {
+        idRemap[comp.id] = seenServiceIds.get(comp.sapServiceId);
+        continue; // drop duplicate
+      }
+      seenServiceIds.set(comp.sapServiceId, comp.id);
+    } else {
+      const normLabel = _normalise(comp.sapServiceName);
+      if (seenUnknownLabels.has(normLabel)) {
+        idRemap[comp.id] = seenUnknownLabels.get(normLabel);
+        continue; // drop duplicate unknown
+      }
+      seenUnknownLabels.set(normLabel, comp.id);
+    }
+    components.push(comp);
+  }
+
+  const seenEdges = new Set();
+  const connections = sketch.connections
+    .map(conn => ({
+      ...conn,
+      fromId: idRemap[conn.fromId] || conn.fromId,
+      toId:   idRemap[conn.toId]   || conn.toId,
+    }))
+    .filter(conn => {
+      if (droppedIds.has(conn.fromId) || droppedIds.has(conn.toId)) return false; // dropped endpoint
+      if (conn.fromId === conn.toId) return false; // self-loop
+      const key = `${conn.fromId}→${conn.toId}`;
+      if (seenEdges.has(key)) return false;        // duplicate edge
+      seenEdges.add(key);
+      return true;
+    });
+
+  return { title: sketch.title, components, connections };
 }
 
 module.exports = { mapToSapServices };

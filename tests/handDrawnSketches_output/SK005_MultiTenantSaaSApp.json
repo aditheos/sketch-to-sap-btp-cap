@@ -1,0 +1,94 @@
+{
+  "title": "SaaS on BTP",
+  "components": [
+    {
+      "id": "comp_1",
+      "label": "Tenant A",
+      "raw_type": "ui",
+      "description": "External SaaS tenant A accessing the BTP platform"
+    },
+    {
+      "id": "comp_2",
+      "label": "Tenant B",
+      "raw_type": "ui",
+      "description": "External SaaS tenant B accessing the BTP platform"
+    },
+    {
+      "id": "comp_3",
+      "label": "SAP Build Code",
+      "raw_type": "runtime",
+      "description": "SAP Build Code service within SAP BTP for application development"
+    },
+    {
+      "id": "comp_4",
+      "label": "Cloud Foundry Runtime",
+      "raw_type": "runtime",
+      "description": "Cloud Foundry Runtime environment hosting the SaaS application on SAP BTP"
+    },
+    {
+      "id": "comp_5",
+      "label": "SAP HANA Cloud",
+      "raw_type": "database",
+      "description": "Managed cloud database service on SAP BTP"
+    },
+    {
+      "id": "comp_6",
+      "label": "SAP Cloud Identity Services",
+      "raw_type": "identity",
+      "description": "Identity and access management service on SAP BTP"
+    },
+    {
+      "id": "comp_7",
+      "label": "SAP S/4HANA",
+      "raw_type": "erp",
+      "description": "SAP S/4HANA backend ERP system external to BTP"
+    }
+  ],
+  "connections": [
+    {
+      "from_id": "comp_1",
+      "to_id": "comp_3",
+      "label": "accesses"
+    },
+    {
+      "from_id": "comp_1",
+      "to_id": "comp_4",
+      "label": "accesses"
+    },
+    {
+      "from_id": "comp_2",
+      "to_id": "comp_4",
+      "label": "accesses"
+    },
+    {
+      "from_id": "comp_4",
+      "to_id": "comp_3",
+      "label": "triggers/deploys"
+    },
+    {
+      "from_id": "comp_3",
+      "to_id": "comp_4",
+      "label": "builds/deploys to"
+    },
+    {
+      "from_id": "comp_4",
+      "to_id": "comp_5",
+      "label": "persists data"
+    },
+    {
+      "from_id": "comp_4",
+      "to_id": "comp_6",
+      "label": "authenticates via"
+    },
+    {
+      "from_id": "comp_4",
+      "to_id": "comp_7",
+      "label": "integrates with"
+    },
+    {
+      "from_id": "comp_7",
+      "to_id": "comp_4",
+      "label": "integrates with"
+    }
+  ]
+}

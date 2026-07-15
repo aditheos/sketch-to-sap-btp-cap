@@ -2,14 +2,17 @@
 
 const { getClient, VISION_MODEL } = require('./config');
 
-const SYSTEM_PROMPT = `You are an expert SAP BTP solution architect.
-Your task is to analyse an architecture sketch (whiteboard photo, screenshot, or diagram image)
-and identify every component and every connection between them.
+const SYSTEM_PROMPT = `You are an expert SAP BTP solution architect analysing an architecture sketch.
 
-Be inclusive — capture anything that looks like a system, service, database, UI, or integration.
-Use the label text visible in the sketch as the component label.
-If a label is unclear, make a reasonable inference based on the shape and context.
-Do not invent connections that are not visually indicated.`;
+EXTRACTION RULES — follow strictly:
+1. Only extract components that are EXPLICITLY LABELED in the sketch. Do not add services you assume should be present.
+2. Use the exact label text visible in the sketch. Do not substitute or enrich with SAP product names unless the label says so.
+3. If the same label appears more than once in the sketch, record it ONCE only.
+4. Do not invent connections — only record arrows or lines that are visually drawn.
+5. Users, browsers, mobile devices, and external applications sitting OUTSIDE the BTP boundary are raw_type "actor".
+6. SAP SaaS products outside BTP (S/4HANA, SuccessFactors, Ariba, etc.) are raw_type "erp".
+7. Only assign raw_type "ui" to things explicitly labeled as a portal, launchpad, or Work Zone inside BTP.
+8. If a label is unclear or ambiguous, use raw_type "unknown" rather than guessing.`;
 
 const EXTRACTION_TOOL = {
   name: 'record_architecture',

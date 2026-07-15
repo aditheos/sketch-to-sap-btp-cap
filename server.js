@@ -44,6 +44,11 @@ function trialRemaining(ip) {
   return Math.max(0, TRIAL_LIMIT - trialEntry(ip).count);
 }
 
+// Strip characters illegal in HTTP header values (control chars, non-ASCII)
+function safeHeader(value) {
+  return String(value).replace(/[^\x20-\x7E]/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
 function checkAndCharge(req, res) {
   if (!DEMO_MODE) return true;
   const ip = clientIp(req);
@@ -87,9 +92,9 @@ cds.on('bootstrap', (app) => {
       res
         .setHeader('Content-Type', 'application/xml')
         .setHeader('Content-Disposition', `attachment; filename="${filename}"`)
-        .setHeader('X-Validation-Summary', validation.summary)
+        .setHeader('X-Validation-Summary', safeHeader(validation.summary))
         .setHeader('X-Warning-Count', String(validation.warnings.length))
-        .setHeader('X-Missing-Services', validation.missingServices.join(', '))
+        .setHeader('X-Missing-Services', safeHeader(validation.missingServices.join(', ')))
         .send(xml);
     } catch (err) {
       res.status(500).json({ error: `Vision pipeline failed: ${err.message}` });
@@ -112,9 +117,9 @@ cds.on('bootstrap', (app) => {
       res
         .setHeader('Content-Type', 'application/xml')
         .setHeader('Content-Disposition', `attachment; filename="${filename}"`)
-        .setHeader('X-Validation-Summary', validation.summary)
+        .setHeader('X-Validation-Summary', safeHeader(validation.summary))
         .setHeader('X-Warning-Count', String(validation.warnings.length))
-        .setHeader('X-Missing-Services', validation.missingServices.join(', '))
+        .setHeader('X-Missing-Services', safeHeader(validation.missingServices.join(', ')))
         .send(xml);
     } catch (err) {
       res.status(500).json({ error: `Mermaid pipeline failed: ${err.message}` });

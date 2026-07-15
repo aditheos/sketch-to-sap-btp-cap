@@ -1,0 +1,63 @@
+{
+  "title": "API-Led Integration",
+  "components": [
+    {
+      "id": "comp_1",
+      "label": "External App",
+      "raw_type": "ui",
+      "description": "External application that initiates API calls; sits outside the SAP BTP boundary"
+    },
+    {
+      "id": "comp_2",
+      "label": "SAP API Management",
+      "raw_type": "api_gateway",
+      "description": "API gateway layer inside SAP BTP responsible for managing, securing, and routing API traffic"
+    },
+    {
+      "id": "comp_3",
+      "label": "SAP Integration Suite",
+      "raw_type": "integration",
+      "description": "Central integration platform inside SAP BTP that orchestrates and routes messages to backend systems"
+    },
+    {
+      "id": "comp_4",
+      "label": "SAP S/4HANA",
+      "raw_type": "erp",
+      "description": "SAP S/4HANA ERP backend system receiving integration flows from SAP Integration Suite"
+    },
+    {
+      "id": "comp_5",
+      "label": "SAP SuccessFactors",
+      "raw_type": "erp",
+      "description": "SAP SuccessFactors HCM system receiving integration flows from SAP Integration Suite"
+    },
+    {
+      "id": "comp_6",
+      "label": "SAP BTP",
+      "raw_type": "runtime",
+      "description": "SAP Business Technology Platform boundary enclosing SAP API Management and SAP Integration Suite"
+    }
+  ],
+  "connections": [
+    {
+      "from_id": "comp_1",
+      "to_id": "comp_2",
+      "label": ""
+    },
+    {
+      "from_id": "comp_2",
+      "to_id": "comp_3",
+      "label": ""
+    },
+    {
+      "from_id": "comp_3",
+      "to_id": "comp_4",
+      "label": ""
+    },
+    {
+      "from_id": "comp_3",
+      "to_id": "comp_5",
+      "label": ""
+    }
+  ]
+}

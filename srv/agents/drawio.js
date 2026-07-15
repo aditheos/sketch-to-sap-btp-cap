@@ -1,233 +1,371 @@
 'use strict';
 
-const fs = require('fs');
+const fs   = require('fs');
 const path = require('path');
 
 const ICON_INDEX_PATH = path.join(__dirname, '..', '..', 'data', 'sap_icon_index.json');
 
-const SLOT_W = 150;
-const SLOT_H = 130;
-const ICON_SIZE = 48;
-const LABEL_W = 140;
-const LABEL_H = 56;
-const LABEL_GAP = 6;
-const COLS = 4;
-const CAT_HEADER_H = 26;
-const CAT_GAP = 20;
-const PAD = 24;
-const MARGIN = 60;
-const COL_GAP = 50;
-const TITLE_H = 36;
+// ── Sizing ────────────────────────────────────────────────────────────────
+const ICON_W       = 48;
+const ICON_H       = 48;
+const LABEL_H_EST  = 54;   // height of the label cell below an icon (room for 3-line names)
+const CAT_H        = 16;   // category section header height within a column
+const COMP_V_GAP   = 14;   // vertical gap between components in the same column
 
+const FALLBACK_W   = 130;
+const FALLBACK_H   = 50;
+
+// Topology column geometry
+const COL_SLOT_W   = 140;  // width of each topology depth column
+const COL_GAP      = 60;   // horizontal gap between adjacent depth columns
+const PAGE_MARGIN  = 40;
+
+// BTP boundary padding
+const BTP_PAD_X    = 24;
+const BTP_PAD_Y    = 20;
+const BTP_LABEL_H  = 30;   // space for "SAP BTP" text label at top of boundary
+
+// Actor / external column width (slightly narrower, they live outside BTP)
+const ACTOR_SLOT_W = 130;
+
+// ── Styles ────────────────────────────────────────────────────────────────
 const SAP_BLUE = '#0070F2';
 const SAP_TEXT = '#1a2733';
 
+// Outer BTP boundary
 const BOUNDARY_STYLE =
-  `rounded=1;whiteSpace=wrap;html=1;strokeColor=${SAP_BLUE};fillColor=#EBF8FF;arcSize=32;absoluteArcSize=1;strokeWidth=1.5;`;
-const TITLE_STYLE =
-  `text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;fontColor=${SAP_TEXT};fontFamily=Helvetica;`;
-const HEADER_STYLE =
-  `text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=12;fontStyle=1;fontColor=${SAP_TEXT};fontFamily=Helvetica;`;
-const LABEL_CELL_STYLE =
-  `text;html=1;align=center;verticalAlign=top;whiteSpace=wrap;fontFamily=Helvetica;fontColor=${SAP_TEXT};fontSize=11;fontStyle=1;`;
+  `rounded=1;whiteSpace=wrap;html=1;strokeColor=${SAP_BLUE};fillColor=#EBF8FF;` +
+  `arcSize=24;absoluteArcSize=1;strokeWidth=1.5;` +
+  `align=left;verticalAlign=top;fontSize=14;fontStyle=1;fontColor=${SAP_TEXT};fontFamily=Helvetica;` +
+  `spacingLeft=12;spacingTop=10;`;
+
+// Category section header — small dimmed text, shown once per category group per column
+const CAT_LABEL_STYLE =
+  `text;html=1;align=left;verticalAlign=bottom;strokeColor=none;fillColor=none;` +
+  `fontColor=#8a9bb0;fontFamily=Helvetica;fontSize=9;fontStyle=1;whiteSpace=wrap;`;
+
+// Icon cell: image only, no label (label is a separate text cell below)
+const ICON_STYLE_PREFIX =
+  `shape=image;verticalLabelPosition=middle;verticalAlign=middle;imageAspect=0;aspect=fixed;` +
+  `fillColor=none;strokeColor=none;fontSize=1;fontColor=none;`;
+
+// Label cell below the icon: full slot width so text wraps within the column
+const ICON_LABEL_STYLE =
+  `text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;` +
+  `fontColor=${SAP_TEXT};fontFamily=Helvetica;fontSize=11;fontStyle=0;spacingTop=0;whiteSpace=wrap;`;
+
+// Directed edge
 const EDGE_STYLE =
-  `edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=blockThin;endFill=1;endSize=4;startSize=4;strokeWidth=1.5;strokeColor=#475E75;fontSize=10;fontFamily=Helvetica;fontColor=${SAP_TEXT};exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;`;
+  `edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;` +
+  `endArrow=blockThin;endFill=1;endSize=4;startSize=4;strokeWidth=1.5;` +
+  `strokeColor=#475E75;fontSize=10;fontFamily=Helvetica;fontColor=${SAP_TEXT};`;
 
-const FALLBACK_RECT_W = 140;
-const FALLBACK_RECT_H = 60;
+// Bidirectional edge (A↔B merged into one double-headed arrow)
+const BIDI_EDGE_STYLE =
+  `edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;` +
+  `endArrow=blockThin;endFill=1;startArrow=blockThin;startFill=1;endSize=4;startSize=4;strokeWidth=1.5;` +
+  `strokeColor=#475E75;fontSize=10;fontFamily=Helvetica;fontColor=${SAP_TEXT};`;
 
-let _iconIndex = null;
-
-function _loadIconIndex() {
-  if (!_iconIndex) {
-    _iconIndex = JSON.parse(fs.readFileSync(ICON_INDEX_PATH, 'utf-8'));
-  }
-  return _iconIndex;
-}
-
-// Minimal XML builder — produces properly indented, attribute-escaped XML.
+// ── Minimal XML builder ───────────────────────────────────────────────────
 class El {
-  constructor(tag, attrs = {}) {
-    this.tag = tag;
-    this.attrs = attrs;
-    this.children = [];
-  }
-  sub(tag, attrs = {}) {
-    const c = new El(tag, attrs);
-    this.children.push(c);
-    return c;
-  }
+  constructor(tag, attrs = {}) { this.tag = tag; this.attrs = attrs; this.children = []; }
+  sub(tag, attrs = {}) { const c = new El(tag, attrs); this.children.push(c); return c; }
   render(d = 0) {
-    const p = '  '.repeat(d);
-    const a = Object.entries(this.attrs)
-      .map(([k, v]) => `${k}="${String(v).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')}"`)
-      .join(' ');
+    const p   = '  '.repeat(d);
+    const esc = s => String(s)
+      .replace(/&/g, '&amp;').replace(/"/g, '&quot;')
+      .replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const a    = Object.entries(this.attrs).map(([k, v]) => `${k}="${esc(v)}"`).join(' ');
     const open = a ? `${p}<${this.tag} ${a}` : `${p}<${this.tag}`;
     if (!this.children.length) return `${open}/>`;
-    const kids = this.children.map(c => c.render(d + 1)).join('\n');
-    return `${open}>\n${kids}\n${p}</${this.tag}>`;
+    return `${open}>\n${this.children.map(c => c.render(d + 1)).join('\n')}\n${p}</${this.tag}>`;
   }
 }
 
-function _zone(comp) {
+// ── Zone classifier ───────────────────────────────────────────────────────
+function _zoneOf(comp) {
   if (comp.renderZone) return comp.renderZone;
   if (comp.category === 'Actors & External') return 'actor';
-  if (comp.category === 'External Systems') return 'external';
+  if (comp.category === 'External Systems')  return 'external';
   return 'btp';
 }
 
-function _placeComponent(root, comp, iconIndex, x, y, parent) {
-  const icon = comp.iconId ? iconIndex[comp.iconId] : null;
+// ── Topological depth (BFS) ───────────────────────────────────────────────
+// Assigns every component a column depth based on graph distance from sources.
+// Sources are actors (depth 0). If no actors, sources are BTP nodes with in-degree 0.
+// External systems are always pinned to max_btp_depth + 1 after BFS.
+function _computeDepths(components, connections) {
+  const depths = new Map();
 
-  if (icon) {
-    const iconCell = root.sub('mxCell', {
-      id: comp.id,
-      value: '',
-      style: `shape=image;html=1;imageAspect=0;aspect=fixed;image=data:image/svg+xml,${icon.base64_svg};`,
-      vertex: '1',
-      parent,
-      tooltip: comp.description || comp.sapServiceName,
-    });
-    const iconX = x + Math.floor((SLOT_W - ICON_SIZE) / 2);
-    iconCell.sub('mxGeometry', { x: String(iconX), y: String(y), width: String(ICON_SIZE), height: String(ICON_SIZE), as: 'geometry' });
-
-    const labelCell = root.sub('mxCell', {
-      id: `label-${comp.id}`,
-      value: comp.sapServiceName,
-      style: LABEL_CELL_STYLE,
-      vertex: '1',
-      parent,
-    });
-    const labelX = x + Math.floor((SLOT_W - LABEL_W) / 2);
-    labelCell.sub('mxGeometry', { x: String(labelX), y: String(y + ICON_SIZE + LABEL_GAP), width: String(LABEL_W), height: String(LABEL_H), as: 'geometry' });
-  } else {
-    const fill = comp.drawio?.fillColor || '#f5f5f5';
-    const stroke = comp.drawio?.strokeColor || '#666';
-    const font = comp.drawio?.fontColor || '#000';
-    const fallbackCell = root.sub('mxCell', {
-      id: comp.id,
-      value: comp.sapServiceName,
-      style: `rounded=1;whiteSpace=wrap;html=1;arcSize=10;fontFamily=Helvetica;fillColor=${fill};strokeColor=${stroke};fontColor=${font};fontSize=11;fontStyle=1;`,
-      vertex: '1',
-      parent,
-      tooltip: comp.description || comp.sapServiceName,
-    });
-    const rectX = x + Math.floor((SLOT_W - FALLBACK_RECT_W) / 2);
-    fallbackCell.sub('mxGeometry', { x: String(rectX), y: String(y + 10), width: String(FALLBACK_RECT_W), height: String(FALLBACK_RECT_H), as: 'geometry' });
+  // Build bidirectional adjacency for BFS (we follow edges in both directions
+  // so that depth increases monotonically away from sources).
+  const adj = new Map(components.map(c => [c.id, []]));
+  for (const conn of connections) {
+    if (adj.has(conn.fromId)) adj.get(conn.fromId).push(conn.toId);
+    if (adj.has(conn.toId))   adj.get(conn.toId).push(conn.fromId);
   }
-}
 
-function _layoutGrid(comps, x0, y0) {
-  const positions = comps.map((comp, idx) => ({
-    comp,
-    x: x0 + (idx % COLS) * SLOT_W,
-    y: y0 + Math.floor(idx / COLS) * SLOT_H,
-  }));
-  if (!comps.length) return { positions, width: 0, height: 0 };
-  const rows = Math.floor((comps.length - 1) / COLS) + 1;
-  return { positions, width: Math.min(comps.length, COLS) * SLOT_W, height: rows * SLOT_H };
-}
+  const queue = [];
 
-function _layoutCategories(categories) {
-  const placements = [];
-  let y = 0;
-  let maxW = 0;
-  for (const [category, comps] of Object.entries(categories)) {
-    placements.push({ kind: 'header', category, x: 0, y });
-    y += CAT_HEADER_H;
-    const { positions, width, height } = _layoutGrid(comps, 0, y);
-    for (const { comp, x: gx, y: gy } of positions) {
-      placements.push({ kind: 'icon', comp, x: gx, y: gy });
+  // Seed from actors
+  for (const c of components) {
+    if (_zoneOf(c) === 'actor') { depths.set(c.id, 0); queue.push(c.id); }
+  }
+
+  // No actors → seed from BTP/actor nodes with no incoming edges from non-external sources.
+  // Ignoring external→BTP edges here lets us correctly seed when an external system
+  // is drawn as the source of the flow (e.g. S/4HANA → IS → EventMesh).
+  if (!queue.length) {
+    const compById = new Map(components.map(c => [c.id, c]));
+    const hasIncomingFromInternal = new Set();
+    for (const conn of connections) {
+      const from = compById.get(conn.fromId);
+      if (from && _zoneOf(from) !== 'external') hasIncomingFromInternal.add(conn.toId);
     }
-    maxW = Math.max(maxW, width);
-    y += height + CAT_GAP;
-  }
-  return { placements, width: maxW, height: Math.max(y - CAT_GAP, 0) };
-}
-
-function generateDrawio(architecture) {
-  const iconIndex = _loadIconIndex();
-
-  const mxfile = new El('mxfile', { host: 'sketch-to-sap-btp', version: '1.0' });
-  const diagram = mxfile.sub('diagram', { name: architecture.title });
-  const graphModel = diagram.sub('mxGraphModel', {
-    dx: '1422', dy: '762', grid: '1', gridSize: '10', guides: '1',
-    tooltips: '1', connect: '1', arrows: '1', fold: '1', page: '1',
-    pageScale: '1', pageWidth: '1169', pageHeight: '827',
-  });
-  const root = graphModel.sub('root');
-  root.sub('mxCell', { id: '0' });
-  root.sub('mxCell', { id: '1', parent: '0' });
-
-  const actors = architecture.components.filter(c => _zone(c) === 'actor');
-  const external = architecture.components.filter(c => _zone(c) === 'external');
-
-  const btpCategories = {};
-  for (const comp of architecture.components) {
-    if (_zone(comp) === 'actor' || _zone(comp) === 'external') continue;
-    (btpCategories[comp.category] = btpCategories[comp.category] || []).push(comp);
-  }
-
-  const { placements, width: contentW, height: contentH } = _layoutCategories(btpCategories);
-
-  const actorColW = actors.length ? SLOT_W + COL_GAP : 0;
-  const boundaryX = MARGIN + actorColW;
-  const boundaryY = MARGIN + TITLE_H;
-  const boundaryW = Object.keys(btpCategories).length ? contentW + 2 * PAD : 0;
-  const boundaryH = Object.keys(btpCategories).length ? contentH + 2 * PAD : 0;
-
-  // Actors — outside boundary, left column
-  for (let i = 0; i < actors.length; i++) {
-    _placeComponent(root, actors[i], iconIndex, MARGIN, boundaryY + i * SLOT_H, '1');
-  }
-
-  // BTP-native services — inside boundary container
-  if (Object.keys(btpCategories).length) {
-    const boundaryCell = root.sub('mxCell', {
-      id: 'btp-boundary', value: '', style: BOUNDARY_STYLE, vertex: '1', parent: '1',
-    });
-    boundaryCell.sub('mxGeometry', { x: String(boundaryX), y: String(boundaryY), width: String(boundaryW), height: String(boundaryH), as: 'geometry' });
-
-    const titleCell = root.sub('mxCell', {
-      id: 'btp-boundary-title', value: 'SAP BTP', style: TITLE_STYLE, vertex: '1', parent: '1',
-    });
-    titleCell.sub('mxGeometry', { x: String(boundaryX), y: String(boundaryY - 30), width: '200', height: '24', as: 'geometry' });
-
-    for (const p of placements) {
-      if (p.kind === 'header') {
-        const headerCell = root.sub('mxCell', {
-          id: `header-${p.category}`,
-          value: p.category,
-          style: HEADER_STYLE,
-          vertex: '1',
-          parent: 'btp-boundary',
-        });
-        headerCell.sub('mxGeometry', { x: String(p.x + PAD), y: String(p.y + PAD), width: '300', height: '22', as: 'geometry' });
-      } else {
-        _placeComponent(root, p.comp, iconIndex, p.x + PAD, p.y + PAD, 'btp-boundary');
+    for (const c of components) {
+      if (_zoneOf(c) !== 'external' && !hasIncomingFromInternal.has(c.id)) {
+        depths.set(c.id, 0);
+        queue.push(c.id);
       }
     }
   }
 
-  // External systems — outside boundary, right column
-  const externalX = Object.keys(btpCategories).length ? boundaryX + boundaryW + COL_GAP : boundaryX;
-  for (let i = 0; i < external.length; i++) {
-    _placeComponent(root, external[i], iconIndex, externalX, boundaryY + i * SLOT_H, '1');
+  // Last resort → seed all BTP at depth 0
+  if (!queue.length) {
+    for (const c of components) {
+      if (_zoneOf(c) === 'btp') { depths.set(c.id, 0); queue.push(c.id); }
+    }
   }
 
-  // Edges
-  let edgeId = 10000;
-  for (const conn of architecture.connections) {
-    const edgeCell = root.sub('mxCell', {
-      id: String(edgeId++),
-      value: conn.label || '',
-      style: EDGE_STYLE,
-      edge: '1',
-      source: conn.fromId,
-      target: conn.toId,
-      parent: '1',
+  // BFS
+  let head = 0;
+  while (head < queue.length) {
+    const id = queue[head++];
+    const d  = depths.get(id);
+    for (const nbId of (adj.get(id) || [])) {
+      if (!depths.has(nbId)) { depths.set(nbId, d + 1); queue.push(nbId); }
+    }
+  }
+
+  // Any component still unvisited (isolated)
+  for (const c of components) { if (!depths.has(c.id)) depths.set(c.id, 1); }
+
+  // Pin externals to max_btp_depth + 1 so they always appear on the right
+  let maxBtp = 0;
+  for (const c of components) {
+    if (_zoneOf(c) === 'btp') maxBtp = Math.max(maxBtp, depths.get(c.id));
+  }
+  for (const c of components) {
+    if (_zoneOf(c) === 'external') depths.set(c.id, maxBtp + 1);
+  }
+
+  return depths;
+}
+
+// ── Column layout helper ──────────────────────────────────────────────────
+// Pre-computes y-offsets for a list of components within one column.
+// Category section headers are inserted whenever the category changes.
+// Returns { items: [{comp, iconY, catLabelY?}], totalH }
+function _columnLayout(comps, startY) {
+  const items = [];
+  let y = startY, lastCat = null;
+  for (const comp of comps) {
+    const cat = comp.category || '';
+    let catLabelY = null;
+    if (cat !== lastCat) { catLabelY = y; y += CAT_H; lastCat = cat; }
+    items.push({ comp, iconY: y, catLabelY });
+    y += ICON_H + LABEL_H_EST + COMP_V_GAP;
+  }
+  return { items, totalH: y - startY };
+}
+
+// ── Component renderer ────────────────────────────────────────────────────
+let _iconIndex = null;
+function _loadIconIndex() {
+  if (!_iconIndex) _iconIndex = JSON.parse(fs.readFileSync(ICON_INDEX_PATH, 'utf-8'));
+  return _iconIndex;
+}
+
+// Renders icon + label cells for a component at absolute (x, y).
+// slotW is the column width used for horizontal centering.
+function _placeComp(root, comp, iconIndex, x, y, slotW) {
+  const icon = comp.iconId ? iconIndex[comp.iconId] : null;
+  if (icon) {
+    const iconX = x + Math.floor((slotW - ICON_W) / 2);
+    root.sub('mxCell', {
+      id: comp.id, value: '',
+      style: ICON_STYLE_PREFIX + `image=data:image/svg+xml,${icon.base64_svg};`,
+      vertex: '1', parent: '1',
+      tooltip: comp.description || comp.sapServiceName,
+    }).sub('mxGeometry', {
+      x: String(iconX), y: String(y),
+      width: String(ICON_W), height: String(ICON_H), as: 'geometry',
     });
-    edgeCell.sub('mxGeometry', { relative: '1', as: 'geometry' });
+    root.sub('mxCell', {
+      id: comp.id + '_lbl', value: comp.sapServiceName,
+      style: ICON_LABEL_STYLE, vertex: '1', parent: '1',
+    }).sub('mxGeometry', {
+      x: String(x), y: String(y + ICON_H + 2),
+      width: String(slotW), height: String(LABEL_H_EST), as: 'geometry',
+    });
+  } else {
+    const fill   = comp.drawio?.fillColor   || '#f5f5f5';
+    const stroke = comp.drawio?.strokeColor || '#666';
+    const font   = comp.drawio?.fontColor   || SAP_TEXT;
+    const rectX  = x + Math.floor((slotW - FALLBACK_W) / 2);
+    root.sub('mxCell', {
+      id: comp.id, value: comp.sapServiceName,
+      style: `rounded=1;whiteSpace=wrap;html=1;arcSize=10;fontFamily=Helvetica;` +
+             `fillColor=${fill};strokeColor=${stroke};fontColor=${font};fontSize=11;fontStyle=1;`,
+      vertex: '1', parent: '1',
+      tooltip: comp.description || comp.sapServiceName,
+    }).sub('mxGeometry', {
+      x: String(rectX), y: String(y + 8),
+      width: String(FALLBACK_W), height: String(FALLBACK_H), as: 'geometry',
+    });
+  }
+}
+
+// ── Main ──────────────────────────────────────────────────────────────────
+function generateDrawio(architecture) {
+  const iconIndex  = _loadIconIndex();
+  const { components, connections } = architecture;
+
+  // ── 1. Compute topological depths ──────────────────────────────────────
+  const depths = _computeDepths(components, connections);
+
+  // Group by depth; sort each column by category then name
+  const byDepth = new Map();
+  for (const comp of components) {
+    const d = depths.get(comp.id) ?? 0;
+    if (!byDepth.has(d)) byDepth.set(d, []);
+    byDepth.get(d).push(comp);
+  }
+  for (const comps of byDepth.values()) {
+    comps.sort((a, b) => {
+      const cc = (a.category || '').localeCompare(b.category || '');
+      return cc !== 0 ? cc : (a.sapServiceName || '').localeCompare(b.sapServiceName || '');
+    });
+  }
+
+  const sortedDepths = [...byDepth.keys()].sort((a, b) => a - b);
+  const maxDepth     = sortedDepths.at(-1) ?? 0;
+
+  // Identify which depths contain BTP components
+  const btpDepths = sortedDepths.filter(d =>
+    (byDepth.get(d) || []).some(c => _zoneOf(c) === 'btp'),
+  );
+  const minBtpDepth = btpDepths.length ? Math.min(...btpDepths) : 1;
+  const maxBtpDepth = btpDepths.length ? Math.max(...btpDepths) : 1;
+  const nBtpCols    = maxBtpDepth - minBtpDepth + 1;
+
+  // ── 2. Column geometry ─────────────────────────────────────────────────
+  const actorComps = (byDepth.get(0) || []).filter(c => _zoneOf(c) === 'actor');
+  const extComps   = (byDepth.get(maxDepth) || []).filter(c => _zoneOf(c) === 'external');
+  const hasActors  = actorComps.length > 0;
+  const hasExt     = extComps.length > 0;
+
+  // Absolute x for each layout region
+  const actorColX  = PAGE_MARGIN;
+  const btpStartX  = PAGE_MARGIN + (hasActors ? ACTOR_SLOT_W + COL_GAP : 0);
+  const btpInnerW  = nBtpCols * COL_SLOT_W + Math.max(0, nBtpCols - 1) * COL_GAP;
+  const btpW       = btpInnerW + 2 * BTP_PAD_X;
+  const extColX    = btpStartX + (btpDepths.length ? btpW + COL_GAP : 0);
+
+  // Absolute x for a BTP column at depth d
+  const btpColAbsX = d => btpStartX + BTP_PAD_X + (d - minBtpDepth) * (COL_SLOT_W + COL_GAP);
+
+  // ── 3. Pre-compute column layouts to determine BTP boundary height ──────
+  const colLayouts = new Map(); // depth → { items, totalH }
+  for (const d of btpDepths) {
+    const comps = (byDepth.get(d) || []).filter(c => _zoneOf(c) === 'btp');
+    colLayouts.set(d, _columnLayout(comps, 0)); // relative y (offset applied later)
+  }
+
+  const btpContentH = btpDepths.length
+    ? Math.max(...[...colLayouts.values()].map(l => l.totalH))
+    : ICON_H + LABEL_H_EST;
+  const btpH  = BTP_LABEL_H + BTP_PAD_Y + btpContentH + BTP_PAD_Y;
+  const btpY  = PAGE_MARGIN + 10;
+
+  // Vertically centre actors/externals alongside the BTP boundary
+  const singleH    = ICON_H + LABEL_H_EST;
+  const actorStartY = btpY + Math.max(0, Math.floor((btpH - singleH) / 2));
+  const extStartY   = btpY + BTP_PAD_Y;
+
+  // ── 4. Build XML ───────────────────────────────────────────────────────
+  const mxfile = new El('mxfile', { host: 'sketch-to-sap-btp', version: '1.0' });
+  const diagram = mxfile.sub('diagram', { name: architecture.title });
+  diagram.sub('mxGraphModel', {
+    dx: '1422', dy: '762', grid: '1', gridSize: '10', guides: '1',
+    tooltips: '1', connect: '1', arrows: '1', fold: '1', page: '1',
+    pageScale: '1', pageWidth: '1169', pageHeight: '827',
+  });
+  const graphModel = diagram.children[0];
+  const root = graphModel.sub('root');
+  root.sub('mxCell', { id: '0' });
+  root.sub('mxCell', { id: '1', parent: '0' });
+
+  // Actor column
+  actorComps.forEach((comp, i) => {
+    const y = actorStartY + i * (singleH + COMP_V_GAP);
+    _placeComp(root, comp, iconIndex, actorColX, y, ACTOR_SLOT_W);
+  });
+
+  // BTP boundary + columns
+  if (btpDepths.length) {
+    root.sub('mxCell', {
+      id: 'btp-boundary', value: 'SAP BTP',
+      style: BOUNDARY_STYLE, vertex: '1', parent: '1',
+    }).sub('mxGeometry', {
+      x: String(btpStartX), y: String(btpY),
+      width: String(btpW), height: String(btpH), as: 'geometry',
+    });
+
+    const colContentStartY = btpY + BTP_LABEL_H + BTP_PAD_Y;
+
+    for (const d of btpDepths) {
+      const colX   = btpColAbsX(d);
+      const layout = colLayouts.get(d);
+      if (!layout) continue;
+
+      for (const { comp, iconY, catLabelY } of layout.items) {
+        // Category section header (only when category changes within the column)
+        if (catLabelY !== null) {
+          root.sub('mxCell', {
+            id: `cat-${comp.id}`, value: comp.category || '',
+            style: CAT_LABEL_STYLE, vertex: '1', parent: '1',
+          }).sub('mxGeometry', {
+            x: String(colX),
+            y: String(colContentStartY + catLabelY),
+            width: String(COL_SLOT_W), height: String(CAT_H), as: 'geometry',
+          });
+        }
+        _placeComp(root, comp, iconIndex, colX, colContentStartY + iconY, COL_SLOT_W);
+      }
+    }
+  }
+
+  // External column
+  extComps.forEach((comp, i) => {
+    const y = extStartY + i * (singleH + COMP_V_GAP);
+    _placeComp(root, comp, iconIndex, extColX, y, ACTOR_SLOT_W);
+  });
+
+  // ── 5. Edges — bidirectional pairs merged into one double-headed arrow ──
+  const skipRev = new Set();
+  let edgeId = 10000;
+  for (const conn of connections) {
+    const key    = `${conn.fromId}→${conn.toId}`;
+    const revKey = `${conn.toId}→${conn.fromId}`;
+    if (skipRev.has(key)) continue;
+    const hasBidi = connections.some(c => c.fromId === conn.toId && c.toId === conn.fromId);
+    if (hasBidi) skipRev.add(revKey);
+    root.sub('mxCell', {
+      id: String(edgeId++), value: '',
+      style: hasBidi ? BIDI_EDGE_STYLE : EDGE_STYLE,
+      edge: '1', source: conn.fromId, target: conn.toId, parent: '1',
+    }).sub('mxGeometry', { relative: '1', as: 'geometry' });
   }
 
   return `<?xml version="1.0" ?>\n${mxfile.render()}`;

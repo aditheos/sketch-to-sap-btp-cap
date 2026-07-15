@@ -1,0 +1,52 @@
+{
+  "title": "Event-Driven Integration",
+  "components": [
+    {
+      "id": "comp_1",
+      "label": "SAP S/4HANA",
+      "raw_type": "erp",
+      "description": "Source system that initiates the event-driven flow. Positioned outside the SAP BTP boundary on the left."
+    },
+    {
+      "id": "comp_2",
+      "label": "SAP Business Technology Platform",
+      "raw_type": "runtime",
+      "description": "Overarching platform boundary (bounding box) that contains SAP Integration Suite and SAP Event Mesh."
+    },
+    {
+      "id": "comp_3",
+      "label": "SAP Integration Suite",
+      "raw_type": "integration",
+      "description": "Middleware integration layer hosted inside SAP BTP. Receives events from SAP S/4HANA and forwards them to SAP Event Mesh."
+    },
+    {
+      "id": "comp_4",
+      "label": "SAP Event Mesh",
+      "raw_type": "messaging",
+      "description": "Event messaging service hosted inside SAP BTP. Receives events from SAP Integration Suite and publishes them to downstream consumers."
+    },
+    {
+      "id": "comp_5",
+      "label": "SAP Build Process Automation",
+      "raw_type": "workflow",
+      "description": "Process automation consumer positioned outside the SAP BTP boundary on the right. Triggered by events from SAP Event Mesh."
+    }
+  ],
+  "connections": [
+    {
+      "from_id": "comp_1",
+      "to_id": "comp_3",
+      "label": "event / message"
+    },
+    {
+      "from_id": "comp_3",
+      "to_id": "comp_4",
+      "label": "event / message"
+    },
+    {
+      "from_id": "comp_4",
+      "to_id": "comp_5",
+      "label": "event / message"
+    }
+  ]
+}

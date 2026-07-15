@@ -1,0 +1,338 @@
+[
+  {
+    "ra_id": "RA0001",
+    "title": "Designing Event-Driven Applications",
+    "file": "RA0001_designing-event-driven-applications__eda-enterprise.drawio",
+    "source_relpath": "docs/ref-arch/RA0001/drawio/eda_enterprise.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0001",
+    "title": "Designing Event-Driven Applications",
+    "file": "RA0001_designing-event-driven-applications__eda-ref-arch.drawio",
+    "source_relpath": "docs/ref-arch/RA0001/drawio/eda_ref_arch.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0001",
+    "title": "Designing Event-Driven Applications",
+    "file": "RA0001_designing-event-driven-applications__eda-strategy.drawio",
+    "source_relpath": "docs/ref-arch/RA0001/drawio/eda_strategy.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0002",
+    "title": "Architecting Multi-Region HA/DR resiliency patterns",
+    "file": "RA0002_architecting-multi-region-ha-dr-resiliency-patterns.drawio",
+    "source_relpath": "docs/ref-arch/RA0002/drawio/architecting-multi-region-resiliency-for-sap-btp-use-cases.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0003",
+    "title": "Federated Machine Learning with SAP Datasphere",
+    "file": "RA0003_federated-machine-learning-with-sap-datasphere.drawio",
+    "source_relpath": "docs/ref-arch/RA0003/drawio/fedml-final.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0004",
+    "title": "Explore your Hyperscaler data with SAP Business Data Cloud",
+    "file": "RA0004_explore-your-hyperscaler-data-with-sap-business-data-cloud.drawio",
+    "source_relpath": "docs/ref-arch/RA0004/drawio/explore-hyperscaler-data.drawio",
+    "tier": "core",
+    "note": "comparison/overview style (37 components, only 4 connections) - useful for node-coverage testing, not meaningful for connection-accuracy testing"
+  },
+  {
+    "ra_id": "RA0005",
+    "title": "Generative AI on SAP BTP",
+    "file": "RA0005_generative-ai-on-sap-btp.drawio",
+    "source_relpath": "docs/ref-arch/RA0005/drawio/reference-architecture-generative-ai.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0006",
+    "title": "Secure connectivity with SAP Private Link service",
+    "file": "RA0006_secure-connectivity-with-sap-private-link-service.drawio",
+    "source_relpath": "docs/ref-arch/RA0006/drawio/secure-connectivity-with-sap-private-link-service.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0007",
+    "title": "Multitenant SaaS Application using CAP",
+    "file": "RA0007_multitenant-saas-application-using-cap.drawio",
+    "source_relpath": "docs/ref-arch/RA0007/5-mt-architecture/drawio/susaas-app-architecture.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0008",
+    "title": "Edge Integration Cell on Hyperscalers",
+    "file": "RA0008_edge-integration-cell-on-hyperscalers.drawio",
+    "source_relpath": "docs/ref-arch/RA0008/drawio/sap_eic.drawio",
+    "tier": "core",
+    "note": "comparison/overview style (12 components, 1 connection) - useful for node-coverage testing only"
+  },
+  {
+    "ra_id": "RA0009",
+    "title": "Establish a central inbox with SAP Task Center",
+    "file": "RA0009_establish-a-central-inbox-with-sap-task-center.drawio",
+    "source_relpath": "docs/ref-arch/RA0009/drawio/establish-a-central-inbox-with-sap-task-center.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0010",
+    "title": "Establish a central entry point with SAP Build Work Zone",
+    "file": "RA0010_establish-a-central-entry-point-with-sap-build-work-zone.drawio",
+    "source_relpath": "docs/ref-arch/RA0010/drawio/sap-build-work-zone.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0011",
+    "title": "SAP HANA Cloud as an Esri Geodatabase",
+    "file": "RA0011_sap-hana-cloud-as-an-esri-geodatabase.drawio",
+    "source_relpath": "docs/ref-arch/RA0011/drawio/esri-and-hana-cloud.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0012",
+    "title": "Medallion Reference Architecture for Big Data Processing in SAP HANA Cloud",
+    "file": "RA0012_medallion-reference-architecture-for-big-data-processing-in-sap-hana-cloud.drawio",
+    "source_relpath": "docs/ref-arch/RA0012/drawio/medallion-big-data-architecture.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0013",
+    "title": "Transforming Enterprise Data Strategy with SAP Business Data Cloud",
+    "file": "RA0013_transforming-enterprise-data-strategy-with-sap-business-data-cloud__sap-bdc-highlevel.drawio",
+    "source_relpath": "docs/ref-arch/RA0013/drawio/sap-bdc-highlevel.drawio",
+    "tier": "excluded",
+    "note": "0 components/connections extracted - purely illustrative graphic, not a structured diagram"
+  },
+  {
+    "ra_id": "RA0013",
+    "title": "Transforming Enterprise Data Strategy with SAP Business Data Cloud",
+    "file": "RA0013_transforming-enterprise-data-strategy-with-sap-business-data-cloud__sap-bdc.drawio",
+    "source_relpath": "docs/ref-arch/RA0013/drawio/sap-bdc.drawio",
+    "tier": "core",
+    "note": "comparison/overview style (29 components, 0 connections) - useful for node-coverage testing only"
+  },
+  {
+    "ra_id": "RA0014",
+    "title": "Understanding Network Performance in a Multi Regional Solution",
+    "file": "RA0014_understanding-network-performance-in-a-multi-regional-solution__direct-odata-call.drawio",
+    "source_relpath": "docs/ref-arch/RA0014/drawio/Direct_OData_Call.drawio",
+    "tier": "excluded",
+    "note": "1-2 components only - narrow connectivity-pattern micro-diagram, redundant with this RA's richer 'measurement-landscape' diagram"
+  },
+  {
+    "ra_id": "RA0014",
+    "title": "Understanding Network Performance in a Multi Regional Solution",
+    "file": "RA0014_understanding-network-performance-in-a-multi-regional-solution__measurement-landscape.drawio",
+    "source_relpath": "docs/ref-arch/RA0014/drawio/measurement_landscape.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0014",
+    "title": "Understanding Network Performance in a Multi Regional Solution",
+    "file": "RA0014_understanding-network-performance-in-a-multi-regional-solution__odata-call-app-router.drawio",
+    "source_relpath": "docs/ref-arch/RA0014/drawio/OData_Call_App_Router.drawio",
+    "tier": "excluded",
+    "note": "1-2 components only - narrow connectivity-pattern micro-diagram, redundant with this RA's richer 'measurement-landscape' diagram"
+  },
+  {
+    "ra_id": "RA0014",
+    "title": "Understanding Network Performance in a Multi Regional Solution",
+    "file": "RA0014_understanding-network-performance-in-a-multi-regional-solution__odata-call-app-router-privatelink.drawio",
+    "source_relpath": "docs/ref-arch/RA0014/drawio/OData_Call_App_Router_PrivateLink.drawio",
+    "tier": "excluded",
+    "note": "1-2 components only - narrow connectivity-pattern micro-diagram, redundant with this RA's richer 'measurement-landscape' diagram"
+  },
+  {
+    "ra_id": "RA0014",
+    "title": "Understanding Network Performance in a Multi Regional Solution",
+    "file": "RA0014_understanding-network-performance-in-a-multi-regional-solution__odata-call-app-router-scc.drawio",
+    "source_relpath": "docs/ref-arch/RA0014/drawio/OData_Call_App_Router_SCC.drawio",
+    "tier": "excluded",
+    "note": "1-2 components only - narrow connectivity-pattern micro-diagram, redundant with this RA's richer 'measurement-landscape' diagram"
+  },
+  {
+    "ra_id": "RA0014",
+    "title": "Understanding Network Performance in a Multi Regional Solution",
+    "file": "RA0014_understanding-network-performance-in-a-multi-regional-solution__odata-call-cap-app.drawio",
+    "source_relpath": "docs/ref-arch/RA0014/drawio/OData_Call_CAP_App.drawio",
+    "tier": "excluded",
+    "note": "1-2 components only - narrow connectivity-pattern micro-diagram, redundant with this RA's richer 'measurement-landscape' diagram"
+  },
+  {
+    "ra_id": "RA0014",
+    "title": "Understanding Network Performance in a Multi Regional Solution",
+    "file": "RA0014_understanding-network-performance-in-a-multi-regional-solution__odata-call-cap-privatelink.drawio",
+    "source_relpath": "docs/ref-arch/RA0014/drawio/OData_Call_CAP_PrivateLink.drawio",
+    "tier": "excluded",
+    "note": "1-2 components only - narrow connectivity-pattern micro-diagram, redundant with this RA's richer 'measurement-landscape' diagram"
+  },
+  {
+    "ra_id": "RA0014",
+    "title": "Understanding Network Performance in a Multi Regional Solution",
+    "file": "RA0014_understanding-network-performance-in-a-multi-regional-solution__odata-call-cap-scc.drawio",
+    "source_relpath": "docs/ref-arch/RA0014/drawio/OData_Call_CAP_SCC.drawio",
+    "tier": "excluded",
+    "note": "1-2 components only - narrow connectivity-pattern micro-diagram, redundant with this RA's richer 'measurement-landscape' diagram"
+  },
+  {
+    "ra_id": "RA0015",
+    "title": "Business to Government Integration",
+    "file": "RA0015_business-to-government-integration.drawio",
+    "source_relpath": "docs/ref-arch/RA0015/drawio/business-to-government-integration.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0016",
+    "title": "Secure Service Consumption Across Hyperscalers",
+    "file": "RA0016_secure-service-consumption-across-hyperscalers__gcp-oidc.drawio",
+    "source_relpath": "docs/ref-arch/RA0016/drawio/gcp-oidc.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0016",
+    "title": "Secure Service Consumption Across Hyperscalers",
+    "file": "RA0016_secure-service-consumption-across-hyperscalers__iam-roles-anywhere.drawio",
+    "source_relpath": "docs/ref-arch/RA0016/drawio/iam-roles-anywhere.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0016",
+    "title": "Secure Service Consumption Across Hyperscalers",
+    "file": "RA0016_secure-service-consumption-across-hyperscalers__oidc-sts.drawio",
+    "source_relpath": "docs/ref-arch/RA0016/drawio/oidc-sts.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0017",
+    "title": "Connect Business Processes with SAP Master Data Integration",
+    "file": "RA0017_connect-business-processes-with-sap-master-data-integration.drawio",
+    "source_relpath": "docs/ref-arch/RA0017/drawio/master-data-integration.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0018",
+    "title": "Integrate and Extend with SAP Build Process Automation",
+    "file": "RA0018_integrate-and-extend-with-sap-build-process-automation.drawio",
+    "source_relpath": "docs/ref-arch/RA0018/drawio/integrate-and-extend-with-sap-build-process-automation.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0019",
+    "title": "SAP IAM integration with SAP Cloud Identity Services",
+    "file": "RA0019_sap-iam-integration-with-sap-cloud-identity-services.drawio",
+    "source_relpath": "docs/ref-arch/RA0019/drawio/public-sap-iam-sd.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0020",
+    "title": "Business to Business Integration",
+    "file": "RA0020_business-to-business-integration.drawio",
+    "source_relpath": "docs/ref-arch/RA0020/drawio/business-to-business-integration.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0021",
+    "title": "Application to Application Integration",
+    "file": "RA0021_application-to-application-integration.drawio",
+    "source_relpath": "docs/ref-arch/RA0021/drawio/application-to-application-integration.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0022",
+    "title": "API Managed Integration",
+    "file": "RA0022_api-managed-integration.drawio",
+    "source_relpath": "docs/ref-arch/RA0022/drawio/api-managed-integration.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0023",
+    "title": "DevOps with SAP BTP",
+    "file": "RA0023_devops-with-sap-btp.drawio",
+    "source_relpath": "docs/ref-arch/RA0023/drawio/devops-with-sap-btp.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0024",
+    "title": "Integrating and Extending Joule",
+    "file": "RA0024_integrating-and-extending-joule.drawio",
+    "source_relpath": "docs/ref-arch/RA0024/drawio/unified_joule.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0025",
+    "title": "Transitioning Architectures from SAP NetWeaver",
+    "file": "RA0025_transitioning-architectures-from-sap-netweaver.drawio",
+    "source_relpath": "docs/ref-arch/RA0025/1-sap-pi-po-to-integration-suite/drawio/sap_architecture_center_is_eic_post.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0026",
+    "title": "Embodied AI Agents & Robotics",
+    "file": "RA0026_embodied-ai-agents-robotics.drawio",
+    "source_relpath": "docs/ref-arch/RA0026/drawio/reference-architecture-overview.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0027",
+    "title": "Log-Driven Security Operations with SAP Enterprise Threat Detection and SIEM/SOAR Platforms",
+    "file": "RA0027_log-driven-security-operations-with-sap-enterprise-threat-detection-and-siem-soar-platforms.drawio",
+    "source_relpath": "docs/ref-arch/RA0027/drawio/siem_soar_etd.drawio",
+    "tier": "core",
+    "note": "mixes real SAP services with 3rd-party vendor names (FortiSIEM, FortiSOAR) never intended for this catalog - coverage ceiling is structurally capped, not a gap"
+  },
+  {
+    "ra_id": "RA0028",
+    "title": "SAP SuccessFactors Suite",
+    "file": "RA0028_sap-successfactors-suite.drawio",
+    "source_relpath": "docs/ref-arch/RA0028/drawio/successfactors.module.integration.drawio",
+    "tier": "excluded",
+    "note": "components are internal SuccessFactors HR module names (BizX, Time Tracking, Compensation, ...), not composable BTP platform services - out of this catalog's domain by design, not a coverage gap"
+  },
+  {
+    "ra_id": "RA0029",
+    "title": "Agentic AI & AI Agents",
+    "file": "RA0029_agentic-ai-ai-agents.drawio",
+    "source_relpath": "docs/ref-arch/RA0029/drawio/architecture.drawio",
+    "tier": "core",
+    "note": null
+  },
+  {
+    "ra_id": "RA0030",
+    "title": "SAP Document AI",
+    "file": "RA0030_sap-document-ai.drawio",
+    "source_relpath": "docs/ref-arch/RA0030/drawio/diagram-GIBKZD5oRo.drawio",
+    "tier": "core",
+    "note": null
+  }
+]

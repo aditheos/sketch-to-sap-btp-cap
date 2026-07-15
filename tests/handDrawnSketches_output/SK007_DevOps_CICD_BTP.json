@@ -1,0 +1,73 @@
+{
+  "title": "DevOps on BTP",
+  "components": [
+    {
+      "id": "comp_1",
+      "label": "Developer",
+      "raw_type": "ui",
+      "description": "A developer persona (stick figure) who interacts with the Git Repository inside SAP BTP"
+    },
+    {
+      "id": "comp_2",
+      "label": "Git Repository (source)",
+      "raw_type": "storage",
+      "description": "Upper Git Repository inside the SAP BTP boundary \u2014 acts as the source code repository that triggers the CI/CD pipeline"
+    },
+    {
+      "id": "comp_3",
+      "label": "SAP Continuous Integration and Delivery",
+      "raw_type": "workflow",
+      "description": "SAP BTP Continuous Integration and Delivery service that builds, tests, and deploys code"
+    },
+    {
+      "id": "comp_4",
+      "label": "Cloud Foundry Runtime",
+      "raw_type": "runtime",
+      "description": "SAP BTP Cloud Foundry runtime environment where the application is deployed"
+    },
+    {
+      "id": "comp_5",
+      "label": "SAP HANA Cloud",
+      "raw_type": "database",
+      "description": "SAP HANA Cloud database service as the persistence layer"
+    },
+    {
+      "id": "comp_6",
+      "label": "Git Repository (target)",
+      "raw_type": "storage",
+      "description": "Lower Git Repository inside the SAP BTP boundary \u2014 receives feedback or updated artefacts from the CI/CD pipeline"
+    }
+  ],
+  "connections": [
+    {
+      "from_id": "comp_1",
+      "to_id": "comp_6",
+      "label": "pushes / interacts with"
+    },
+    {
+      "from_id": "comp_2",
+      "to_id": "comp_3",
+      "label": "triggers pipeline"
+    },
+    {
+      "from_id": "comp_2",
+      "to_id": "comp_6",
+      "label": "feeds"
+    },
+    {
+      "from_id": "comp_3",
+      "to_id": "comp_4",
+      "label": "deploys to"
+    },
+    {
+      "from_id": "comp_3",
+      "to_id": "comp_6",
+      "label": "writes back"
+    },
+    {
+      "from_id": "comp_4",
+      "to_id": "comp_5",
+      "label": "connects to"
+    }
+  ]
+}

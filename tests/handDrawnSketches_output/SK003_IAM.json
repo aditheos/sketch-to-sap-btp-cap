@@ -1,0 +1,67 @@
+{
+  "title": "IAM Architecture",
+  "components": [
+    {
+      "id": "comp_1",
+      "label": "Browser / Mobile App",
+      "raw_type": "ui",
+      "description": "End-user access point via web browser or mobile application"
+    },
+    {
+      "id": "comp_2",
+      "label": "SAP Cloud Identity Services",
+      "raw_type": "identity",
+      "description": "Central Identity and Access Management service; sits at the boundary of SAP BTP and the external client"
+    },
+    {
+      "id": "comp_3",
+      "label": "SAP Build Work Zone",
+      "raw_type": "ui",
+      "description": "SAP BTP-hosted digital workplace / launchpad service inside the SAP BTP boundary"
+    },
+    {
+      "id": "comp_4",
+      "label": "SAP S/4HANA Cloud",
+      "raw_type": "erp",
+      "description": "Cloud ERP system inside the SAP BTP boundary"
+    },
+    {
+      "id": "comp_5",
+      "label": "SAP BTP Cockpit",
+      "raw_type": "ui",
+      "description": "SAP BTP administration and management console; partially inside and partially outside the SAP BTP dashed boundary"
+    }
+  ],
+  "connections": [
+    {
+      "from_id": "comp_1",
+      "to_id": "comp_2",
+      "label": "authenticates via"
+    },
+    {
+      "from_id": "comp_2",
+      "to_id": "comp_3",
+      "label": "issues token / grants access"
+    },
+    {
+      "from_id": "comp_3",
+      "to_id": "comp_4",
+      "label": "navigates to / calls"
+    },
+    {
+      "from_id": "comp_2",
+      "to_id": "comp_5",
+      "label": "bidirectional sync / trust configuration"
+    },
+    {
+      "from_id": "comp_5",
+      "to_id": "comp_2",
+      "label": "bidirectional sync / trust configuration"
+    },
+    {
+      "from_id": "comp_4",
+      "to_id": "comp_5",
+      "label": "reports to / managed by"
+    }
+  ]
+}
