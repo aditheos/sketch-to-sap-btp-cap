@@ -110,6 +110,18 @@ The app resolves the Anthropic API key in this priority order:
 
 Cost is charged to your own Anthropic account. Aditheos incurs no API costs.
 
+## API response headers
+
+`POST /convert` and `POST /convert-mermaid` return the `.drawio` file body plus these headers from the validator:
+
+| Header | Content |
+|---|---|
+| `X-Validation-Summary` | One-sentence overall assessment |
+| `X-Warning-Count` | Number of warnings (integer) |
+| `X-Missing-Services` | Comma-separated list of suggested missing services |
+
+Use `POST /validate-only` (image) or `POST /validate-mermaid` (text) to get validation results as JSON without generating a diagram.
+
 ## Contributing
 
 Pull requests welcome. The service catalog (`data/sap_service_catalog.json`) is the most impactful place to contribute — adding new SAP services, aliases, and draw.io style metadata improves mapping accuracy for everyone.

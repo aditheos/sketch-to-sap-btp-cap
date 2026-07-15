@@ -4,4 +4,8 @@ gen/
 *.mtar
 mta_archives/
 .DS_Store
+Thumbs.db
+desktop.ini
 *.log
+tests/handDrawnSketches_output/
+tests/handDrawnSketches_topo_output/
