@@ -8,6 +8,7 @@ const CATALOG_PATH = path.join(__dirname, '..', 'data', 'sap_service_catalog.jso
 const VALID_CATEGORIES = new Set([
   'Data & Storage',
   'Integration',
+  'Messaging',
   'Process & Automation',
   'Identity & Security',
   'AI',
@@ -15,6 +16,9 @@ const VALID_CATEGORIES = new Set([
   'Analytics',
   'Mobile',
   'Development',
+  'Work Zone',
+  'Document Management',
+  'DevOps & Operations',
   'External Systems',
   'Actors & External',
   'Other',
