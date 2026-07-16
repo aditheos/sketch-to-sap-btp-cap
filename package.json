@@ -1,6 +1,6 @@
 {
   "name": "sketch-to-sap-btp",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Convert architecture sketches and Mermaid diagrams into SAP BTP Solution Diagrams",
   "license": "Apache-2.0",
   "engines": {
@@ -8,17 +8,23 @@
   },
   "scripts": {
     "start": "cds-serve",
-    "dev": "cds watch",
+    "dev": "cds-ts watch",
+    "typecheck": "tsc --noEmit",
     "build": "npx cds build --production && mbt build"
   },
   "dependencies": {
     "@sap/cds": "^8",
     "@anthropic-ai/sdk": "^0.36.0",
     "express": "^4",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "ts-node": "^10",
+    "typescript": "^5"
   },
   "devDependencies": {
-    "@sap/cds-dk": "^8"
+    "@sap/cds-dk": "^8",
+    "@types/express": "^4",
+    "@types/multer": "^1",
+    "@types/node": "^20"
   },
   "cds": {
     "requires": {

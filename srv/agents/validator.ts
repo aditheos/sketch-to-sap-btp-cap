@@ -1,6 +1,13 @@
 'use strict';
 
-const { getClient, VALIDATOR_MODEL } = require('./config');
+import { getClient, VALIDATOR_MODEL } from './config';
+import type { MappedArchitecture, ValidationResult, ValidationWarning } from './types';
+
+interface ReviewToolInput {
+  warnings: Array<{ severity: 'high' | 'medium' | 'low'; message: string; suggestion: string }>;
+  missing_services: string[];
+  summary: string;
+}
 
 const SYSTEM_PROMPT = `You are a senior SAP BTP solution architect reviewing an architecture diagram.
 Your job is to identify practical issues — missing security services, anti-patterns,
@@ -12,7 +19,7 @@ const REVIEW_TOOL = {
   name: 'record_review',
   description: 'Record findings from the architecture review',
   input_schema: {
-    type: 'object',
+    type: 'object' as const,
     properties: {
       warnings: {
         type: 'array',
@@ -20,8 +27,8 @@ const REVIEW_TOOL = {
         items: {
           type: 'object',
           properties: {
-            severity: { type: 'string', enum: ['high', 'medium', 'low'] },
-            message: { type: 'string' },
+            severity:   { type: 'string', enum: ['high', 'medium', 'low'] },
+            message:    { type: 'string' },
             suggestion: { type: 'string' },
           },
           required: ['severity', 'message', 'suggestion'],
@@ -41,7 +48,7 @@ const REVIEW_TOOL = {
   },
 };
 
-async function validateArchitecture(architecture) {
+export async function validateArchitecture(architecture: MappedArchitecture): Promise<ValidationResult> {
   const client = await getClient();
 
   const compById = new Map(architecture.components.map(c => [c.id, c]));
@@ -53,8 +60,8 @@ async function validateArchitecture(architecture) {
   const connectionsText = architecture.connections.length
     ? architecture.connections
         .map(conn => {
-          const from = compById.get(conn.fromId)?.sapServiceName || conn.fromId;
-          const to   = compById.get(conn.toId)?.sapServiceName   || conn.toId;
+          const from = compById.get(conn.fromId)?.sapServiceName ?? conn.fromId;
+          const to   = compById.get(conn.toId)?.sapServiceName   ?? conn.toId;
           return `- ${from} → ${to}`;
         })
         .join('\n')
@@ -84,18 +91,18 @@ async function validateArchitecture(architecture) {
   });
 
   const toolBlock = response.content.find(b => b.type === 'tool_use');
-  if (!toolBlock) return { warnings: [], missingServices: [], summary: 'Validator returned no findings.' };
+  if (!toolBlock || toolBlock.type !== 'tool_use') {
+    return { warnings: [], missingServices: [], summary: 'Validator returned no findings.' };
+  }
 
-  const data = toolBlock.input;
+  const data = toolBlock.input as ReviewToolInput;
   return {
-    warnings: (data.warnings || []).map(w => ({
-      severity: w.severity,
-      message: w.message,
+    warnings: (data.warnings ?? []).map((w): ValidationWarning => ({
+      severity:   w.severity,
+      message:    w.message,
       suggestion: w.suggestion,
     })),
-    missingServices: data.missing_services || [],
-    summary: data.summary || '',
+    missingServices: data.missing_services ?? [],
+    summary:         data.summary ?? '',
   };
 }
-
-module.exports = { validateArchitecture };

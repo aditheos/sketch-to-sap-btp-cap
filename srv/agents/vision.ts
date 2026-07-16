@@ -1,6 +1,26 @@
 'use strict';
 
-const { getClient, VISION_MODEL } = require('./config');
+import { getClient, VISION_MODEL } from './config';
+import type { SketchArchitecture } from './types';
+
+interface VisionComponent {
+  id: string;
+  label: string;
+  raw_type: string;
+  description?: string;
+}
+
+interface VisionConnection {
+  from_id: string;
+  to_id: string;
+  label?: string;
+}
+
+interface VisionToolInput {
+  title?: string;
+  components?: VisionComponent[];
+  connections?: VisionConnection[];
+}
 
 const SYSTEM_PROMPT = `You are an expert SAP BTP solution architect analysing an architecture sketch.
 
@@ -18,7 +38,7 @@ const EXTRACTION_TOOL = {
   name: 'record_architecture',
   description: 'Record every component and connection identified in the architecture sketch. Call this tool exactly once with all findings.',
   input_schema: {
-    type: 'object',
+    type: 'object' as const,
     properties: {
       title: {
         type: 'string',
@@ -30,12 +50,9 @@ const EXTRACTION_TOOL = {
         items: {
           type: 'object',
           properties: {
-            id: { type: 'string', description: 'Unique snake_case identifier e.g. comp_1, comp_2' },
-            label: { type: 'string', description: 'Exact text label from the sketch, or best inference' },
-            raw_type: {
-              type: 'string',
-              description: "Generic category: database, api_gateway, messaging, workflow, ui, integration, storage, identity, ai, erp, analytics, mobile, connectivity, runtime, or 'unknown'",
-            },
+            id:          { type: 'string', description: 'Unique snake_case identifier e.g. comp_1, comp_2' },
+            label:       { type: 'string', description: 'Exact text label from the sketch, or best inference' },
+            raw_type:    { type: 'string', description: "Generic category: database, api_gateway, messaging, workflow, ui, integration, storage, identity, ai, erp, analytics, mobile, connectivity, runtime, or 'unknown'" },
             description: { type: 'string', description: 'Optional: any extra context visible for this component' },
           },
           required: ['id', 'label', 'raw_type'],
@@ -48,8 +65,8 @@ const EXTRACTION_TOOL = {
           type: 'object',
           properties: {
             from_id: { type: 'string', description: 'id of the source component' },
-            to_id: { type: 'string', description: 'id of the target component' },
-            label: { type: 'string', description: "Edge label if visible (e.g. 'reads', 'triggers', 'API call')" },
+            to_id:   { type: 'string', description: 'id of the target component' },
+            label:   { type: 'string', description: "Edge label if visible (e.g. 'reads', 'triggers', 'API call')" },
           },
           required: ['from_id', 'to_id'],
         },
@@ -59,9 +76,12 @@ const EXTRACTION_TOOL = {
   },
 };
 
-async function extractComponents(imageBuffer, mediaType = 'image/png') {
-  const client = await getClient();
-  const imageB64 = imageBuffer.toString('base64');
+export async function extractComponents(
+  imageBuffer: Buffer,
+  mediaType: string = 'image/png',
+): Promise<SketchArchitecture> {
+  const client    = await getClient();
+  const imageB64  = imageBuffer.toString('base64');
 
   const response = await client.messages.create({
     model: VISION_MODEL,
@@ -75,7 +95,7 @@ async function extractComponents(imageBuffer, mediaType = 'image/png') {
         content: [
           {
             type: 'image',
-            source: { type: 'base64', media_type: mediaType, data: imageB64 },
+            source: { type: 'base64', media_type: mediaType as 'image/png' | 'image/jpeg' | 'image/gif' | 'image/webp', data: imageB64 },
           },
           {
             type: 'text',
@@ -87,23 +107,23 @@ async function extractComponents(imageBuffer, mediaType = 'image/png') {
   });
 
   const toolBlock = response.content.find(b => b.type === 'tool_use');
-  if (!toolBlock) throw new Error('Vision agent returned no tool_use block — unexpected model response.');
+  if (!toolBlock || toolBlock.type !== 'tool_use') {
+    throw new Error('Vision agent returned no tool_use block — unexpected model response.');
+  }
 
-  const data = toolBlock.input;
+  const data = toolBlock.input as VisionToolInput;
   return {
-    title: data.title || 'SAP BTP Architecture',
-    components: (data.components || []).map(c => ({
-      id: c.id,
-      label: c.label,
-      rawType: c.raw_type,
-      description: c.description || '',
+    title: data.title ?? 'SAP BTP Architecture',
+    components: (data.components ?? []).map(c => ({
+      id:          c.id,
+      label:       c.label,
+      rawType:     c.raw_type,
+      description: c.description ?? '',
     })),
-    connections: (data.connections || []).map(conn => ({
+    connections: (data.connections ?? []).map(conn => ({
       fromId: conn.from_id,
-      toId: conn.to_id,
-      label: conn.label || '',
+      toId:   conn.to_id,
+      label:  conn.label ?? '',
     })),
   };
 }
-
-module.exports = { extractComponents };

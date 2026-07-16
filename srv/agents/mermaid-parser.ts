@@ -1,30 +1,19 @@
 'use strict';
 
-/**
- * Mermaid Parser — converts Mermaid flowchart/graph text into an architecture sketch object.
- * Feeds the same downstream pipeline (mapper → validator → drawio) as the vision agent.
- *
- * Supported syntax:
- *   flowchart / graph directives (LR, TD, BT, RL)
- *   Node shapes: [text], (text), [(text)], ((text)), {text}
- *   Edges: -->, -->|label|, -- label -->, -.-> , ==>
- *   Chained edges: A --> B --> C
- *   Subgraph labels (treated as zone hints, not components)
- *   YAML front-matter title block (--- title: ... ---)
- *   Inline %% title: ... comments
- */
+import type { SketchArchitecture } from './types';
+
+type TokenType = 'id' | 'arrow';
+type Token     = [TokenType, string];
+type RawEdge   = [string, string, string];
 
 // Matches node id followed by a labelled shape.
-// Group 1: node id, Group 2-6: label from each shape variant.
 const NODE_LABEL_RE = /\b([A-Za-z_]\w*)\s*(?:\[\(([^\)\]]+)\)\]|\(\(([^\)]+)\)\)|\[([^\]]+)\]|\(([^\)]+)\)|\{([^\}]+)\})/g;
 
 const HAS_ARROW = /-{2,}[>.\s|]?|-\.->|={2,}/;
 
-// Tokenizer: node id OR arrow with optional |label|
 const TOKEN_RE = /([A-Za-z_]\w*)|--+>?\s*(?:\|([^|]*)\|)?\s*/g;
 
-const TYPE_HINTS = [
-  // ERP checked before database — "S/4HANA Cloud" contains "hana cloud"
+const TYPE_HINTS: Array<[string[], string]> = [
   [['s/4hana', 's4hana', 'ecc', 'successfactors', 'ariba', 'concur', 'on-premise', 'netweaver'], 'erp'],
   [['hana cloud', 'hana db', 'datasphere', 'object store', 'data lake'], 'database'],
   [['api management', 'api gateway', 'developer hub', 'api hub', 'apim'], 'api_gateway'],
@@ -40,7 +29,7 @@ const TYPE_HINTS = [
   [['integration suite', 'cloud integration', 'open connectors'], 'integration'],
 ];
 
-function _inferType(label, isCylinder = false) {
+function _inferType(label: string, isCylinder = false): string {
   if (isCylinder) return 'database';
   const norm = label.toLowerCase();
   for (const [hints, rawType] of TYPE_HINTS) {
@@ -49,32 +38,32 @@ function _inferType(label, isCylinder = false) {
   return 'unknown';
 }
 
-function _normalizeArrows(line) {
-  line = line.replace(/--[^-|>\n]+-+>/g, '-->');  // -- label --> → -->
-  line = line.replace(/-\.->/g, '-->');             // -.-> → -->
-  line = line.replace(/={2,}>?/g, '-->');           // ==> → -->
-  line = line.replace(/-{3,}(?!>)/g, '-->');        // --- (no arrow) → -->
+function _normalizeArrows(line: string): string {
+  line = line.replace(/--[^-|>\n]+-+>/g, '-->');
+  line = line.replace(/-\.->/g, '-->');
+  line = line.replace(/={2,}>?/g, '-->');
+  line = line.replace(/-{3,}(?!>)/g, '-->');
   return line;
 }
 
-function _extractEdges(line) {
-  const tokens = [];
-  let m;
+function _extractEdges(line: string): RawEdge[] {
+  const tokens: Token[] = [];
+  let m: RegExpExecArray | null;
   TOKEN_RE.lastIndex = 0;
   while ((m = TOKEN_RE.exec(line)) !== null) {
     if (m[1]) tokens.push(['id', m[1]]);
-    else tokens.push(['arrow', (m[2] || '').trim()]);
+    else      tokens.push(['arrow', (m[2] ?? '').trim()]);
   }
 
-  const edges = [];
+  const edges: RawEdge[] = [];
   let i = 0;
   while (i < tokens.length - 2) {
     if (tokens[i][0] === 'id' && tokens[i + 1][0] === 'arrow' && tokens[i + 2][0] === 'id') {
-      const src = tokens[i][1];
+      const src   = tokens[i][1];
       const label = tokens[i + 1][1];
-      const tgt = tokens[i + 2][1];
+      const tgt   = tokens[i + 2][1];
       if (src !== tgt) edges.push([src, tgt, label]);
-      i += 2; // target becomes next source for chain support
+      i += 2;
     } else {
       i++;
     }
@@ -82,14 +71,13 @@ function _extractEdges(line) {
   return edges;
 }
 
-function parseMermaid(text) {
+export function parseMermaid(text: string): SketchArchitecture {
   const lines = text.trim().split('\n');
   let title = 'SAP BTP Architecture';
-  const nodeLabels = {};
-  const nodeCylinder = {};
-  const rawEdges = [];
+  const nodeLabels:   Record<string, string>  = {};
+  const nodeCylinder: Record<string, boolean> = {};
+  const rawEdges: RawEdge[] = [];
 
-  // YAML front-matter title block
   let inFrontmatter = false;
   for (const line of lines) {
     const s = line.trim();
@@ -114,20 +102,17 @@ function parseMermaid(text) {
 
     if (SKIP_PREFIXES.some(p => stripped.toLowerCase().startsWith(p.toLowerCase()))) continue;
 
-    // Collect all (id, label) definitions on this line
-    let m;
+    let m: RegExpExecArray | null;
     NODE_LABEL_RE.lastIndex = 0;
     while ((m = NODE_LABEL_RE.exec(stripped)) !== null) {
-      const nid = m[1];
-      // groups 2-6 correspond to the five shape variants
+      const nid   = m[1];
       const label = [m[2], m[3], m[4], m[5], m[6]].find(g => g !== undefined);
       if (label !== undefined) {
-        nodeLabels[nid] = label.trim();
-        nodeCylinder[nid] = m[2] !== undefined; // group 2 = cylinder [(..)]
+        nodeLabels[nid]   = label.trim();
+        nodeCylinder[nid] = m[2] !== undefined;
       }
     }
 
-    // Detect and extract edges
     if (HAS_ARROW.test(stripped)) {
       NODE_LABEL_RE.lastIndex = 0;
       const shapeStripped = stripped.replace(NODE_LABEL_RE, '$1');
@@ -137,20 +122,18 @@ function parseMermaid(text) {
     }
   }
 
-  // Union of all node ids seen in label declarations or edges
   const allIds = new Set(Object.keys(nodeLabels));
-  for (const [src, tgt] of rawEdges) {
-    allIds.add(src);
-    allIds.add(tgt);
-  }
+  for (const [src, tgt] of rawEdges) { allIds.add(src); allIds.add(tgt); }
 
   const sortedIds = [...allIds].sort();
-  const idMap = Object.fromEntries(sortedIds.map((nid, i) => [nid, `comp_${i + 1}`]));
+  const idMap: Record<string, string> = Object.fromEntries(
+    sortedIds.map((nid, i) => [nid, `comp_${i + 1}`]),
+  );
 
   const components = sortedIds.map(nid => ({
-    id: idMap[nid],
-    label: nodeLabels[nid] || nid,
-    rawType: _inferType(nodeLabels[nid] || nid, nodeCylinder[nid] || false),
+    id:          idMap[nid],
+    label:       nodeLabels[nid] ?? nid,
+    rawType:     _inferType(nodeLabels[nid] ?? nid, nodeCylinder[nid] ?? false),
     description: '',
   }));
 
@@ -158,11 +141,9 @@ function parseMermaid(text) {
     .filter(([src, tgt]) => idMap[src] && idMap[tgt])
     .map(([src, tgt, label]) => ({
       fromId: idMap[src],
-      toId: idMap[tgt],
+      toId:   idMap[tgt],
       label,
     }));
 
   return { title, components, connections };
 }
-
-module.exports = { parseMermaid };

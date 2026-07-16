@@ -1,78 +1,84 @@
 'use strict';
 
-const fs   = require('fs');
-const path = require('path');
+import { readFileSync } from 'fs';
+import { join }         from 'path';
+import type { MappedArchitecture, MappedComponent, IconIndex } from './types';
 
-const ICON_INDEX_PATH = path.join(__dirname, '..', '..', 'data', 'sap_icon_index.json');
+const ICON_INDEX_PATH = join(__dirname, '..', '..', 'data', 'sap_icon_index.json');
 
-// ── Sizing ────────────────────────────────────────────────────────────────
-const ICON_W       = 48;
-const ICON_H       = 48;
-const LABEL_H_EST  = 54;   // height of the label cell below an icon (room for 3-line names)
-const CAT_H        = 16;   // category section header height within a column
-const COMP_V_GAP   = 14;   // vertical gap between components in the same column
+// ── Sizing ─────────────────────────────────────────────────────────────────
+const ICON_W      = 48;
+const ICON_H      = 48;
+const LABEL_H_EST = 54;
+const CAT_H       = 16;
+const COMP_V_GAP  = 14;
 
-const FALLBACK_W   = 130;
-const FALLBACK_H   = 50;
+const FALLBACK_W  = 130;
+const FALLBACK_H  = 50;
 
-// Topology column geometry
-const COL_SLOT_W   = 140;  // width of each topology depth column
-const COL_GAP      = 60;   // horizontal gap between adjacent depth columns
-const PAGE_MARGIN  = 40;
+const COL_SLOT_W  = 140;
+const COL_GAP     = 60;
+const PAGE_MARGIN = 40;
 
-// BTP boundary padding
-const BTP_PAD_X    = 24;
-const BTP_PAD_Y    = 20;
-const BTP_LABEL_H  = 30;   // space for "SAP BTP" text label at top of boundary
+const BTP_PAD_X   = 24;
+const BTP_PAD_Y   = 20;
+const BTP_LABEL_H = 30;
 
-// Actor / external column width (slightly narrower, they live outside BTP)
 const ACTOR_SLOT_W = 130;
 
-// ── Styles ────────────────────────────────────────────────────────────────
+// ── Styles ──────────────────────────────────────────────────────────────────
 const SAP_BLUE = '#0070F2';
 const SAP_TEXT = '#1a2733';
 
-// Outer BTP boundary
 const BOUNDARY_STYLE =
   `rounded=1;whiteSpace=wrap;html=1;strokeColor=${SAP_BLUE};fillColor=#EBF8FF;` +
   `arcSize=24;absoluteArcSize=1;strokeWidth=1.5;` +
   `align=left;verticalAlign=top;fontSize=14;fontStyle=1;fontColor=${SAP_TEXT};fontFamily=Helvetica;` +
   `spacingLeft=12;spacingTop=10;`;
 
-// Category section header — small dimmed text, shown once per category group per column
 const CAT_LABEL_STYLE =
   `text;html=1;align=left;verticalAlign=bottom;strokeColor=none;fillColor=none;` +
   `fontColor=#8a9bb0;fontFamily=Helvetica;fontSize=9;fontStyle=1;whiteSpace=wrap;`;
 
-// Icon cell: image only, no label (label is a separate text cell below)
 const ICON_STYLE_PREFIX =
   `shape=image;verticalLabelPosition=middle;verticalAlign=middle;imageAspect=0;aspect=fixed;` +
   `fillColor=none;strokeColor=none;fontSize=1;fontColor=none;`;
 
-// Label cell below the icon: full slot width so text wraps within the column
 const ICON_LABEL_STYLE =
   `text;html=1;align=center;verticalAlign=top;strokeColor=none;fillColor=none;` +
   `fontColor=${SAP_TEXT};fontFamily=Helvetica;fontSize=11;fontStyle=0;spacingTop=0;whiteSpace=wrap;`;
 
-// Directed edge
 const EDGE_STYLE =
   `edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;` +
   `endArrow=blockThin;endFill=1;endSize=4;startSize=4;strokeWidth=1.5;` +
   `strokeColor=#475E75;fontSize=10;fontFamily=Helvetica;fontColor=${SAP_TEXT};`;
 
-// Bidirectional edge (A↔B merged into one double-headed arrow)
 const BIDI_EDGE_STYLE =
   `edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;` +
   `endArrow=blockThin;endFill=1;startArrow=blockThin;startFill=1;endSize=4;startSize=4;strokeWidth=1.5;` +
   `strokeColor=#475E75;fontSize=10;fontFamily=Helvetica;fontColor=${SAP_TEXT};`;
 
-// ── Minimal XML builder ───────────────────────────────────────────────────
+// ── Minimal XML builder ──────────────────────────────────────────────────────
 class El {
-  constructor(tag, attrs = {}) { this.tag = tag; this.attrs = attrs; this.children = []; }
-  sub(tag, attrs = {}) { const c = new El(tag, attrs); this.children.push(c); return c; }
-  render(d = 0) {
+  private tag:   string;
+  private attrs: Record<string, string | number>;
+  children:      El[];
+
+  constructor(tag: string, attrs: Record<string, string | number> = {}) {
+    this.tag      = tag;
+    this.attrs    = attrs;
+    this.children = [];
+  }
+
+  sub(tag: string, attrs: Record<string, string | number> = {}): El {
+    const c = new El(tag, attrs);
+    this.children.push(c);
+    return c;
+  }
+
+  render(d = 0): string {
     const p   = '  '.repeat(d);
-    const esc = s => String(s)
+    const esc = (s: string | number) => String(s)
       .replace(/&/g, '&amp;').replace(/"/g, '&quot;')
       .replace(/</g, '&lt;').replace(/>/g, '&gt;');
     const a    = Object.entries(this.attrs).map(([k, v]) => `${k}="${esc(v)}"`).join(' ');
@@ -82,42 +88,38 @@ class El {
   }
 }
 
-// ── Zone classifier ───────────────────────────────────────────────────────
-function _zoneOf(comp) {
-  if (comp.renderZone) return comp.renderZone;
+// ── Zone classifier ──────────────────────────────────────────────────────────
+type Zone = 'actor' | 'external' | 'btp';
+
+function _zoneOf(comp: MappedComponent): Zone {
+  if (comp.renderZone) return comp.renderZone as Zone;
   if (comp.category === 'Actors & External') return 'actor';
   if (comp.category === 'External Systems')  return 'external';
   return 'btp';
 }
 
-// ── Topological depth (BFS) ───────────────────────────────────────────────
-// Assigns every component a column depth based on graph distance from sources.
-// Sources are actors (depth 0). If no actors, sources are BTP nodes with in-degree 0.
-// External systems are always pinned to max_btp_depth + 1 after BFS.
-function _computeDepths(components, connections) {
-  const depths = new Map();
+// ── Topological depth (BFS) ──────────────────────────────────────────────────
+function _computeDepths(
+  components: MappedComponent[],
+  connections: MappedArchitecture['connections'],
+): Map<string, number> {
+  const depths = new Map<string, number>();
+  const adj    = new Map<string, string[]>(components.map(c => [c.id, []]));
 
-  // Build bidirectional adjacency for BFS (we follow edges in both directions
-  // so that depth increases monotonically away from sources).
-  const adj = new Map(components.map(c => [c.id, []]));
   for (const conn of connections) {
-    if (adj.has(conn.fromId)) adj.get(conn.fromId).push(conn.toId);
-    if (adj.has(conn.toId))   adj.get(conn.toId).push(conn.fromId);
+    adj.get(conn.fromId)?.push(conn.toId);
+    adj.get(conn.toId)?.push(conn.fromId);
   }
 
-  const queue = [];
+  const queue: string[] = [];
 
-  // Seed from actors
   for (const c of components) {
     if (_zoneOf(c) === 'actor') { depths.set(c.id, 0); queue.push(c.id); }
   }
 
-  // No actors → seed from BTP/actor nodes with no incoming edges from non-external sources.
-  // Ignoring external→BTP edges here lets us correctly seed when an external system
-  // is drawn as the source of the flow (e.g. S/4HANA → IS → EventMesh).
   if (!queue.length) {
     const compById = new Map(components.map(c => [c.id, c]));
-    const hasIncomingFromInternal = new Set();
+    const hasIncomingFromInternal = new Set<string>();
     for (const conn of connections) {
       const from = compById.get(conn.fromId);
       if (from && _zoneOf(from) !== 'external') hasIncomingFromInternal.add(conn.toId);
@@ -130,30 +132,26 @@ function _computeDepths(components, connections) {
     }
   }
 
-  // Last resort → seed all BTP at depth 0
   if (!queue.length) {
     for (const c of components) {
       if (_zoneOf(c) === 'btp') { depths.set(c.id, 0); queue.push(c.id); }
     }
   }
 
-  // BFS
   let head = 0;
   while (head < queue.length) {
     const id = queue[head++];
-    const d  = depths.get(id);
-    for (const nbId of (adj.get(id) || [])) {
+    const d  = depths.get(id)!;
+    for (const nbId of (adj.get(id) ?? [])) {
       if (!depths.has(nbId)) { depths.set(nbId, d + 1); queue.push(nbId); }
     }
   }
 
-  // Any component still unvisited (isolated)
   for (const c of components) { if (!depths.has(c.id)) depths.set(c.id, 1); }
 
-  // Pin externals to max_btp_depth + 1 so they always appear on the right
   let maxBtp = 0;
   for (const c of components) {
-    if (_zoneOf(c) === 'btp') maxBtp = Math.max(maxBtp, depths.get(c.id));
+    if (_zoneOf(c) === 'btp') maxBtp = Math.max(maxBtp, depths.get(c.id)!);
   }
   for (const c of components) {
     if (_zoneOf(c) === 'external') depths.set(c.id, maxBtp + 1);
@@ -162,16 +160,16 @@ function _computeDepths(components, connections) {
   return depths;
 }
 
-// ── Column layout helper ──────────────────────────────────────────────────
-// Pre-computes y-offsets for a list of components within one column.
-// Category section headers are inserted whenever the category changes.
-// Returns { items: [{comp, iconY, catLabelY?}], totalH }
-function _columnLayout(comps, startY) {
-  const items = [];
-  let y = startY, lastCat = null;
+// ── Column layout helper ─────────────────────────────────────────────────────
+interface ColumnItem { comp: MappedComponent; iconY: number; catLabelY: number | null; }
+interface ColumnLayout { items: ColumnItem[]; totalH: number; }
+
+function _columnLayout(comps: MappedComponent[], startY: number): ColumnLayout {
+  const items: ColumnItem[] = [];
+  let y = startY, lastCat: string | null = null;
   for (const comp of comps) {
-    const cat = comp.category || '';
-    let catLabelY = null;
+    const cat = comp.category ?? '';
+    let catLabelY: number | null = null;
     if (cat !== lastCat) { catLabelY = y; y += CAT_H; lastCat = cat; }
     items.push({ comp, iconY: y, catLabelY });
     y += ICON_H + LABEL_H_EST + COMP_V_GAP;
@@ -179,16 +177,21 @@ function _columnLayout(comps, startY) {
   return { items, totalH: y - startY };
 }
 
-// ── Component renderer ────────────────────────────────────────────────────
-let _iconIndex = null;
-function _loadIconIndex() {
-  if (!_iconIndex) _iconIndex = JSON.parse(fs.readFileSync(ICON_INDEX_PATH, 'utf-8'));
+// ── Component renderer ───────────────────────────────────────────────────────
+let _iconIndex: IconIndex | null = null;
+function _loadIconIndex(): IconIndex {
+  if (!_iconIndex) _iconIndex = JSON.parse(readFileSync(ICON_INDEX_PATH, 'utf-8')) as IconIndex;
   return _iconIndex;
 }
 
-// Renders icon + label cells for a component at absolute (x, y).
-// slotW is the column width used for horizontal centering.
-function _placeComp(root, comp, iconIndex, x, y, slotW) {
+function _placeComp(
+  root: El,
+  comp: MappedComponent,
+  iconIndex: IconIndex,
+  x: number,
+  y: number,
+  slotW: number,
+): void {
   const icon = comp.iconId ? iconIndex[comp.iconId] : null;
   if (icon) {
     const iconX = x + Math.floor((slotW - ICON_W) / 2);
@@ -209,9 +212,9 @@ function _placeComp(root, comp, iconIndex, x, y, slotW) {
       width: String(slotW), height: String(LABEL_H_EST), as: 'geometry',
     });
   } else {
-    const fill   = comp.drawio?.fillColor   || '#f5f5f5';
-    const stroke = comp.drawio?.strokeColor || '#666';
-    const font   = comp.drawio?.fontColor   || SAP_TEXT;
+    const fill   = comp.drawio?.fillColor   ?? '#f5f5f5';
+    const stroke = comp.drawio?.strokeColor ?? '#666';
+    const font   = comp.drawio?.fontColor   ?? SAP_TEXT;
     const rectX  = x + Math.floor((slotW - FALLBACK_W) / 2);
     root.sub('mxCell', {
       id: comp.id, value: comp.sapServiceName,
@@ -226,75 +229,65 @@ function _placeComp(root, comp, iconIndex, x, y, slotW) {
   }
 }
 
-// ── Main ──────────────────────────────────────────────────────────────────
-function generateDrawio(architecture) {
+// ── Main ─────────────────────────────────────────────────────────────────────
+export function generateDrawio(architecture: MappedArchitecture): string {
   const iconIndex  = _loadIconIndex();
   const { components, connections } = architecture;
 
-  // ── 1. Compute topological depths ──────────────────────────────────────
   const depths = _computeDepths(components, connections);
 
-  // Group by depth; sort each column by category then name
-  const byDepth = new Map();
+  const byDepth = new Map<number, MappedComponent[]>();
   for (const comp of components) {
     const d = depths.get(comp.id) ?? 0;
     if (!byDepth.has(d)) byDepth.set(d, []);
-    byDepth.get(d).push(comp);
+    byDepth.get(d)!.push(comp);
   }
   for (const comps of byDepth.values()) {
     comps.sort((a, b) => {
-      const cc = (a.category || '').localeCompare(b.category || '');
-      return cc !== 0 ? cc : (a.sapServiceName || '').localeCompare(b.sapServiceName || '');
+      const cc = (a.category ?? '').localeCompare(b.category ?? '');
+      return cc !== 0 ? cc : (a.sapServiceName ?? '').localeCompare(b.sapServiceName ?? '');
     });
   }
 
   const sortedDepths = [...byDepth.keys()].sort((a, b) => a - b);
   const maxDepth     = sortedDepths.at(-1) ?? 0;
 
-  // Identify which depths contain BTP components
   const btpDepths = sortedDepths.filter(d =>
-    (byDepth.get(d) || []).some(c => _zoneOf(c) === 'btp'),
+    (byDepth.get(d) ?? []).some(c => _zoneOf(c) === 'btp'),
   );
   const minBtpDepth = btpDepths.length ? Math.min(...btpDepths) : 1;
   const maxBtpDepth = btpDepths.length ? Math.max(...btpDepths) : 1;
   const nBtpCols    = maxBtpDepth - minBtpDepth + 1;
 
-  // ── 2. Column geometry ─────────────────────────────────────────────────
-  const actorComps = (byDepth.get(0) || []).filter(c => _zoneOf(c) === 'actor');
-  const extComps   = (byDepth.get(maxDepth) || []).filter(c => _zoneOf(c) === 'external');
+  const actorComps = (byDepth.get(0) ?? []).filter(c => _zoneOf(c) === 'actor');
+  const extComps   = (byDepth.get(maxDepth) ?? []).filter(c => _zoneOf(c) === 'external');
   const hasActors  = actorComps.length > 0;
-  const hasExt     = extComps.length > 0;
 
-  // Absolute x for each layout region
   const actorColX  = PAGE_MARGIN;
   const btpStartX  = PAGE_MARGIN + (hasActors ? ACTOR_SLOT_W + COL_GAP : 0);
   const btpInnerW  = nBtpCols * COL_SLOT_W + Math.max(0, nBtpCols - 1) * COL_GAP;
   const btpW       = btpInnerW + 2 * BTP_PAD_X;
   const extColX    = btpStartX + (btpDepths.length ? btpW + COL_GAP : 0);
 
-  // Absolute x for a BTP column at depth d
-  const btpColAbsX = d => btpStartX + BTP_PAD_X + (d - minBtpDepth) * (COL_SLOT_W + COL_GAP);
+  const btpColAbsX = (d: number) => btpStartX + BTP_PAD_X + (d - minBtpDepth) * (COL_SLOT_W + COL_GAP);
 
-  // ── 3. Pre-compute column layouts to determine BTP boundary height ──────
-  const colLayouts = new Map(); // depth → { items, totalH }
+  const colLayouts = new Map<number, ColumnLayout>();
   for (const d of btpDepths) {
-    const comps = (byDepth.get(d) || []).filter(c => _zoneOf(c) === 'btp');
-    colLayouts.set(d, _columnLayout(comps, 0)); // relative y (offset applied later)
+    const comps = (byDepth.get(d) ?? []).filter(c => _zoneOf(c) === 'btp');
+    colLayouts.set(d, _columnLayout(comps, 0));
   }
 
   const btpContentH = btpDepths.length
     ? Math.max(...[...colLayouts.values()].map(l => l.totalH))
     : ICON_H + LABEL_H_EST;
-  const btpH  = BTP_LABEL_H + BTP_PAD_Y + btpContentH + BTP_PAD_Y;
-  const btpY  = PAGE_MARGIN + 10;
+  const btpH = BTP_LABEL_H + BTP_PAD_Y + btpContentH + BTP_PAD_Y;
+  const btpY = PAGE_MARGIN + 10;
 
-  // Vertically centre actors/externals alongside the BTP boundary
-  const singleH    = ICON_H + LABEL_H_EST;
+  const singleH     = ICON_H + LABEL_H_EST;
   const actorStartY = btpY + Math.max(0, Math.floor((btpH - singleH) / 2));
   const extStartY   = btpY + BTP_PAD_Y;
 
-  // ── 4. Build XML ───────────────────────────────────────────────────────
-  const mxfile = new El('mxfile', { host: 'sketch-to-sap-btp', version: '1.0' });
+  const mxfile  = new El('mxfile', { host: 'sketch-to-sap-btp', version: '1.0' });
   const diagram = mxfile.sub('diagram', { name: architecture.title });
   diagram.sub('mxGraphModel', {
     dx: '1422', dy: '762', grid: '1', gridSize: '10', guides: '1',
@@ -306,13 +299,11 @@ function generateDrawio(architecture) {
   root.sub('mxCell', { id: '0' });
   root.sub('mxCell', { id: '1', parent: '0' });
 
-  // Actor column
   actorComps.forEach((comp, i) => {
     const y = actorStartY + i * (singleH + COMP_V_GAP);
     _placeComp(root, comp, iconIndex, actorColX, y, ACTOR_SLOT_W);
   });
 
-  // BTP boundary + columns
   if (btpDepths.length) {
     root.sub('mxCell', {
       id: 'btp-boundary', value: 'SAP BTP',
@@ -330,10 +321,9 @@ function generateDrawio(architecture) {
       if (!layout) continue;
 
       for (const { comp, iconY, catLabelY } of layout.items) {
-        // Category section header (only when category changes within the column)
         if (catLabelY !== null) {
           root.sub('mxCell', {
-            id: `cat-${comp.id}`, value: comp.category || '',
+            id: `cat-${comp.id}`, value: comp.category ?? '',
             style: CAT_LABEL_STYLE, vertex: '1', parent: '1',
           }).sub('mxGeometry', {
             x: String(colX),
@@ -346,14 +336,12 @@ function generateDrawio(architecture) {
     }
   }
 
-  // External column
   extComps.forEach((comp, i) => {
     const y = extStartY + i * (singleH + COMP_V_GAP);
     _placeComp(root, comp, iconIndex, extColX, y, ACTOR_SLOT_W);
   });
 
-  // ── 5. Edges — bidirectional pairs merged into one double-headed arrow ──
-  const skipRev = new Set();
+  const skipRev = new Set<string>();
   let edgeId = 10000;
   for (const conn of connections) {
     const key    = `${conn.fromId}→${conn.toId}`;
@@ -370,5 +358,3 @@ function generateDrawio(architecture) {
 
   return `<?xml version="1.0" ?>\n${mxfile.render()}`;
 }
-
-module.exports = { generateDrawio };
