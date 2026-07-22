@@ -4,7 +4,7 @@ Convert a hand-drawn whiteboard sketch or a Mermaid diagram into an official **S
 
 Built with SAP Cloud Application Programming Model (CAP) and Claude AI.
 
-[![Demo video](https://img.shields.io/badge/YouTube-Demo-red?logo=youtube)](https://youtu.be/eDKe8JjrcSA) [![Short](https://img.shields.io/badge/YouTube-Short-red?logo=youtube)](https://youtube.com/shorts/B6eQHePv34I)
+[![Demo video](https://img.shields.io/badge/YouTube-Demo-red?logo=youtube)](https://youtu.be/eDKe8JjrcSA) [![Short](https://img.shields.io/badge/YouTube-Short-red?logo=youtube)](https://youtube.com/shorts/B6eQHePv34I) [![SAP Blog](https://img.shields.io/badge/SAP%20Community-Blog%20Post-blue?logo=sap)](https://community.sap.com/t5/sap-cap-blog-posts/from-whiteboard-to-sap-btp-building-an-open-source-ai-architecture-diagram/ba-p/14440736)
 
 ---
 
