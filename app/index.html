@@ -558,32 +558,116 @@
     clearResult('sketchResult');
   }
 
+  // ── Validation cache (avoids re-running analysis after Generate .drawio) ──
+
+  const validationCache  = { sketch: null, mermaid: null };
+  const convertCache     = { sketch: null, mermaid: null };
+  const prefetchInFlight = { sketch: null, mermaid: null };
+
+  function sketchCacheKey() {
+    return selectedFile ? `${selectedFile.name}|${selectedFile.size}|${selectedFile.lastModified}` : null;
+  }
+
+  function mermaidCacheKey() {
+    return document.getElementById('mermaidInput').value.trim();
+  }
+
+  function cacheValidation(tab, key, data) {
+    validationCache[tab] = { key, data };
+  }
+
+  function getCachedValidation(tab, key) {
+    const entry = validationCache[tab];
+    return (entry && entry.key === key) ? entry.data : null;
+  }
+
+  function cacheConvert(tab, key, blob, filename, summary, warnings, missing) {
+    convertCache[tab] = { key, blob, filename, summary, warnings, missing };
+  }
+
+  function getCachedConvert(tab, key) {
+    const entry = convertCache[tab];
+    return (entry && entry.key === key) ? entry : null;
+  }
+
+  function prefetchValidation(tab, endpoint, body) {
+    const key = tab === 'sketch' ? sketchCacheKey() : mermaidCacheKey();
+    if (!key || getCachedValidation(tab, key)) return;
+    const promise = (async () => {
+      try {
+        const isJson = typeof body === 'string';
+        const headers = isJson ? { 'Content-Type': 'application/json' } : {};
+        const resp = await fetch(endpoint, { method: 'POST', headers, body });
+        if (resp.ok) cacheValidation(tab, key, await resp.json());
+      } catch (_) {}
+      prefetchInFlight[tab] = null;
+    })();
+    prefetchInFlight[tab] = { key, promise };
+  }
+
+  async function awaitPrefetch(tab, key, spinnerId) {
+    const inFlight = prefetchInFlight[tab];
+    if (!inFlight || inFlight.key !== key) return null;
+    const spinner = document.getElementById(spinnerId);
+    spinner.classList.add('visible');
+    await inFlight.promise;
+    spinner.classList.remove('visible');
+    return getCachedValidation(tab, key);
+  }
+
   // ── Sketch actions ────────────────────────────────────────────────────────
 
   document.getElementById('sketchPreviewBtn').addEventListener('click', async () => {
-    if (!selectedFile) return;
+    if (!selectedFile) { showHint('sketchResult', 'Drop or select a sketch image to get started.'); return; }
+    const key = sketchCacheKey();
+    const cached = getCachedValidation('sketch', key);
+    if (cached) { showValidation('sketchResult', cached, true); return; }
+    const prefetched = await awaitPrefetch('sketch', key, 'sketchSpinner');
+    if (prefetched) { showValidation('sketchResult', prefetched, true); return; }
     const form = new FormData();
     form.append('file', selectedFile);
-    await callApi('/validate-only', form, 'sketchSpinner', 'sketchResult', 'json');
+    const data = await callApi('/validate-only', form, 'sketchSpinner', 'sketchResult', 'json');
+    if (data) cacheValidation('sketch', key, data);
   });
 
   document.getElementById('sketchConvertBtn').addEventListener('click', async () => {
-    if (!selectedFile) return;
+    if (!selectedFile) { showHint('sketchResult', 'Drop or select a sketch image to get started.'); return; }
+    const key = sketchCacheKey();
+    const cached = getCachedConvert('sketch', key);
+    if (cached) { showDownload('sketchResult', cached.blob, cached.filename, cached.summary, cached.warnings, cached.missing, true); return; }
     const form = new FormData();
     form.append('file', selectedFile);
-    await callApi('/convert', form, 'sketchSpinner', 'sketchResult', 'binary');
+    const result = await callApi('/convert', form, 'sketchSpinner', 'sketchResult', 'binary');
+    if (result) cacheConvert('sketch', key, result.blob, result.filename, result.summary, result.warnings, result.missing);
+    const prefetchForm = new FormData();
+    prefetchForm.append('file', selectedFile);
+    prefetchValidation('sketch', '/validate-only', prefetchForm);
   });
 
   // ── Mermaid actions ───────────────────────────────────────────────────────
 
   document.getElementById('mermaidPreviewBtn').addEventListener('click', async () => {
+    if (!mermaidCacheKey()) { showHint('mermaidResult', 'Enter a Mermaid diagram above to get started.'); return; }
+    const key = mermaidCacheKey();
+    const cached = getCachedValidation('mermaid', key);
+    if (cached) { showValidation('mermaidResult', cached, true); return; }
+    const prefetched = await awaitPrefetch('mermaid', key, 'mermaidSpinner');
+    if (prefetched) { showValidation('mermaidResult', prefetched, true); return; }
     const body = JSON.stringify({ mermaid: document.getElementById('mermaidInput').value });
-    await callApi('/validate-mermaid', body, 'mermaidSpinner', 'mermaidResult', 'json');
+    const data = await callApi('/validate-mermaid', body, 'mermaidSpinner', 'mermaidResult', 'json');
+    if (data) cacheValidation('mermaid', key, data);
   });
 
   document.getElementById('mermaidConvertBtn').addEventListener('click', async () => {
-    const body = JSON.stringify({ mermaid: document.getElementById('mermaidInput').value });
-    await callApi('/convert-mermaid', body, 'mermaidSpinner', 'mermaidResult', 'binary');
+    if (!mermaidCacheKey()) { showHint('mermaidResult', 'Enter a Mermaid diagram above to get started.'); return; }
+    const key = mermaidCacheKey();
+    const cached = getCachedConvert('mermaid', key);
+    if (cached) { showDownload('mermaidResult', cached.blob, cached.filename, cached.summary, cached.warnings, cached.missing, true); return; }
+    const mermaidText = document.getElementById('mermaidInput').value;
+    const body = JSON.stringify({ mermaid: mermaidText });
+    const result = await callApi('/convert-mermaid', body, 'mermaidSpinner', 'mermaidResult', 'binary');
+    if (result) cacheConvert('mermaid', key, result.blob, result.filename, result.summary, result.warnings, result.missing);
+    prefetchValidation('mermaid', '/validate-mermaid', JSON.stringify({ mermaid: mermaidText }));
   });
 
   // ── Shared fetch helper ───────────────────────────────────────────────────
@@ -615,9 +699,11 @@
         const warnings = parseInt(resp.headers.get('X-Warning-Count') || '0', 10);
         const missing = resp.headers.get('X-Missing-Services') || '';
         showDownload(resultId, blob, filename, summary, warnings, missing);
+        return { blob, filename, summary, warnings, missing };
       } else {
         const data = await resp.json();
         showValidation(resultId, data);
+        return data;
       }
     } catch (err) {
       showError(resultId, `Cannot reach the server: ${err.message}`);
@@ -640,11 +726,18 @@
     el.classList.add('visible');
   }
 
-  function showDownload(id, blob, filename, summary, warningCount, missing) {
+  function showHint(id, msg) {
+    const el = document.getElementById(id);
+    el.innerHTML = `<hr class="divider"><div class="summary-box" style="color:var(--text-secondary)">💡 ${escHtml(msg)}</div>`;
+    el.classList.add('visible');
+  }
+
+  function showDownload(id, blob, filename, summary, warningCount, missing, fromCache = false) {
     const url = URL.createObjectURL(blob);
     const el = document.getElementById(id);
-    let html = `<hr class="divider">
-      <button class="download-btn" onclick="triggerDownload('${url}','${escHtml(filename)}')">
+    let html = `<hr class="divider">`;
+    if (fromCache) html += `<div class="summary-box" style="color:var(--text-secondary)">✓ Already generated for this input — showing previous result.</div>`;
+    html += `<button class="download-btn" onclick="triggerDownload('${url}','${escHtml(filename)}')">
         ⬇️ Download ${escHtml(filename)}
       </button>`;
     if (summary) html += `<div class="summary-box">📋 ${escHtml(summary)}</div>`;
@@ -654,7 +747,8 @@
     el.classList.add('visible');
   }
 
-  function showValidation(id, data) {
+  function showValidation(id, data, fromCache = false) {
+    clearResult(id);
     const comps = data.components || [];
     const validation = data.validation || {};
     const warnings = validation.warnings || [];
@@ -666,8 +760,9 @@
       return `<span class="chip ${cls}">${label}</span>`;
     };
 
-    let html = `<hr class="divider">
-      <div class="section-title">✅ ${comps.length} components detected in <em>${escHtml(data.title || '')}</em></div>
+    let html = `<hr class="divider">`;
+    if (fromCache) html += `<div class="summary-box" style="color:var(--text-secondary)">✓ Already analysed for this input — showing previous result.</div>`;
+    html += `<div class="section-title">✅ ${comps.length} components detected in <em>${escHtml(data.title || '')}</em></div>
       <ul class="component-list">`;
 
     for (const c of comps) {
