@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "cds-serve",
-    "dev": "cds-ts watch",
+    "dev": "cds watch",
     "typecheck": "tsc --noEmit",
     "build": "npx cds build --production && mbt build"
   },
