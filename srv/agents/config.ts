@@ -77,12 +77,14 @@ async function _sapAiCoreClient(creds: AicoreCredentials): Promise<Anthropic> {
 
   return new Anthropic({
     apiKey: 'aicore',           // placeholder — replaced by fetch override below
-    fetch: _makeAiCoreFetch(config),
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    fetch: _makeAiCoreFetch(config) as any,
   });
 }
 
 function _makeAiCoreFetch(cfg: AicoreConfig) {
-  return async (url: RequestInfo | URL, init?: RequestInit): Promise<Response> => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return async (_url: any, init?: RequestInit): Promise<Response> => {
     const requestBody = init?.body ? JSON.parse(init.body as string) : {};
     const { model, ...bodyWithoutModel } = requestBody as { model?: string; [k: string]: unknown };
 
